@@ -154,13 +154,13 @@ class Robot(object):
         for v in self._variables.values():
             v.get_value()
     
-    def __init__(self, adapter, number, root, bindings):
+    def __init__(self, adapter, name, number, root, bindings):
         self._adapter = adapter
         self._number = number
         self._root = root
         self._bindings = dict(bindings)
         self._bindings["number"] = number
-        self._name = f'robot_{number}'
+        self._name = name
 
 
         print("--------------------------------")
@@ -231,9 +231,9 @@ try:
 
     adapter = Adapter(('0.0.0.0', 7878))
 
-    robots = [Robot(adapter, 1, root, bindings),              
-              Robot(adapter, 3, root, bindings),
-              Robot(adapter, 4, root, bindings)]
+    robots = [Robot(adapter, 'Stan', 1, root, bindings),              
+              Robot(adapter, 'Kenny', 3, root, bindings),
+              Robot(adapter, 'Cartman', 4, root, bindings)]
 
     adapter.start()
 
