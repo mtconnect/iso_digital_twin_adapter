@@ -108,7 +108,7 @@ class Robot(object):
 
     def add_event(self, name, path, root = None):
         v = self.add_variable(name, path, root = root)
-        di = MappedDataItem(name, v)
+        di = MappedDataItem(f'{self._number}:{name}', v)
         self._adapter.add_data_item(di)
 
     def add_sample(self, name, path, root = None):
@@ -116,7 +116,7 @@ class Robot(object):
 
 
     def add_estop(self):
-        di = MappedEnumeration("estop", self._variables["ControllerState"], {
+        di = MappedEnumeration(f"{self._number}:estop", self._variables["ControllerState"], {
             7: None,
             4: 'TRIGGERED',
             'default': 'ARMED'
@@ -125,7 +125,7 @@ class Robot(object):
         self._adapter.add_data_item(di)
 
     def add_controller_mode(self):
-        di = MappedEnumeration("controller_mode", self._variables['OperatingMode'], {
+        di = MappedEnumeration(f"{self._number}:controller_mode", self._variables['OperatingMode'], {
             6: None,
             0: 'AUTOMATIC', 4: 'AUTOMATIC',
             2: 'MANUAL', 3: 'MANUAL', 5: 'MANUAL'            
@@ -134,7 +134,7 @@ class Robot(object):
         
                         
     def add_execution(self):
-        di = MappedEnumeration("execution", self._variables["ControllerExecutionState"], {
+        di = MappedEnumeration(f"{self._number}:execution", self._variables["ControllerExecutionState"], {
             0: None,
             1: 'ACTIVE',
             2: 'READY'
