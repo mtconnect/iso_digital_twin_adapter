@@ -88,7 +88,11 @@ class MappedEnumeration(DataItem):
             self.unavailable()
         else:
             if v in self._translation:
-                self.set_value(self._translation[v])
+                t = self._translation[v]
+                if t is None:
+                    self.unavailable()
+                else:
+                    self.set_value(t)
             elif 'default' in self._translation:                
                 self.set_value(self._translation['default'])
             else:
@@ -111,7 +115,7 @@ class Robot(object):
 
     def add_estop(self):
         di = MappedEnumeration("estop", self._variables["ControllerState"], {
-            7: 'UNAVAILABLE',
+            7: None,
             4: 'TRIGGERED',
             'default': 'ARMED'
             })
@@ -119,8 +123,8 @@ class Robot(object):
         self._adapter.add_data_item(di)
 
     def add_controller_mode(self):
-        di = MappedEnumeration("controller_mode", self.variables['OperatingMode'], {
-            6: 'UNAVAILABLE',
+        di = MappedEnumeration("controller_mode", self._variables['OperatingMode'], {
+            6: None,
             0: 'AUTOMATIC', 4: 'AUTOMATIC',
             2: 'MANUAL', 3: 'MANUAL', 5: 'MANUAL'            
             })
@@ -129,7 +133,7 @@ class Robot(object):
                         
     def add_execution(self):
         di = MappedEnumeration("execution", self._variables["ControllerExecutionState"], {
-            0: 'UNAVAILABLE',
+            0: None,
             1: 'ACTIVE',
             2: 'READY'
             })
