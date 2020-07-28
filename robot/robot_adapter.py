@@ -68,7 +68,7 @@ class MappedDataItem(DataItem):
         self.set_value(self._variable.get_value())
     
 
-class MappedEnumeration(DataItem):
+class MappedTranform(DataItem):
     def __init__(self, name, transformation):
         super().__init__(name)
         self._transformation = transformation
@@ -76,7 +76,24 @@ class MappedEnumeration(DataItem):
     def collect(self):
         self.set_value(self._transformation())
 
-        
+class MappedEnumeration(DataItem):
+    def __init__(self, name, variable, translation):
+        super().__init__(name)
+        self._variable = variable
+        self._translation = translation
+
+    def collect(self):
+        v = self._variable.get_value()
+        if v is None:
+            self.unavailable()
+        else:
+            if v in self._translation:
+                self.set_value(self._translation[v])
+            elif 'default' in self._translation:                
+                self.set_value(self._translation['default'])
+            else:
+                self.unavailable()
+                
 class Robot(object):
     def add_variable(self, name, path, root = None):
         v = Variable(name, path, root=root, bindings=self._bindings)
@@ -93,47 +110,29 @@ class Robot(object):
 
 
     def add_estop(self):
-        def emergency_stop():
-            v = self._variables["ControllerState"].get_value()
-            if v is None or v == 7:
-                r = 'UNAVAILABLE'
-            elif v == 4:
-                r = 'TRIGGERED'
-            else:
-                r = 'ARMED'
-            return r
-        
-        di = MappedEnumeration("estop", emergency_stop)
+        di = MappedEnumeration("estop", self._variables["ControllerState"], {
+            7: 'UNAVAILABLE',
+            4: 'TRIGGERED',
+            'default': 'ARMED'
+            })
+                               
         self._adapter.add_data_item(di)
 
     def add_controller_mode(self):
-        def mode():
-            v = self._variables["OperatingMode"].get_value()
-            if v is None or v == 6:
-                r = 'UNAVAILABLE'
-            elif v == 0 or v == 4:
-                r = 'AUTOMATIC'
-            elif v == 2 or v == 3 or v == 5:
-                r = 'MANUAL'
-            return r
-            
-        
-        di = MappedEnumeration("controller_mode", mode)
+        di = MappedEnumeration("controller_mode", self.variables['OperatingMode'], {
+            6: 'UNAVAILABLE',
+            0: 'AUTOMATIC', 4: 'AUTOMATIC',
+            2: 'MANUAL', 3: 'MANUAL', 5: 'MANUAL'            
+            })
         self._adapter.add_data_item(di)
         
                         
     def add_execution(self):
-        def execution():
-            v = self._variables["ControllerExecutionState"].get_value()
-            if v is None or v == 0:
-                r = 'UNAVAILABLE'
-            elif v == 1:
-                r = 'ACTIVE'
-            elif v == 2:
-                r = 'READY'
-            return r
-        
-        di = MappedEnumeration("execution", execution)
+        di = MappedEnumeration("execution", self._variables["ControllerExecutionState"], {
+            0: 'UNAVAILABLE',
+            1: 'ACTIVE',
+            2: 'READY'
+            })
         self._adapter.add_data_item(di)
                         
     
