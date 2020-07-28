@@ -60,6 +60,9 @@ class Variable(Node):
         if self._node is not None:
             self._value = self._node.get_value()
         return self._value
+
+    def value(self):
+        return self._value
         
 class MappedDataItem(DataItem):
     def __init__(self, name, variable):
@@ -67,7 +70,7 @@ class MappedDataItem(DataItem):
         self._variable = variable
 
     def collect(self):
-        self.set_value(self._variable.get_value())
+        self.set_value(self._variable.value())
     
 
 class MappedTranform(DataItem):
@@ -85,7 +88,7 @@ class MappedEnumeration(DataItem):
         self._translation = translation
 
     def collect(self):
-        v = self._variable.get_value()
+        v = self._variable.value()
         if v is None:
             self.unavailable()
         else:
@@ -140,7 +143,16 @@ class Robot(object):
             2: 'READY'
             })
         self._adapter.add_data_item(di)
+
+    def value(self, name):
+        return self._variables[name].get_value()
+
+    def variable(self, name):
+        return self._variables[name]
                         
+    def collect(self):
+        for v in self._variables.values():
+            v.get_value()
     
     def __init__(self, adapter, number, root, bindings):
         self._adapter = adapter
@@ -177,7 +189,7 @@ class Robot(object):
             name = f'{root.get_browse_name().Name}_axis'
             self.add_sample(name, '{di}:ParameterSet/{uar}:ActualPosition', root=root)
 
-        axes.each(lambda n: create_position(n))
+        axes.each(create_position)
 
         # Get some of the UA controller stuff
         controllers = Node("{uar}:Controllers")
@@ -188,14 +200,17 @@ class Robot(object):
             self.add_variable("TaskProgramLoaded", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramLoaded", root=root)
             self.add_event("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramName", root=root)
 
-        controllers.each(lambda n: add_controller_variables(n))
+        controllers.each(add_controller_variables)
 
         self.add_estop()
         self.add_execution()
         self.add_controller_mode()
 
 logging.basicConfig(level=logging.WARN)
-client = Client("opc.tcp://robot:robotics@10.211.55.16:61510")
+server = sys.argv[1]
+url = f"opc.tcp://robot:robotics@{server}:61510"
+print(f"Connecting to OPC Server {server}: {url}")
+client = Client(url)
 client.set_security_string("Basic256Sha256,Sign,my_cert.der,my_private_key.pem")
 try:
     client.application_uri = "urn:mtconnect.org:MTConnect:MTConnect"
@@ -215,10 +230,10 @@ try:
               }
 
     adapter = Adapter(('0.0.0.0', 7878))
-    
-    robot1 = Robot(adapter, 1, root, bindings)
-    robot3 = Robot(adapter, 3, root, bindings)
-    robot4 = Robot(adapter, 4, root, bindings)
+
+    robots = [Robot(adapter, 1, root, bindings),              
+              Robot(adapter, 3, root, bindings),
+              Robot(adapter, 4, root, bindings)]
 
     adapter.start()
 
@@ -228,6 +243,7 @@ try:
 
     def gather_forever():
         while adapter.is_running():
+            for r in robots: r.collect()
             adapter.gather(collect_data)
             time.sleep(0.100)
 

@@ -27,7 +27,9 @@ class DataItem:
         return self._value
 
     def set_value(self, value):
-        if self._value != value:
+        if value is None:
+            unavailable()
+        elif self._value != value:
             self._value = value
             self._changed = True
 
