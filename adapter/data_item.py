@@ -54,7 +54,7 @@ class DataItem:
     def sweep(self):
         self._changed = False
 
-    def collect(self): return
+    def gather(self): return
 
     def unavailable(self):
         if self._value:

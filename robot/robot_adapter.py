@@ -69,7 +69,7 @@ class MappedDataItem(DataItem):
         super().__init__(name)
         self._variable = variable
 
-    def collect(self):
+    def gather(self):
         self.set_value(self._variable.value())
     
 
@@ -78,7 +78,7 @@ class MappedTransform(DataItem):
         super().__init__(name)
         self._transformation = transformation
 
-    def collect(self):
+    def gather(self):
         self.set_value(self._transformation())
 
 class MappedEnumeration(DataItem):
@@ -87,7 +87,7 @@ class MappedEnumeration(DataItem):
         self._variable = variable
         self._translation = translation
 
-    def collect(self):
+    def gather(self):
         v = self._variable.value()
         if v is None:
             self.unavailable()
@@ -175,7 +175,7 @@ class Robot(object):
     def variable(self, name):
         return self._variables[name]
                         
-    def gather(self):
+    def collect(self):
         for v in self._variables.values():
             v.get_value()
     
@@ -283,14 +283,14 @@ try:
 
     adapter.start()
 
-    def collect_data(data_items):
+    def gather_data(data_items):
         for d in data_items:
-            d.collect()
+            d.gather()
 
     def gather_forever():
         while adapter.is_running():
-            for r in robots: r.gather()
-            adapter.gather(collect_data)
+            for r in robots: r.collect()
+            adapter.gather(gather_data)
             time.sleep(0.100)
 
     gather_thread = threading.Thread(target = gather_forever)
