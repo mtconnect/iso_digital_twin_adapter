@@ -93,11 +93,7 @@ class MappedEnumeration(DataItem):
             self.unavailable()
         else:
             if v in self._translation:
-                t = self._translation[v]
-                if t is None:
-                    self.unavailable()
-                else:
-                    self.set_value(t)
+                self.set_value(self._translation[v])
             elif 'default' in self._translation:                
                 self.set_value(self._translation['default'])
             else:
