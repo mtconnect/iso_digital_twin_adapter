@@ -37,7 +37,8 @@ class Node(object):
 
     def connect(self, root, bindings):
         self._node = resolve_path(root, self._path, bindings)
-        self._browse_name = self._node.get_browse_name().Name
+        if self._node is not None:
+            self._browse_name = self._node.get_browse_name().Name            
         
     def each(self, function):
         for n in self._node.get_children():
@@ -56,7 +57,8 @@ class Variable(Node):
             self.connect(root, bindings)
 
     def get_value(self):
-        self._value = self._node.get_value()
+        if self._node is not None:
+            self._value = self._node.get_value()
         return self._value
         
 class MappedDataItem(DataItem):
@@ -146,6 +148,10 @@ class Robot(object):
         self._root = root
         self._bindings = dict(bindings)
         self._bindings["number"] = number
+
+
+        print("--------------------------------")
+        print(f"Binding variables for robot {number}")
         self._abb_root = resolve_path(root, "0:Objects/{abbc}:IRC5/{abbc}:rob{number}", self._bindings)
         self._ua_root = resolve_path(root, "0:Objects/{di}:DeviceSet/{di}:rob{number}", self._bindings)
 
@@ -157,13 +163,13 @@ class Robot(object):
         self.add_variable("ControllerState", "{abbc}:ControllerState", root=self._abb_root)
         self.add_variable("ControllerExecutionState", "{abbc}:ControllerExecutionState", root=self._abb_root)
         self.add_event("SpeedRatio", "{abbc}:SpeedRatio", root=self._abb_root)
-        self.add_variable("DrillTool", "{abbc}:RAPID/{abbc}:T_ROB{number}/{abbc}:Tools/{abbc}:DrillTool", root=self._abb_root)
-        self.add_variable("TaskState", "{abbc}:RAPID/{abbc}:T_ROB{number}/{abbc}:TaskState", root=self._abb_root)
-        self.add_variable("TaskExecutionState", "{abbc}:RAPID/{abbc}:T_ROB{number}/{abbc}:TaskExecutionState", root=self._abb_root)
+        self.add_variable("DrillTool", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:Tools/{abbc}:DrillTool", root=self._abb_root)
+        self.add_variable("TaskState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskState", root=self._abb_root)
+        self.add_variable("TaskExecutionState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskExecutionState", root=self._abb_root)
         self.add_variable("IsDone", "{abbc}:IO_System/{abbc}:IO_Signals/{abbc}:IsDone", root=self._abb_root)
 
         # Get the axes position from the UA section
-        axes = Node("{uar}:MotionDevices/{di}:ROB_{number}/{uar}:Axes")
+        axes = Node("{uar}:MotionDevices/{di}:ROB_1/{uar}:Axes")
         axes.connect(self._ua_root, self._bindings)
 
         def create_position(root):
@@ -177,9 +183,9 @@ class Robot(object):
         controllers.connect(self._ua_root, self._bindings)
 
         def add_controller_variables(root):
-            self.add_variable("ExecutionMode", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:ExecutionMode", root=root)
-            self.add_variable("TaskProgramLoaded", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:TaskProgramLoaded", root=root)
-            self.add_event("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:TaskProgramName", root=root)
+            self.add_variable("ExecutionMode", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:ExecutionMode", root=root)
+            self.add_variable("TaskProgramLoaded", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramLoaded", root=root)
+            self.add_event("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramName", root=root)
 
         controllers.each(lambda n: add_controller_variables(n))
 
@@ -204,13 +210,14 @@ try:
                  "di": client.get_namespace_index("http://opcfoundation.org/UA/DI/"), #3
                  "uar": client.get_namespace_index("http://opcfoundation.org/UA/Robotics/"), #4
                  "abbc": client.get_namespace_index("https://abb.com/Robotics/UA/Controller/"), #2
-                 "abbr": client.get_namespace_index("http://abb.com/UA/RoboticsCS/"), #5
-                 "number": 1
+                 "abbr": client.get_namespace_index("http://abb.com/UA/RoboticsCS/") #5
               }
 
     adapter = Adapter(('0.0.0.0', 7878))
     
     robot1 = Robot(adapter, 1, root, bindings)
+    robot3 = Robot(adapter, 3, root, bindings)
+    robot4 = Robot(adapter, 4, root, bindings)
 
     adapter.start()
 
