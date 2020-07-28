@@ -74,8 +74,7 @@ class MappedEnumeration(DataItem):
         self._transformation = transformation
 
     def collect(self):
-        v = variable.get_value()
-        self.set_value(self._transformation(v))
+        self.set_value(self._transformation())
 
         
 class Robot(object):
@@ -86,13 +85,57 @@ class Robot(object):
 
     def add_event(self, name, path, root = None):
         v = self.add_variable(name, path, root = root)
-        sample = MappedDataItem(name, v)
-        self._adapter.add_data_item(sample)
+        di = MappedDataItem(name, v)
+        self._adapter.add_data_item(di)
 
     def add_sample(self, name, path, root = None):
         self.add_event(name, path, root)
-    
+
+
+    def add_estop(self):
+        def emergency_stop():
+            v = self._variables["ControllerState"].get_value()
+            if v is None or v == 7:
+                r = 'UNAVAILABLE'
+            elif v == 4:
+                r = 'TRIGGERED'
+            else:
+                r = 'ARMED'
+            return r
         
+        di = MappedEnumeration("estop", emergency_stop)
+        self._adapter.add_data_item(di)
+
+    def add_controller_mode(self):
+        def mode():
+            v = self._variables["OperatingMode"].get_value()
+            if v is None or v == 6:
+                r = 'UNAVAILABLE'
+            elif v == 0 or v == 4:
+                r = 'AUTOMATIC'
+            elif v == 2 or v == 3 or v == 5:
+                r = 'MANUAL'
+            return r
+            
+        
+        di = MappedEnumeration("controller_mode", mode)
+        self._adapter.add_data_item(di)
+        
+                        
+    def add_execution(self):
+        def execution():
+            v = self._variables["ControllerExecutionState"].get_value()
+            if v is None or v == 0:
+                r = 'UNAVAILABLE'
+            elif v == 1:
+                r = 'ACTIVE'
+            elif v == 2:
+                r = 'READY'
+            return r
+        
+        di = MappedEnumeration("execution", execution)
+        self._adapter.add_data_item(di)
+                        
     
     def __init__(self, adapter, number, root, bindings):
         self._adapter = adapter
@@ -107,9 +150,10 @@ class Robot(object):
 
         # ABB Specific Model
         self.add_variable("SystemID", "{abbc}:SystemID", root = self._abb_root)
+        self.add_variable("OperatingMode", "{abbc}:OperatingMode", root = self._abb_root)
         self.add_variable("ControllerState", "{abbc}:ControllerState", root=self._abb_root)
         self.add_variable("ControllerExecutionState", "{abbc}:ControllerExecutionState", root=self._abb_root)
-        self.add_variable("SpeedRatio", "{abbc}:SpeedRatio", root=self._abb_root)
+        self.add_event("SpeedRatio", "{abbc}:SpeedRatio", root=self._abb_root)
         self.add_variable("DrillTool", "{abbc}:RAPID/{abbc}:T_ROB{number}/{abbc}:Tools/{abbc}:DrillTool", root=self._abb_root)
         self.add_variable("TaskState", "{abbc}:RAPID/{abbc}:T_ROB{number}/{abbc}:TaskState", root=self._abb_root)
         self.add_variable("TaskExecutionState", "{abbc}:RAPID/{abbc}:T_ROB{number}/{abbc}:TaskExecutionState", root=self._abb_root)
@@ -132,12 +176,13 @@ class Robot(object):
         def add_controller_variables(root):
             self.add_variable("ExecutionMode", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:ExecutionMode", root=root)
             self.add_variable("TaskProgramLoaded", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:TaskProgramLoaded", root=root)
-            self.add_variable("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:TaskProgramName", root=root)
+            self.add_event("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:TaskProgramName", root=root)
 
         controllers.each(lambda n: add_controller_variables(n))
 
-
-        print(self._variables)
+        self.add_estop()
+        self.add_execution()
+        self.add_controller_mode()
 
 logging.basicConfig(level=logging.WARN)
 client = Client("opc.tcp://robot:robotics@10.211.55.16:61510")
