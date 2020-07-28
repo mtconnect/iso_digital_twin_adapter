@@ -175,7 +175,7 @@ class Robot(object):
     def variable(self, name):
         return self._variables[name]
                         
-    def collect(self):
+    def gather(self):
         for v in self._variables.values():
             v.get_value()
     
@@ -289,7 +289,7 @@ try:
 
     def gather_forever():
         while adapter.is_running():
-            for r in robots: r.collect()
+            for r in robots: r.gather()
             adapter.gather(collect_data)
             time.sleep(0.100)
 
