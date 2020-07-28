@@ -28,7 +28,7 @@ class DataItem:
 
     def set_value(self, value):
         if value is None:
-            unavailable()
+            self.unavailable()
         elif self._value != value:
             self._value = value
             self._changed = True
@@ -53,6 +53,8 @@ class DataItem:
 
     def sweep(self):
         self._changed = False
+
+    def collect(self): return
 
     def unavailable(self):
         if self._value:

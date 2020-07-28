@@ -1,0 +1,789 @@
+Browsing node ns=3;i=5001 at opc.tcp://robot:robotics@10.211.55.16:61510
+
+DisplayName                    NodeId                    BrowseName                Value                    
+
+rob1                           ns=3;i=1                  3:rob1                   
+  MotionDevices                  ns=3;i=2                  4:MotionDevices          
+    ROB_1                          ns=3;i=49                 3:ROB_1                  
+      MotionDeviceCategory           ns=3;i=50                 4:MotionDeviceCategory   , 0  
+      Axes                           ns=3;i=51                 4:Axes                   
+        Rax_1                          ns=3;i=412                3:Rax_1                  
+          MotionProfile                  ns=3;i=413                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=414                4:AdditionalLoad         
+            Mass                           ns=3;i=415                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=416                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=417                3:ParameterSet           
+            ActualPosition                 ns=3;i=418                4:ActualPosition         , 8.468309468370391e-14
+              EngineeringUnits               ns=3;i=419                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=420                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=421                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=422                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=423                0:EngineeringUnits       , None
+        Rax_2                          ns=3;i=424                3:Rax_2                  
+          MotionProfile                  ns=3;i=425                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=426                4:AdditionalLoad         
+            Mass                           ns=3;i=427                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=428                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=429                3:ParameterSet           
+            ActualPosition                 ns=3;i=430                4:ActualPosition         , 4.045595510069472e-13
+              EngineeringUnits               ns=3;i=431                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=432                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=433                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=434                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=435                0:EngineeringUnits       , None
+        Rax_3                          ns=3;i=436                3:Rax_3                  
+          MotionProfile                  ns=3;i=437                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=438                4:AdditionalLoad         
+            Mass                           ns=3;i=439                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=440                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=441                3:ParameterSet           
+            ActualPosition                 ns=3;i=442                4:ActualPosition         , -1.574807721293342e-13
+              EngineeringUnits               ns=3;i=443                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=444                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=445                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=446                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=447                0:EngineeringUnits       , None
+        Rax_4                          ns=3;i=448                3:Rax_4                  
+          MotionProfile                  ns=3;i=449                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=450                4:AdditionalLoad         
+            Mass                           ns=3;i=451                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=452                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=453                3:ParameterSet           
+            ActualPosition                 ns=3;i=454                4:ActualPosition         , 1.5299537353165304e-13
+              EngineeringUnits               ns=3;i=455                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=456                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=457                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=458                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=459                0:EngineeringUnits       , None
+        Rax_5                          ns=3;i=460                3:Rax_5                  
+          MotionProfile                  ns=3;i=461                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=462                4:AdditionalLoad         
+            Mass                           ns=3;i=463                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=464                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=465                3:ParameterSet           
+            ActualPosition                 ns=3;i=466                4:ActualPosition         , 4.263660279869852e-13
+              EngineeringUnits               ns=3;i=467                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=468                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=469                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=470                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=471                0:EngineeringUnits       , None
+        Rax_6                          ns=3;i=472                3:Rax_6                  
+          MotionProfile                  ns=3;i=473                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=474                4:AdditionalLoad         
+            Mass                           ns=3;i=475                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=476                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=477                3:ParameterSet           
+            ActualPosition                 ns=3;i=478                4:ActualPosition         , -6.353672742012012e-14
+              EngineeringUnits               ns=3;i=479                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=480                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=481                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=482                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=483                0:EngineeringUnits       , None
+      PowerTrains                    ns=3;i=52                 4:PowerTrains            
+        rob1_1                         ns=3;i=497                3:rob1_1                 
+          rob1_1                         ns=3;i=498                3:rob1_1                 
+            Manufacturer                   ns=3;i=499                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=500                3:Model                  , None
+            ProductCode                    ns=3;i=501                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=502                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=503                3:ParameterSet           
+              BrakeReleased                  ns=3;i=504                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=505                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=506                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=507                4:EffectiveLoadRate      , None
+          rob1_1                         ns=3;i=498                3:rob1_1                 
+            Manufacturer                   ns=3;i=499                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=500                3:Model                  , None
+            ProductCode                    ns=3;i=501                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=502                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=503                3:ParameterSet           
+              BrakeReleased                  ns=3;i=504                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=505                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=506                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=507                4:EffectiveLoadRate      , None
+        rob1_2                         ns=3;i=508                3:rob1_2                 
+          rob1_2                         ns=3;i=509                3:rob1_2                 
+            Manufacturer                   ns=3;i=510                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=511                3:Model                  , None
+            ProductCode                    ns=3;i=512                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=513                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=514                3:ParameterSet           
+              BrakeReleased                  ns=3;i=515                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=516                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=517                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=518                4:EffectiveLoadRate      , None
+          rob1_2                         ns=3;i=509                3:rob1_2                 
+            Manufacturer                   ns=3;i=510                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=511                3:Model                  , None
+            ProductCode                    ns=3;i=512                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=513                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=514                3:ParameterSet           
+              BrakeReleased                  ns=3;i=515                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=516                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=517                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=518                4:EffectiveLoadRate      , None
+        rob1_3                         ns=3;i=519                3:rob1_3                 
+          rob1_3                         ns=3;i=520                3:rob1_3                 
+            Manufacturer                   ns=3;i=521                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=522                3:Model                  , None
+            ProductCode                    ns=3;i=523                3:ProductCode            , 3HAC031105-001
+            SerialNumber                   ns=3;i=524                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=525                3:ParameterSet           
+              BrakeReleased                  ns=3;i=526                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=527                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=528                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=529                4:EffectiveLoadRate      , None
+          rob1_3                         ns=3;i=520                3:rob1_3                 
+            Manufacturer                   ns=3;i=521                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=522                3:Model                  , None
+            ProductCode                    ns=3;i=523                3:ProductCode            , 3HAC031105-001
+            SerialNumber                   ns=3;i=524                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=525                3:ParameterSet           
+              BrakeReleased                  ns=3;i=526                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=527                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=528                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=529                4:EffectiveLoadRate      , None
+        rob1_4                         ns=3;i=530                3:rob1_4                 
+          rob1_4                         ns=3;i=531                3:rob1_4                 
+            Manufacturer                   ns=3;i=532                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=533                3:Model                  , None
+            ProductCode                    ns=3;i=534                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=535                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=536                3:ParameterSet           
+              BrakeReleased                  ns=3;i=537                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=538                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=539                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=540                4:EffectiveLoadRate      , None
+          rob1_4                         ns=3;i=531                3:rob1_4                 
+            Manufacturer                   ns=3;i=532                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=533                3:Model                  , None
+            ProductCode                    ns=3;i=534                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=535                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=536                3:ParameterSet           
+              BrakeReleased                  ns=3;i=537                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=538                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=539                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=540                4:EffectiveLoadRate      , None
+        rob1_5                         ns=3;i=541                3:rob1_5                 
+          rob1_5                         ns=3;i=542                3:rob1_5                 
+            Manufacturer                   ns=3;i=543                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=544                3:Model                  , None
+            ProductCode                    ns=3;i=545                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=546                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=547                3:ParameterSet           
+              BrakeReleased                  ns=3;i=548                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=549                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=550                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=551                4:EffectiveLoadRate      , None
+          rob1_5                         ns=3;i=542                3:rob1_5                 
+            Manufacturer                   ns=3;i=543                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=544                3:Model                  , None
+            ProductCode                    ns=3;i=545                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=546                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=547                3:ParameterSet           
+              BrakeReleased                  ns=3;i=548                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=549                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=550                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=551                4:EffectiveLoadRate      , None
+        rob1_6                         ns=3;i=552                3:rob1_6                 
+          rob1_6                         ns=3;i=553                3:rob1_6                 
+            Manufacturer                   ns=3;i=554                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=555                3:Model                  , None
+            ProductCode                    ns=3;i=556                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=557                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=558                3:ParameterSet           
+              BrakeReleased                  ns=3;i=559                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=560                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=561                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=562                4:EffectiveLoadRate      , None
+          rob1_6                         ns=3;i=553                3:rob1_6                 
+            Manufacturer                   ns=3;i=554                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=555                3:Model                  , None
+            ProductCode                    ns=3;i=556                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=557                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=558                3:ParameterSet           
+              BrakeReleased                  ns=3;i=559                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=560                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=561                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=562                4:EffectiveLoadRate      , None
+      FlangeLoad                     ns=3;i=53                 4:FlangeLoad             
+        Mass                           ns=3;i=54                 4:Mass                   , 0.0010000000474974513
+          EngineeringUnits               ns=3;i=55                 0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+      AdditionalComponents           ns=3;i=56                 4:AdditionalComponents   
+      Manufacturer                   ns=3;i=57                 3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+      Model                          ns=3;i=58                 3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:IRB_ELBOW_BASE)
+      ProductCode                    ns=3;i=59                 3:ProductCode            ,    
+      SerialNumber                   ns=3;i=60                 3:SerialNumber           , 0000-0
+      ParameterSet                   ns=3;i=61                 3:ParameterSet           
+        OnPath                         ns=3;i=62                 4:OnPath                 , None
+        InControl                      ns=3;i=63                 4:InControl              , True
+        SpeedOverride                  ns=3;i=64                 4:SpeedOverride          , 100
+  Controllers                    ns=3;i=3                  4:Controllers            
+    WILLIAMSOBEBEB1                ns=3;i=563                3:WILLIAMSOBEBEB1        
+      CurrentUser                    ns=3;i=564                4:CurrentUser            
+        Level                          ns=3;i=565                4:Level                  , UAS_BACKUP, UAS_CALIBRATE, UAS_CFG_WRITE, UAS_CONTROLLER_PROPERTIES_WRITE, UAS_EVENTLOG_CLEAR, UAS_FTP_READ, UAS_FTP_WRITE, UAS_FULL_ACCESS, UAS_FULL_ACCESS, UAS_IO_WRITE, UAS_LOCK_SAFETY_CONFIG, UAS_RAPID_CURRVALUE, UAS_RAPID_DEBUG, UAS_RAPID_EDIT, UAS_RAPID_EXECUTE, UAS_RAPID_LOADPROGRAM, UAS_RAPID_MODPOS, UAS_REMOTE_LOGIN, UAS_REMOTE_WARMSTART, UAS_RESTORE, UAS_REVOLUTION_COUNTER_UPDATE, UAS_SAFETY_CONFIG, UAS_SPEED_DECREASE, UAS_SYSTEM_ADMINISTRATION, UAS_SYSUPDATE, UAS_UAS_ADMINISTRATION
+        Name                           ns=3;i=587                3:Name                   , Default User
+      Components                     ns=3;i=566                4:Components             
+      Software                       ns=3;i=567                4:Software               
+        RobotWare                      ns=3;i=588                3:RobotWare              
+          Manufacturer                   ns=3;i=589                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+          Model                          ns=3;i=590                3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:RobotWare)
+          SoftwareRevision               ns=3;i=591                3:SoftwareRevision       , 6.7.0.1
+      TaskControls                   ns=3;i=568                4:TaskControls           
+        T_ROB1                         ns=3;i=592                3:T_ROB1                 
+          ComponentName                  ns=3;i=593                3:ComponentName          , LocalizedText(Encoding:2, Locale:None, Text:T_ROB1)
+          ParameterSet                   ns=3;i=594                3:ParameterSet           
+            TaskProgramName                ns=3;i=595                4:TaskProgramName        , StanModule
+            TaskProgramLoaded              ns=3;i=596                4:TaskProgramLoaded      , True
+            ExecutionMode                  ns=3;i=597                4:ExecutionMode          , None
+      Manufacturer                   ns=3;i=569                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+      Model                          ns=3;i=570                3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:IRC5)
+      ProductCode                    ns=3;i=571                3:ProductCode            ,    
+      SerialNumber                   ns=3;i=572                3:SerialNumber           ,    
+      ParameterSet                   ns=3;i=573                3:ParameterSet           
+        TotalPowerOnTime               ns=3;i=574                4:TotalPowerOnTime       , None
+        StartUpTime                    ns=3;i=575                4:StartUpTime            , None
+        UpsState                       ns=3;i=576                4:UpsState               , None
+        TotalEnergyConsumption         ns=3;i=577                4:TotalEnergyConsumption , None
+          EngineeringUnits               ns=3;i=578                0:EngineeringUnits       , None
+        CabinetFanSpeed                ns=3;i=579                4:CabinetFanSpeed        , None
+          EngineeringUnits               ns=3;i=580                0:EngineeringUnits       , None
+        CPUFanSpeed                    ns=3;i=581                4:CPUFanSpeed            , None
+          EngineeringUnits               ns=3;i=582                0:EngineeringUnits       , None
+        InputVoltage                   ns=3;i=583                4:InputVoltage           , None
+          EngineeringUnits               ns=3;i=584                0:EngineeringUnits       , None
+        Temperature                    ns=3;i=585                4:Temperature            , None
+          EngineeringUnits               ns=3;i=586                0:EngineeringUnits       , None
+  SafetyStates                   ns=3;i=4                  4:SafetyStates           
+    SAF                            ns=3;i=598                3:SAF                    
+      EmergencyStopFunctions         ns=3;i=599                4:EmergencyStopFunctions 
+      ProtectiveStopFunctions        ns=3;i=600                4:ProtectiveStopFunctions
+      ParameterSet                   ns=3;i=601                3:ParameterSet           
+        OperationalMode                ns=3;i=602                4:OperationalMode        , 3  
+        EmergencyStop                  ns=3;i=603                4:EmergencyStop          , False
+        ProtectiveStop                 ns=3;i=604                4:ProtectiveStop         , False
+rob2                           ns=3;i=5                  3:rob2                   
+  MotionDevices                  ns=3;i=6                  4:MotionDevices          
+  Controllers                    ns=3;i=7                  4:Controllers            
+  SafetyStates                   ns=3;i=8                  4:SafetyStates           
+rob3                           ns=3;i=9                  3:rob3                   
+  MotionDevices                  ns=3;i=10                 4:MotionDevices          
+    ROB_1                          ns=3;i=17                 3:ROB_1                  
+      MotionDeviceCategory           ns=3;i=18                 4:MotionDeviceCategory   , 0  
+      Axes                           ns=3;i=19                 4:Axes                   
+        Rax_1                          ns=3;i=65                 3:Rax_1                  
+          MotionProfile                  ns=3;i=66                 4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=67                 4:AdditionalLoad         
+            Mass                           ns=3;i=68                 4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=69                 0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=70                 3:ParameterSet           
+            ActualPosition                 ns=3;i=71                 4:ActualPosition         , -5.250410024283669e-13
+              EngineeringUnits               ns=3;i=72                 0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=73                 4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=74                 0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=75                 4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=76                 0:EngineeringUnits       , None
+        Rax_2                          ns=3;i=77                 3:Rax_2                  
+          MotionProfile                  ns=3;i=78                 4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=79                 4:AdditionalLoad         
+            Mass                           ns=3;i=80                 4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=81                 0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=82                 3:ParameterSet           
+            ActualPosition                 ns=3;i=83                 4:ActualPosition         , -2.0104608895645665e-13
+              EngineeringUnits               ns=3;i=84                 0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=85                 4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=86                 0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=87                 4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=88                 0:EngineeringUnits       , None
+        Rax_3                          ns=3;i=89                 3:Rax_3                  
+          MotionProfile                  ns=3;i=90                 4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=91                 4:AdditionalLoad         
+            Mass                           ns=3;i=92                 4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=93                 0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=94                 3:ParameterSet           
+            ActualPosition                 ns=3;i=95                 4:ActualPosition         , -1.0922170692829677e-13
+              EngineeringUnits               ns=3;i=96                 0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=97                 4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=98                 0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=99                 4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=100                0:EngineeringUnits       , None
+        Rax_4                          ns=3;i=101                3:Rax_4                  
+          MotionProfile                  ns=3;i=102                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=103                4:AdditionalLoad         
+            Mass                           ns=3;i=104                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=105                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=106                3:ParameterSet           
+            ActualPosition                 ns=3;i=107                4:ActualPosition         , 6.026149495857655e-14
+              EngineeringUnits               ns=3;i=108                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=109                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=110                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=111                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=112                0:EngineeringUnits       , None
+        Rax_5                          ns=3;i=113                3:Rax_5                  
+          MotionProfile                  ns=3;i=114                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=115                4:AdditionalLoad         
+            Mass                           ns=3;i=116                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=117                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=118                3:ParameterSet           
+            ActualPosition                 ns=3;i=119                4:ActualPosition         , 4.872337816953613e-14
+              EngineeringUnits               ns=3;i=120                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=121                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=122                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=123                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=124                0:EngineeringUnits       , None
+        Rax_6                          ns=3;i=125                3:Rax_6                  
+          MotionProfile                  ns=3;i=126                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=127                4:AdditionalLoad         
+            Mass                           ns=3;i=128                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=129                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=130                3:ParameterSet           
+            ActualPosition                 ns=3;i=131                4:ActualPosition         , 2.2055008644036866e-13
+              EngineeringUnits               ns=3;i=132                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=133                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=134                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=135                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=136                0:EngineeringUnits       , None
+      PowerTrains                    ns=3;i=20                 4:PowerTrains            
+        rob1_1                         ns=3;i=137                3:rob1_1                 
+          rob1_1                         ns=3;i=138                3:rob1_1                 
+            Manufacturer                   ns=3;i=139                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=140                3:Model                  , None
+            ProductCode                    ns=3;i=141                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=142                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=143                3:ParameterSet           
+              BrakeReleased                  ns=3;i=144                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=145                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=146                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=147                4:EffectiveLoadRate      , None
+          rob1_1                         ns=3;i=138                3:rob1_1                 
+            Manufacturer                   ns=3;i=139                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=140                3:Model                  , None
+            ProductCode                    ns=3;i=141                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=142                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=143                3:ParameterSet           
+              BrakeReleased                  ns=3;i=144                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=145                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=146                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=147                4:EffectiveLoadRate      , None
+        rob1_2                         ns=3;i=148                3:rob1_2                 
+          rob1_2                         ns=3;i=149                3:rob1_2                 
+            Manufacturer                   ns=3;i=150                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=151                3:Model                  , None
+            ProductCode                    ns=3;i=152                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=153                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=154                3:ParameterSet           
+              BrakeReleased                  ns=3;i=155                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=156                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=157                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=158                4:EffectiveLoadRate      , None
+          rob1_2                         ns=3;i=149                3:rob1_2                 
+            Manufacturer                   ns=3;i=150                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=151                3:Model                  , None
+            ProductCode                    ns=3;i=152                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=153                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=154                3:ParameterSet           
+              BrakeReleased                  ns=3;i=155                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=156                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=157                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=158                4:EffectiveLoadRate      , None
+        rob1_3                         ns=3;i=159                3:rob1_3                 
+          rob1_3                         ns=3;i=160                3:rob1_3                 
+            Manufacturer                   ns=3;i=161                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=162                3:Model                  , None
+            ProductCode                    ns=3;i=163                3:ProductCode            , 3HAC031105-001
+            SerialNumber                   ns=3;i=164                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=165                3:ParameterSet           
+              BrakeReleased                  ns=3;i=166                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=167                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=168                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=169                4:EffectiveLoadRate      , None
+          rob1_3                         ns=3;i=160                3:rob1_3                 
+            Manufacturer                   ns=3;i=161                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=162                3:Model                  , None
+            ProductCode                    ns=3;i=163                3:ProductCode            , 3HAC031105-001
+            SerialNumber                   ns=3;i=164                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=165                3:ParameterSet           
+              BrakeReleased                  ns=3;i=166                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=167                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=168                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=169                4:EffectiveLoadRate      , None
+        rob1_4                         ns=3;i=170                3:rob1_4                 
+          rob1_4                         ns=3;i=171                3:rob1_4                 
+            Manufacturer                   ns=3;i=172                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=173                3:Model                  , None
+            ProductCode                    ns=3;i=174                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=175                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=176                3:ParameterSet           
+              BrakeReleased                  ns=3;i=177                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=178                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=179                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=180                4:EffectiveLoadRate      , None
+          rob1_4                         ns=3;i=171                3:rob1_4                 
+            Manufacturer                   ns=3;i=172                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=173                3:Model                  , None
+            ProductCode                    ns=3;i=174                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=175                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=176                3:ParameterSet           
+              BrakeReleased                  ns=3;i=177                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=178                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=179                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=180                4:EffectiveLoadRate      , None
+        rob1_5                         ns=3;i=181                3:rob1_5                 
+          rob1_5                         ns=3;i=182                3:rob1_5                 
+            Manufacturer                   ns=3;i=183                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=184                3:Model                  , None
+            ProductCode                    ns=3;i=185                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=186                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=187                3:ParameterSet           
+              BrakeReleased                  ns=3;i=188                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=189                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=190                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=191                4:EffectiveLoadRate      , None
+          rob1_5                         ns=3;i=182                3:rob1_5                 
+            Manufacturer                   ns=3;i=183                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=184                3:Model                  , None
+            ProductCode                    ns=3;i=185                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=186                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=187                3:ParameterSet           
+              BrakeReleased                  ns=3;i=188                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=189                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=190                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=191                4:EffectiveLoadRate      , None
+        rob1_6                         ns=3;i=192                3:rob1_6                 
+          rob1_6                         ns=3;i=193                3:rob1_6                 
+            Manufacturer                   ns=3;i=194                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=195                3:Model                  , None
+            ProductCode                    ns=3;i=196                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=197                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=198                3:ParameterSet           
+              BrakeReleased                  ns=3;i=199                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=200                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=201                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=202                4:EffectiveLoadRate      , None
+          rob1_6                         ns=3;i=193                3:rob1_6                 
+            Manufacturer                   ns=3;i=194                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=195                3:Model                  , None
+            ProductCode                    ns=3;i=196                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=197                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=198                3:ParameterSet           
+              BrakeReleased                  ns=3;i=199                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=200                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=201                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=202                4:EffectiveLoadRate      , None
+      FlangeLoad                     ns=3;i=21                 4:FlangeLoad             
+        Mass                           ns=3;i=22                 4:Mass                   , 0.0010000000474974513
+          EngineeringUnits               ns=3;i=23                 0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+      AdditionalComponents           ns=3;i=24                 4:AdditionalComponents   
+      Manufacturer                   ns=3;i=25                 3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+      Model                          ns=3;i=26                 3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:IRB_ELBOW_BASE)
+      ProductCode                    ns=3;i=27                 3:ProductCode            ,    
+      SerialNumber                   ns=3;i=28                 3:SerialNumber           , 0000-0
+      ParameterSet                   ns=3;i=29                 3:ParameterSet           
+        OnPath                         ns=3;i=30                 4:OnPath                 , None
+        InControl                      ns=3;i=31                 4:InControl              , True
+        SpeedOverride                  ns=3;i=32                 4:SpeedOverride          , 100
+  Controllers                    ns=3;i=11                 4:Controllers            
+    WILLIAMSOBEBEB1                ns=3;i=298                3:WILLIAMSOBEBEB1        
+      CurrentUser                    ns=3;i=299                4:CurrentUser            
+        Level                          ns=3;i=300                4:Level                  , UAS_BACKUP, UAS_CALIBRATE, UAS_CFG_WRITE, UAS_CONTROLLER_PROPERTIES_WRITE, UAS_EVENTLOG_CLEAR, UAS_FTP_READ, UAS_FTP_WRITE, UAS_FULL_ACCESS, UAS_FULL_ACCESS, UAS_IO_WRITE, UAS_LOCK_SAFETY_CONFIG, UAS_RAPID_CURRVALUE, UAS_RAPID_DEBUG, UAS_RAPID_EDIT, UAS_RAPID_EXECUTE, UAS_RAPID_LOADPROGRAM, UAS_RAPID_MODPOS, UAS_REMOTE_LOGIN, UAS_REMOTE_WARMSTART, UAS_RESTORE, UAS_REVOLUTION_COUNTER_UPDATE, UAS_SAFETY_CONFIG, UAS_SPEED_DECREASE, UAS_SYSTEM_ADMINISTRATION, UAS_SYSUPDATE, UAS_UAS_ADMINISTRATION
+        Name                           ns=3;i=322                3:Name                   , Default User
+      Components                     ns=3;i=301                4:Components             
+      Software                       ns=3;i=302                4:Software               
+        RobotWare                      ns=3;i=323                3:RobotWare              
+          Manufacturer                   ns=3;i=324                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+          Model                          ns=3;i=325                3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:RobotWare)
+          SoftwareRevision               ns=3;i=326                3:SoftwareRevision       , 6.7.0.1
+      TaskControls                   ns=3;i=303                4:TaskControls           
+        T_ROB1                         ns=3;i=327                3:T_ROB1                 
+          ComponentName                  ns=3;i=328                3:ComponentName          , LocalizedText(Encoding:2, Locale:None, Text:T_ROB1)
+          ParameterSet                   ns=3;i=329                3:ParameterSet           
+            TaskProgramName                ns=3;i=330                4:TaskProgramName        , KennyWorkingPlan
+            TaskProgramLoaded              ns=3;i=331                4:TaskProgramLoaded      , True
+            ExecutionMode                  ns=3;i=332                4:ExecutionMode          , None
+      Manufacturer                   ns=3;i=304                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+      Model                          ns=3;i=305                3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:IRC5)
+      ProductCode                    ns=3;i=306                3:ProductCode            ,    
+      SerialNumber                   ns=3;i=307                3:SerialNumber           ,    
+      ParameterSet                   ns=3;i=308                3:ParameterSet           
+        TotalPowerOnTime               ns=3;i=309                4:TotalPowerOnTime       , None
+        StartUpTime                    ns=3;i=310                4:StartUpTime            , None
+        UpsState                       ns=3;i=311                4:UpsState               , None
+        TotalEnergyConsumption         ns=3;i=312                4:TotalEnergyConsumption , None
+          EngineeringUnits               ns=3;i=313                0:EngineeringUnits       , None
+        CabinetFanSpeed                ns=3;i=314                4:CabinetFanSpeed        , None
+          EngineeringUnits               ns=3;i=315                0:EngineeringUnits       , None
+        CPUFanSpeed                    ns=3;i=316                4:CPUFanSpeed            , None
+          EngineeringUnits               ns=3;i=317                0:EngineeringUnits       , None
+        InputVoltage                   ns=3;i=318                4:InputVoltage           , None
+          EngineeringUnits               ns=3;i=319                0:EngineeringUnits       , None
+        Temperature                    ns=3;i=320                4:Temperature            , None
+          EngineeringUnits               ns=3;i=321                0:EngineeringUnits       , None
+  SafetyStates                   ns=3;i=12                 4:SafetyStates           
+    SAF                            ns=3;i=343                3:SAF                    
+      EmergencyStopFunctions         ns=3;i=344                4:EmergencyStopFunctions 
+      ProtectiveStopFunctions        ns=3;i=345                4:ProtectiveStopFunctions
+      ParameterSet                   ns=3;i=346                3:ParameterSet           
+        OperationalMode                ns=3;i=347                4:OperationalMode        , 3  
+        EmergencyStop                  ns=3;i=348                4:EmergencyStop          , False
+        ProtectiveStop                 ns=3;i=349                4:ProtectiveStop         , False
+rob4                           ns=3;i=13                 3:rob4                   
+  MotionDevices                  ns=3;i=14                 4:MotionDevices          
+    ROB_1                          ns=3;i=33                 3:ROB_1                  
+      MotionDeviceCategory           ns=3;i=34                 4:MotionDeviceCategory   , 0  
+      Axes                           ns=3;i=35                 4:Axes                   
+        Rax_1                          ns=3;i=203                3:Rax_1                  
+          MotionProfile                  ns=3;i=204                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=205                4:AdditionalLoad         
+            Mass                           ns=3;i=206                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=207                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=208                3:ParameterSet           
+            ActualPosition                 ns=3;i=209                4:ActualPosition         , 3.3934804293846155e-13
+              EngineeringUnits               ns=3;i=210                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=211                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=212                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=213                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=214                0:EngineeringUnits       , None
+        Rax_2                          ns=3;i=215                3:Rax_2                  
+          MotionProfile                  ns=3;i=216                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=217                4:AdditionalLoad         
+            Mass                           ns=3;i=218                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=219                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=220                3:ParameterSet           
+            ActualPosition                 ns=3;i=221                4:ActualPosition         , 1.0201049531997908e-13
+              EngineeringUnits               ns=3;i=222                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=223                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=224                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=225                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=226                0:EngineeringUnits       , None
+        Rax_3                          ns=3;i=227                3:Rax_3                  
+          MotionProfile                  ns=3;i=228                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=229                4:AdditionalLoad         
+            Mass                           ns=3;i=230                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=231                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=232                3:ParameterSet           
+            ActualPosition                 ns=3;i=233                4:ActualPosition         , -6.173764976894272e-14
+              EngineeringUnits               ns=3;i=234                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=235                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=236                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=237                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=238                0:EngineeringUnits       , None
+        Rax_4                          ns=3;i=239                3:Rax_4                  
+          MotionProfile                  ns=3;i=240                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=241                4:AdditionalLoad         
+            Mass                           ns=3;i=242                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=243                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=244                3:ParameterSet           
+            ActualPosition                 ns=3;i=245                4:ActualPosition         , -1.896796250882432e-13
+              EngineeringUnits               ns=3;i=246                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=247                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=248                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=249                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=250                0:EngineeringUnits       , None
+        Rax_5                          ns=3;i=251                3:Rax_5                  
+          MotionProfile                  ns=3;i=252                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=253                4:AdditionalLoad         
+            Mass                           ns=3;i=254                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=255                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=256                3:ParameterSet           
+            ActualPosition                 ns=3;i=257                4:ActualPosition         , -1.800743764984649e-14
+              EngineeringUnits               ns=3;i=258                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=259                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=260                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=261                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=262                0:EngineeringUnits       , None
+        Rax_6                          ns=3;i=263                3:Rax_6                  
+          MotionProfile                  ns=3;i=264                4:MotionProfile          , 0  
+          AdditionalLoad                 ns=3;i=265                4:AdditionalLoad         
+            Mass                           ns=3;i=266                4:Mass                   , 0.0
+              EngineeringUnits               ns=3;i=267                0:EngineeringUnits       , None
+          ParameterSet                   ns=3;i=268                3:ParameterSet           
+            ActualPosition                 ns=3;i=269                4:ActualPosition         , -2.292172528173264e-13
+              EngineeringUnits               ns=3;i=270                0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+            ActualSpeed                    ns=3;i=271                4:ActualSpeed            , None
+              EngineeringUnits               ns=3;i=272                0:EngineeringUnits       , None
+            ActualAcceleration             ns=3;i=273                4:ActualAcceleration     , None
+              EngineeringUnits               ns=3;i=274                0:EngineeringUnits       , None
+      PowerTrains                    ns=3;i=36                 4:PowerTrains            
+        rob1_1                         ns=3;i=275                3:rob1_1                 
+          rob1_1                         ns=3;i=276                3:rob1_1                 
+            Manufacturer                   ns=3;i=277                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=278                3:Model                  , None
+            ProductCode                    ns=3;i=279                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=280                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=281                3:ParameterSet           
+              BrakeReleased                  ns=3;i=282                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=283                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=284                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=285                4:EffectiveLoadRate      , None
+          rob1_1                         ns=3;i=276                3:rob1_1                 
+            Manufacturer                   ns=3;i=277                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=278                3:Model                  , None
+            ProductCode                    ns=3;i=279                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=280                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=281                3:ParameterSet           
+              BrakeReleased                  ns=3;i=282                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=283                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=284                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=285                4:EffectiveLoadRate      , None
+        rob1_2                         ns=3;i=286                3:rob1_2                 
+          rob1_2                         ns=3;i=287                3:rob1_2                 
+            Manufacturer                   ns=3;i=288                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=289                3:Model                  , None
+            ProductCode                    ns=3;i=290                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=291                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=292                3:ParameterSet           
+              BrakeReleased                  ns=3;i=293                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=294                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=295                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=296                4:EffectiveLoadRate      , None
+          rob1_2                         ns=3;i=287                3:rob1_2                 
+            Manufacturer                   ns=3;i=288                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=289                3:Model                  , None
+            ProductCode                    ns=3;i=290                3:ProductCode            , 3HAC031106-001
+            SerialNumber                   ns=3;i=291                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=292                3:ParameterSet           
+              BrakeReleased                  ns=3;i=293                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=294                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=295                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=296                4:EffectiveLoadRate      , None
+        rob1_3                         ns=3;i=297                3:rob1_3                 
+          rob1_3                         ns=3;i=333                3:rob1_3                 
+            Manufacturer                   ns=3;i=334                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=335                3:Model                  , None
+            ProductCode                    ns=3;i=336                3:ProductCode            , 3HAC031105-001
+            SerialNumber                   ns=3;i=337                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=338                3:ParameterSet           
+              BrakeReleased                  ns=3;i=339                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=340                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=341                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=342                4:EffectiveLoadRate      , None
+          rob1_3                         ns=3;i=333                3:rob1_3                 
+            Manufacturer                   ns=3;i=334                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=335                3:Model                  , None
+            ProductCode                    ns=3;i=336                3:ProductCode            , 3HAC031105-001
+            SerialNumber                   ns=3;i=337                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=338                3:ParameterSet           
+              BrakeReleased                  ns=3;i=339                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=340                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=341                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=342                4:EffectiveLoadRate      , None
+        rob1_4                         ns=3;i=350                3:rob1_4                 
+          rob1_4                         ns=3;i=351                3:rob1_4                 
+            Manufacturer                   ns=3;i=352                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=353                3:Model                  , None
+            ProductCode                    ns=3;i=354                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=355                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=356                3:ParameterSet           
+              BrakeReleased                  ns=3;i=357                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=358                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=359                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=360                4:EffectiveLoadRate      , None
+          rob1_4                         ns=3;i=351                3:rob1_4                 
+            Manufacturer                   ns=3;i=352                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=353                3:Model                  , None
+            ProductCode                    ns=3;i=354                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=355                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=356                3:ParameterSet           
+              BrakeReleased                  ns=3;i=357                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=358                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=359                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=360                4:EffectiveLoadRate      , None
+        rob1_5                         ns=3;i=361                3:rob1_5                 
+          rob1_5                         ns=3;i=362                3:rob1_5                 
+            Manufacturer                   ns=3;i=363                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=364                3:Model                  , None
+            ProductCode                    ns=3;i=365                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=366                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=367                3:ParameterSet           
+              BrakeReleased                  ns=3;i=368                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=369                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=370                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=371                4:EffectiveLoadRate      , None
+          rob1_5                         ns=3;i=362                3:rob1_5                 
+            Manufacturer                   ns=3;i=363                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=364                3:Model                  , None
+            ProductCode                    ns=3;i=365                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=366                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=367                3:ParameterSet           
+              BrakeReleased                  ns=3;i=368                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=369                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=370                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=371                4:EffectiveLoadRate      , None
+        rob1_6                         ns=3;i=372                3:rob1_6                 
+          rob1_6                         ns=3;i=373                3:rob1_6                 
+            Manufacturer                   ns=3;i=374                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=375                3:Model                  , None
+            ProductCode                    ns=3;i=376                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=377                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=378                3:ParameterSet           
+              BrakeReleased                  ns=3;i=379                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=380                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=381                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=382                4:EffectiveLoadRate      , None
+          rob1_6                         ns=3;i=373                3:rob1_6                 
+            Manufacturer                   ns=3;i=374                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+            Model                          ns=3;i=375                3:Model                  , None
+            ProductCode                    ns=3;i=376                3:ProductCode            , 3HAC030780-001
+            SerialNumber                   ns=3;i=377                3:SerialNumber           , None
+            ParameterSet                   ns=3;i=378                3:ParameterSet           
+              BrakeReleased                  ns=3;i=379                4:BrakeReleased          , None
+              MotorTemperature               ns=3;i=380                4:MotorTemperature       , None
+                EngineeringUnits               ns=3;i=381                0:EngineeringUnits       , None
+              EffectiveLoadRate              ns=3;i=382                4:EffectiveLoadRate      , None
+      FlangeLoad                     ns=3;i=37                 4:FlangeLoad             
+        Mass                           ns=3;i=38                 4:Mass                   , 0.0010000000474974513
+          EngineeringUnits               ns=3;i=39                 0:EngineeringUnits       , EUInformation(NamespaceUri:{self.NamespaceUri}, UnitId:{self.UnitId}, DisplayName:{self.DisplayName}, Description:{self.Description})
+      AdditionalComponents           ns=3;i=40                 4:AdditionalComponents   
+      Manufacturer                   ns=3;i=41                 3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+      Model                          ns=3;i=42                 3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:IRB_ELBOW_BASE)
+      ProductCode                    ns=3;i=43                 3:ProductCode            ,    
+      SerialNumber                   ns=3;i=44                 3:SerialNumber           , 0000-0
+      ParameterSet                   ns=3;i=45                 3:ParameterSet           
+        OnPath                         ns=3;i=46                 4:OnPath                 , None
+        InControl                      ns=3;i=47                 4:InControl              , True
+        SpeedOverride                  ns=3;i=48                 4:SpeedOverride          , 100
+  Controllers                    ns=3;i=15                 4:Controllers            
+    WILLIAMSOBEBEB1                ns=3;i=383                3:WILLIAMSOBEBEB1        
+      CurrentUser                    ns=3;i=384                4:CurrentUser            
+        Level                          ns=3;i=385                4:Level                  , UAS_BACKUP, UAS_CALIBRATE, UAS_CFG_WRITE, UAS_CONTROLLER_PROPERTIES_WRITE, UAS_EVENTLOG_CLEAR, UAS_FTP_READ, UAS_FTP_WRITE, UAS_FULL_ACCESS, UAS_FULL_ACCESS, UAS_IO_WRITE, UAS_LOCK_SAFETY_CONFIG, UAS_RAPID_CURRVALUE, UAS_RAPID_DEBUG, UAS_RAPID_EDIT, UAS_RAPID_EXECUTE, UAS_RAPID_LOADPROGRAM, UAS_RAPID_MODPOS, UAS_REMOTE_LOGIN, UAS_REMOTE_WARMSTART, UAS_RESTORE, UAS_REVOLUTION_COUNTER_UPDATE, UAS_SAFETY_CONFIG, UAS_SPEED_DECREASE, UAS_SYSTEM_ADMINISTRATION, UAS_SYSUPDATE, UAS_UAS_ADMINISTRATION
+        Name                           ns=3;i=407                3:Name                   , Default User
+      Components                     ns=3;i=386                4:Components             
+      Software                       ns=3;i=387                4:Software               
+        RobotWare                      ns=3;i=408                3:RobotWare              
+          Manufacturer                   ns=3;i=409                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+          Model                          ns=3;i=410                3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:RobotWare)
+          SoftwareRevision               ns=3;i=411                3:SoftwareRevision       , 6.7.0.1
+      TaskControls                   ns=3;i=388                4:TaskControls           
+        T_ROB1                         ns=3;i=484                3:T_ROB1                 
+          ComponentName                  ns=3;i=485                3:ComponentName          , LocalizedText(Encoding:2, Locale:None, Text:T_ROB1)
+          ParameterSet                   ns=3;i=486                3:ParameterSet           
+            TaskProgramName                ns=3;i=487                4:TaskProgramName        , CartmanWorkingPlan
+            TaskProgramLoaded              ns=3;i=488                4:TaskProgramLoaded      , True
+            ExecutionMode                  ns=3;i=489                4:ExecutionMode          , None
+      Manufacturer                   ns=3;i=389                3:Manufacturer           , LocalizedText(Encoding:2, Locale:None, Text:ABB)
+      Model                          ns=3;i=390                3:Model                  , LocalizedText(Encoding:2, Locale:None, Text:IRC5)
+      ProductCode                    ns=3;i=391                3:ProductCode            ,    
+      SerialNumber                   ns=3;i=392                3:SerialNumber           ,    
+      ParameterSet                   ns=3;i=393                3:ParameterSet           
+        TotalPowerOnTime               ns=3;i=394                4:TotalPowerOnTime       , None
+        StartUpTime                    ns=3;i=395                4:StartUpTime            , None
+        UpsState                       ns=3;i=396                4:UpsState               , None
+        TotalEnergyConsumption         ns=3;i=397                4:TotalEnergyConsumption , None
+          EngineeringUnits               ns=3;i=398                0:EngineeringUnits       , None
+        CabinetFanSpeed                ns=3;i=399                4:CabinetFanSpeed        , None
+          EngineeringUnits               ns=3;i=400                0:EngineeringUnits       , None
+        CPUFanSpeed                    ns=3;i=401                4:CPUFanSpeed            , None
+          EngineeringUnits               ns=3;i=402                0:EngineeringUnits       , None
+        InputVoltage                   ns=3;i=403                4:InputVoltage           , None
+          EngineeringUnits               ns=3;i=404                0:EngineeringUnits       , None
+        Temperature                    ns=3;i=405                4:Temperature            , None
+          EngineeringUnits               ns=3;i=406                0:EngineeringUnits       , None
+  SafetyStates                   ns=3;i=16                 4:SafetyStates           
+    SAF                            ns=3;i=490                3:SAF                    
+      EmergencyStopFunctions         ns=3;i=491                4:EmergencyStopFunctions 
+      ProtectiveStopFunctions        ns=3;i=492                4:ProtectiveStopFunctions
+      ParameterSet                   ns=3;i=493                3:ParameterSet           
+        OperationalMode                ns=3;i=494                4:OperationalMode        , 3  
+        EmergencyStop                  ns=3;i=495                4:EmergencyStop          , False
+        ProtectiveStop                 ns=3;i=496                4:ProtectiveStop         , False
+DeviceFeatures                 ns=3;i=15034              3:DeviceFeatures         

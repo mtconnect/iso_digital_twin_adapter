@@ -1,0 +1,932 @@
+Browsing node ns=2;i=1 at opc.tcp://robot:robotics@10.211.55.16:61510
+
+DisplayName                    NodeId                    BrowseName                Value                    
+
+rob1                           ns=2;i=2                  2:rob1                   
+  BootVersion                    ns=2;i=3                  2:BootVersion            , 6.7.0.1
+  ControllerAddress              ns=2;i=4                  2:ControllerAddress      , 127.0.0.1
+  ControllerID                   ns=2;i=5                  2:ControllerID           ,    
+  ControllerName                 ns=2;i=6                  2:ControllerName         , WILLIAMSOBEBEB1
+  SystemID                       ns=2;i=7                  2:SystemID               , 9435d7b1-b80a-4899-a07b-17576b8cdbe6
+  SystemName                     ns=2;i=8                  2:SystemName             , Rob1
+  CollisionDetectState           ns=2;i=9                  2:CollisionDetectState   , 0  
+  ControllerExecutionState       ns=2;i=10                 2:ControllerExecutionState, 2  
+  ControllerState                ns=2;i=11                 2:ControllerState        , 2  
+  InterfaceState                 ns=2;i=12                 2:InterfaceState         , 1  
+  OperatingMode                  ns=2;i=13                 2:OperatingMode          , 0  
+  SpeedRatio                     ns=2;i=14                 2:SpeedRatio             , 100
+  SystemClock                    ns=2;i=15                 2:SystemClock            , 2020-07-27 13:27:26
+  RapidProgramUsedMemory         ns=2;i=16                 2:RapidProgramUsedMemory , 0  
+  RapidProgramFreeMemory         ns=2;i=17                 2:RapidProgramFreeMemory , 0  
+  MasterRAPID                    ns=2;i=18                 2:MasterRAPID            , 0  
+  MasterCFG                      ns=2;i=19                 2:MasterCFG              , 0  
+  IO_System                      ns=2;i=20                 2:IO_System              
+    IO_Signals                     ns=2;i=21                 2:IO_Signals             
+      IsDone                         ns=2;i=711                2:IsDone                 , False
+        FalseState                     ns=2;i=712                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=713                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TESTE2                     ns=2;i=714                2:DRV1TESTE2             , False
+        FalseState                     ns=2;i=715                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=716                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKE                      ns=2;i=717                2:DRV1BRAKE              , False
+        FalseState                     ns=2;i=718                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=719                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN2                     ns=2;i=720                2:DRV1CHAIN2             , False
+        FalseState                     ns=2;i=721                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=722                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN1                     ns=2;i=723                2:DRV1CHAIN1             , False
+        FalseState                     ns=2;i=724                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=725                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEOK                    ns=2;i=726                2:DRV1BRAKEOK            , False
+        FalseState                     ns=2;i=727                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=728                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST2                      ns=2;i=729                2:DRV1TEST2              , False
+        FalseState                     ns=2;i=730                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=731                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST1                      ns=2;i=732                2:DRV1TEST1              , False
+        FalseState                     ns=2;i=733                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=734                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1SPEED                      ns=2;i=735                2:DRV1SPEED              , False
+        FalseState                     ns=2;i=736                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=737                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEFB                    ns=2;i=738                2:DRV1BRAKEFB            , False
+        FalseState                     ns=2;i=739                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=740                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN2                       ns=2;i=741                2:DRV1FAN2               , False
+        FalseState                     ns=2;i=742                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=743                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN1                       ns=2;i=744                2:DRV1FAN1               , False
+        FalseState                     ns=2;i=745                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=746                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCEXT                     ns=2;i=747                2:DRV1PTCEXT             , False
+        FalseState                     ns=2;i=748                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=749                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCINT                     ns=2;i=750                2:DRV1PTCINT             , False
+        FalseState                     ns=2;i=751                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=752                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH2                     ns=2;i=753                2:DRV1PANCH2             , False
+        FalseState                     ns=2;i=754                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=755                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH1                     ns=2;i=756                2:DRV1PANCH1             , False
+        FalseState                     ns=2;i=757                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=758                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1EXTCONT                    ns=2;i=759                2:DRV1EXTCONT            , False
+        FalseState                     ns=2;i=760                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=761                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K2                         ns=2;i=762                2:DRV1K2                 , False
+        FalseState                     ns=2;i=763                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=764                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K1                         ns=2;i=765                2:DRV1K1                 , False
+        FalseState                     ns=2;i=766                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=767                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM2                       ns=2;i=768                2:DRV1LIM2               , False
+        FalseState                     ns=2;i=769                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=770                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM1                       ns=2;i=771                2:DRV1LIM1               , False
+        FalseState                     ns=2;i=772                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=773                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGRBNK                     ns=2;i=774                2:STLEDGRBNK             , False
+        FalseState                     ns=2;i=775                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=776                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGR                        ns=2;i=777                2:STLEDGR                , False
+        FalseState                     ns=2;i=778                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=779                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDREDBNK                    ns=2;i=780                2:STLEDREDBNK            , False
+        FalseState                     ns=2;i=781                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=782                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDRED                       ns=2;i=783                2:STLEDRED               , False
+        FalseState                     ns=2;i=784                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=785                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      TESTEN1                        ns=2;i=786                2:TESTEN1                , False
+        FalseState                     ns=2;i=787                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=788                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MOTLMP                         ns=2;i=789                2:MOTLMP                 , True
+        FalseState                     ns=2;i=790                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=791                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSO                        ns=2;i=792                2:SOFTSSO                , True
+        FalseState                     ns=2;i=793                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=794                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSO                        ns=2;i=795                2:SOFTGSO                , True
+        FalseState                     ns=2;i=796                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=797                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASO                        ns=2;i=798                2:SOFTASO                , True
+        FalseState                     ns=2;i=799                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=800                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESO                        ns=2;i=801                2:SOFTESO                , False
+        FalseState                     ns=2;i=802                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=803                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRVOVLD                        ns=2;i=804                2:DRVOVLD                , False
+        FalseState                     ns=2;i=805                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=806                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANEL24OVLD                    ns=2;i=807                2:PANEL24OVLD            , False
+        FalseState                     ns=2;i=808                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=809                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANFAN                         ns=2;i=810                2:PANFAN                 , False
+        FalseState                     ns=2;i=811                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=812                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_4                      ns=2;i=813                2:ENABLE2_4              , True
+        FalseState                     ns=2;i=814                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=815                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_3                      ns=2;i=816                2:ENABLE2_3              , True
+        FalseState                     ns=2;i=817                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=818                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_2                      ns=2;i=819                2:ENABLE2_2              , True
+        FalseState                     ns=2;i=820                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=821                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_1                      ns=2;i=822                2:ENABLE2_1              , True
+        FalseState                     ns=2;i=823                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=824                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE1                        ns=2;i=826                2:ENABLE1                , True
+        FalseState                     ns=2;i=827                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=828                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH2                            ns=2;i=829                2:CH2                    , True
+        FalseState                     ns=2;i=830                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=831                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH1                            ns=2;i=832                2:CH1                    , True
+        FalseState                     ns=2;i=833                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=834                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSI                        ns=2;i=835                2:SOFTSSI                , True
+        FalseState                     ns=2;i=836                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=837                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS2                            ns=2;i=838                2:SS2                    , True
+        FalseState                     ns=2;i=839                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=840                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS1                            ns=2;i=841                2:SS1                    , True
+        FalseState                     ns=2;i=842                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=843                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSI                        ns=2;i=844                2:SOFTGSI                , True
+        FalseState                     ns=2;i=845                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=846                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS2                            ns=2;i=847                2:GS2                    , True
+        FalseState                     ns=2;i=848                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=849                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS1                            ns=2;i=850                2:GS1                    , True
+        FalseState                     ns=2;i=851                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=852                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASI                        ns=2;i=853                2:SOFTASI                , True
+        FalseState                     ns=2;i=854                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=855                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS2                            ns=2;i=856                2:AS2                    , True
+        FalseState                     ns=2;i=857                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=858                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS1                            ns=2;i=859                2:AS1                    , True
+        FalseState                     ns=2;i=860                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=861                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MONPB                          ns=2;i=862                2:MONPB                  , False
+        FalseState                     ns=2;i=863                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=864                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      USERDOOVLD                     ns=2;i=865                2:USERDOOVLD             , False
+        FalseState                     ns=2;i=866                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=867                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS2                         ns=2;i=868                2:MANFS2                 , False
+        FalseState                     ns=2;i=869                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=870                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN2                           ns=2;i=871                2:MAN2                   , False
+        FalseState                     ns=2;i=872                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=873                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS1                         ns=2;i=874                2:MANFS1                 , False
+        FalseState                     ns=2;i=875                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=876                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN1                           ns=2;i=877                2:MAN1                   , False
+        FalseState                     ns=2;i=878                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=879                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO2                          ns=2;i=880                2:AUTO2                  , True
+        FalseState                     ns=2;i=881                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=882                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO1                          ns=2;i=883                2:AUTO1                  , True
+        FalseState                     ns=2;i=884                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=885                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN2                            ns=2;i=886                2:EN2                    , False
+        FalseState                     ns=2;i=887                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=888                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN1                            ns=2;i=889                2:EN1                    , False
+        FalseState                     ns=2;i=890                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=891                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESI                        ns=2;i=892                2:SOFTESI                , False
+        FalseState                     ns=2;i=893                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=894                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES2                            ns=2;i=895                2:ES2                    , True
+        FalseState                     ns=2;i=896                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=897                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES1                            ns=2;i=898                2:ES1                    , True
+        FalseState                     ns=2;i=899                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=900                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+  RAPID                          ns=2;i=22                 2:RAPID                  
+    T_ROB1                         ns=2;i=903                2:T_ROB1                 
+      TaskExecutionState             ns=2;i=904                2:TaskExecutionState     , 1  
+      TaskState                      ns=2;i=905                2:TaskState              , 0  
+      Tools                          ns=2;i=906                2:Tools                  
+        ExternalFedTool                ns=2;i=917                2:ExternalFedTool        , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        ExternalFedWobjData            ns=2;i=918                2:ExternalFedWobjData    , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        DrillTool                      ns=2;i=919                2:DrillTool              , [TRUE,[[67.056,0,55.372],[0.7071,0,0.7071,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        MyTool                         ns=2;i=920                2:MyTool                 , [TRUE,[[31.7926,0,229.639],[0.945519,0,0.325568,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        PendEff_point                  ns=2;i=921                2:PendEff_point          , [TRUE,[[67.056,0,55.372],[0.707107,0,0.707107,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+      StanModule                     ns=2;i=907                2:StanModule             
+        workingPlanUUID                ns=2;i=923                2:workingPlanUUID        , sdvonvskvnwovewn342532nkfloencvosnvqwef12
+      WorkObjs                       ns=2;i=908                2:WorkObjs               
+        A                              ns=2;i=924                2:A                      , [FALSE,TRUE,"",[[246.014,-596.5,290.101],[0,0,0,1]],[[0,0,0],[1,0,0,0]]]
+      user                           ns=2;i=909                2:user                   
+      BASE                           ns=2;i=910                2:BASE                   
+        tool0                          ns=2;i=925                2:tool0                  , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        wobj0                          ns=2;i=926                2:wobj0                  , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        load0                          ns=2;i=927                2:load0                  , [0.001,[0,0,0.001],[1,0,0,0],0,0,0]
+      Speeds                         ns=2;i=911                2:Speeds                 
+      StandardJointMoves             ns=2;i=912                2:StandardJointMoves     
+      Targets                        ns=2;i=913                2:Targets                
+        TargetsUUID                    ns=2;i=928                2:TargetsUUID            , isnvsiowm2345nwerfiosdvncv9sadsic
+rob2                           ns=2;i=23                 2:rob2                   
+  BootVersion                    ns=2;i=24                 2:BootVersion            , Bad (0x808d0000)
+  ControllerAddress              ns=2;i=25                 2:ControllerAddress      , Bad (0x808d0000)
+  ControllerID                   ns=2;i=26                 2:ControllerID           , Bad (0x808d0000)
+  ControllerName                 ns=2;i=27                 2:ControllerName         , Bad (0x808d0000)
+  SystemID                       ns=2;i=28                 2:SystemID               , Bad (0x808d0000)
+  SystemName                     ns=2;i=29                 2:SystemName             , Bad (0x808d0000)
+  CollisionDetectState           ns=2;i=30                 2:CollisionDetectState   , Bad (0x808d0000)
+  ControllerExecutionState       ns=2;i=31                 2:ControllerExecutionState, 2  
+  ControllerState                ns=2;i=32                 2:ControllerState        , 2  
+  InterfaceState                 ns=2;i=33                 2:InterfaceState         , Bad (0x808d0000)
+  OperatingMode                  ns=2;i=34                 2:OperatingMode          , 0  
+  SpeedRatio                     ns=2;i=35                 2:SpeedRatio             , 100
+  SystemClock                    ns=2;i=36                 2:SystemClock            , 2020-07-27 13:27:28
+  RapidProgramUsedMemory         ns=2;i=37                 2:RapidProgramUsedMemory , Bad (0x808d0000)
+  RapidProgramFreeMemory         ns=2;i=38                 2:RapidProgramFreeMemory , Bad (0x808d0000)
+  MasterRAPID                    ns=2;i=39                 2:MasterRAPID            , 0  
+  MasterCFG                      ns=2;i=40                 2:MasterCFG              , 0  
+  IO_System                      ns=2;i=41                 2:IO_System              
+    IO_Signals                     ns=2;i=42                 2:IO_Signals             
+      doIsComplete                   ns=2;i=286                2:doIsComplete           , False
+        FalseState                     ns=2;i=287                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=288                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TESTE2                     ns=2;i=289                2:DRV1TESTE2             , False
+        FalseState                     ns=2;i=290                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=291                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKE                      ns=2;i=292                2:DRV1BRAKE              , False
+        FalseState                     ns=2;i=293                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=294                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN2                     ns=2;i=295                2:DRV1CHAIN2             , False
+        FalseState                     ns=2;i=296                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=297                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN1                     ns=2;i=298                2:DRV1CHAIN1             , False
+        FalseState                     ns=2;i=299                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=300                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEOK                    ns=2;i=301                2:DRV1BRAKEOK            , False
+        FalseState                     ns=2;i=302                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=303                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST2                      ns=2;i=304                2:DRV1TEST2              , False
+        FalseState                     ns=2;i=305                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=306                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST1                      ns=2;i=307                2:DRV1TEST1              , False
+        FalseState                     ns=2;i=308                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=309                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1SPEED                      ns=2;i=310                2:DRV1SPEED              , False
+        FalseState                     ns=2;i=311                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=312                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEFB                    ns=2;i=313                2:DRV1BRAKEFB            , False
+        FalseState                     ns=2;i=314                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=315                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN2                       ns=2;i=316                2:DRV1FAN2               , False
+        FalseState                     ns=2;i=317                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=318                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN1                       ns=2;i=319                2:DRV1FAN1               , False
+        FalseState                     ns=2;i=320                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=321                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCEXT                     ns=2;i=322                2:DRV1PTCEXT             , False
+        FalseState                     ns=2;i=323                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=324                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCINT                     ns=2;i=325                2:DRV1PTCINT             , False
+        FalseState                     ns=2;i=326                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=327                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH2                     ns=2;i=328                2:DRV1PANCH2             , False
+        FalseState                     ns=2;i=329                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=330                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH1                     ns=2;i=331                2:DRV1PANCH1             , False
+        FalseState                     ns=2;i=332                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=333                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1EXTCONT                    ns=2;i=334                2:DRV1EXTCONT            , False
+        FalseState                     ns=2;i=335                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=336                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K2                         ns=2;i=337                2:DRV1K2                 , False
+        FalseState                     ns=2;i=338                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=339                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K1                         ns=2;i=340                2:DRV1K1                 , False
+        FalseState                     ns=2;i=341                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=342                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM2                       ns=2;i=343                2:DRV1LIM2               , False
+        FalseState                     ns=2;i=344                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=345                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM1                       ns=2;i=346                2:DRV1LIM1               , False
+        FalseState                     ns=2;i=347                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=348                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGRBNK                     ns=2;i=349                2:STLEDGRBNK             , False
+        FalseState                     ns=2;i=350                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=351                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGR                        ns=2;i=352                2:STLEDGR                , False
+        FalseState                     ns=2;i=353                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=354                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDREDBNK                    ns=2;i=355                2:STLEDREDBNK            , False
+        FalseState                     ns=2;i=356                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=357                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDRED                       ns=2;i=358                2:STLEDRED               , False
+        FalseState                     ns=2;i=359                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=360                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      TESTEN1                        ns=2;i=361                2:TESTEN1                , False
+        FalseState                     ns=2;i=362                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=363                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MOTLMP                         ns=2;i=364                2:MOTLMP                 , True
+        FalseState                     ns=2;i=365                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=366                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSO                        ns=2;i=367                2:SOFTSSO                , True
+        FalseState                     ns=2;i=368                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=369                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSO                        ns=2;i=370                2:SOFTGSO                , True
+        FalseState                     ns=2;i=371                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=372                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASO                        ns=2;i=373                2:SOFTASO                , True
+        FalseState                     ns=2;i=374                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=375                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESO                        ns=2;i=376                2:SOFTESO                , False
+        FalseState                     ns=2;i=377                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=378                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRVOVLD                        ns=2;i=379                2:DRVOVLD                , False
+        FalseState                     ns=2;i=380                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=381                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANEL24OVLD                    ns=2;i=382                2:PANEL24OVLD            , False
+        FalseState                     ns=2;i=383                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=384                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANFAN                         ns=2;i=385                2:PANFAN                 , False
+        FalseState                     ns=2;i=386                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=387                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_4                      ns=2;i=388                2:ENABLE2_4              , True
+        FalseState                     ns=2;i=389                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=390                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_3                      ns=2;i=391                2:ENABLE2_3              , True
+        FalseState                     ns=2;i=392                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=393                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_2                      ns=2;i=394                2:ENABLE2_2              , True
+        FalseState                     ns=2;i=395                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=396                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_1                      ns=2;i=397                2:ENABLE2_1              , True
+        FalseState                     ns=2;i=398                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=399                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE1                        ns=2;i=400                2:ENABLE1                , True
+        FalseState                     ns=2;i=401                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=402                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH2                            ns=2;i=403                2:CH2                    , True
+        FalseState                     ns=2;i=404                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=405                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH1                            ns=2;i=406                2:CH1                    , True
+        FalseState                     ns=2;i=407                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=408                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSI                        ns=2;i=409                2:SOFTSSI                , True
+        FalseState                     ns=2;i=410                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=411                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS2                            ns=2;i=412                2:SS2                    , True
+        FalseState                     ns=2;i=413                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=414                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS1                            ns=2;i=415                2:SS1                    , True
+        FalseState                     ns=2;i=416                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=417                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSI                        ns=2;i=418                2:SOFTGSI                , True
+        FalseState                     ns=2;i=419                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=420                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS2                            ns=2;i=421                2:GS2                    , True
+        FalseState                     ns=2;i=422                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=423                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS1                            ns=2;i=424                2:GS1                    , True
+        FalseState                     ns=2;i=425                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=426                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASI                        ns=2;i=427                2:SOFTASI                , True
+        FalseState                     ns=2;i=428                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=429                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS2                            ns=2;i=430                2:AS2                    , True
+        FalseState                     ns=2;i=431                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=432                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS1                            ns=2;i=433                2:AS1                    , True
+        FalseState                     ns=2;i=434                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=435                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MONPB                          ns=2;i=436                2:MONPB                  , False
+        FalseState                     ns=2;i=437                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=438                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      USERDOOVLD                     ns=2;i=439                2:USERDOOVLD             , False
+        FalseState                     ns=2;i=440                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=441                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS2                         ns=2;i=442                2:MANFS2                 , False
+        FalseState                     ns=2;i=443                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=444                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN2                           ns=2;i=445                2:MAN2                   , False
+        FalseState                     ns=2;i=446                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=447                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS1                         ns=2;i=448                2:MANFS1                 , False
+        FalseState                     ns=2;i=449                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=450                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN1                           ns=2;i=451                2:MAN1                   , False
+        FalseState                     ns=2;i=452                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=453                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO2                          ns=2;i=454                2:AUTO2                  , True
+        FalseState                     ns=2;i=455                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=456                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO1                          ns=2;i=457                2:AUTO1                  , True
+        FalseState                     ns=2;i=458                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=459                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN2                            ns=2;i=460                2:EN2                    , False
+        FalseState                     ns=2;i=461                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=462                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN1                            ns=2;i=463                2:EN1                    , False
+        FalseState                     ns=2;i=464                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=465                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESI                        ns=2;i=466                2:SOFTESI                , False
+        FalseState                     ns=2;i=467                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=468                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES2                            ns=2;i=469                2:ES2                    , True
+        FalseState                     ns=2;i=470                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=471                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES1                            ns=2;i=472                2:ES1                    , True
+        FalseState                     ns=2;i=473                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=474                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+  RAPID                          ns=2;i=43                 2:RAPID                  
+    T_ROB1                         ns=2;i=475                2:T_ROB1                 
+      TaskExecutionState             ns=2;i=476                2:TaskExecutionState     , 1  
+      TaskState                      ns=2;i=477                2:TaskState              , 0  
+      Tools                          ns=2;i=478                2:Tools                  
+        ExternalFedTool                ns=2;i=676                2:ExternalFedTool        , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        ExternalFedWobjData            ns=2;i=677                2:ExternalFedWobjData    , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        DrillTool                      ns=2;i=679                2:DrillTool              , [TRUE,[[67.056,0,55.372],[0.7071,0,0.7071,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        MyTool                         ns=2;i=681                2:MyTool                 , [TRUE,[[31.7926,0,229.639],[0.945519,0,0.325568,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        PendEff_point                  ns=2;i=683                2:PendEff_point          , [TRUE,[[67.056,0,55.372],[0.707107,0,0.707107,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+      WorkObjs                       ns=2;i=479                2:WorkObjs               
+        A                              ns=2;i=686                2:A                      , [FALSE,TRUE,"",[[246.014,597.3,290.101],[0,0,0,1]],[[0,0,0],[1,0,0,0]]]
+      user                           ns=2;i=480                2:user                   
+      KyleModule                     ns=2;i=481                2:KyleModule             
+        workingPlanUUID                ns=2;i=687                2:workingPlanUUID        , dvvfbdbsvdsv2e2vwv2dvwed5ym7y5b
+      BASE                           ns=2;i=482                2:BASE                   
+        tool0                          ns=2;i=691                2:tool0                  , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        wobj0                          ns=2;i=692                2:wobj0                  , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        load0                          ns=2;i=693                2:load0                  , [0.001,[0,0,0.001],[1,0,0,0],0,0,0]
+      Speeds                         ns=2;i=483                2:Speeds                 
+      StandardJointMoves             ns=2;i=484                2:StandardJointMoves     
+      Targets                        ns=2;i=485                2:Targets                
+        TargetsUUID                    ns=2;i=695                2:TargetsUUID            , dvtrghfdfadsfyjhegdwafjktergasdfsd
+rob3                           ns=2;i=44                 2:rob3                   
+  BootVersion                    ns=2;i=45                 2:BootVersion            , 6.7.0.1
+  ControllerAddress              ns=2;i=46                 2:ControllerAddress      , 127.0.0.1
+  ControllerID                   ns=2;i=47                 2:ControllerID           ,    
+  ControllerName                 ns=2;i=48                 2:ControllerName         , WILLIAMSOBEBEB1
+  SystemID                       ns=2;i=49                 2:SystemID               , 44c84631-7f16-4056-a26a-1fe30fb5b115
+  SystemName                     ns=2;i=50                 2:SystemName             , Rob4
+  CollisionDetectState           ns=2;i=51                 2:CollisionDetectState   , 0  
+  ControllerExecutionState       ns=2;i=52                 2:ControllerExecutionState, 2  
+  ControllerState                ns=2;i=53                 2:ControllerState        , 2  
+  InterfaceState                 ns=2;i=54                 2:InterfaceState         , 1  
+  OperatingMode                  ns=2;i=55                 2:OperatingMode          , 0  
+  SpeedRatio                     ns=2;i=56                 2:SpeedRatio             , 100
+  SystemClock                    ns=2;i=57                 2:SystemClock            , 2020-07-27 13:27:29
+  RapidProgramUsedMemory         ns=2;i=58                 2:RapidProgramUsedMemory , 0  
+  RapidProgramFreeMemory         ns=2;i=59                 2:RapidProgramFreeMemory , 0  
+  MasterRAPID                    ns=2;i=60                 2:MasterRAPID            , 0  
+  MasterCFG                      ns=2;i=61                 2:MasterCFG              , 0  
+  IO_System                      ns=2;i=62                 2:IO_System              
+    IO_Signals                     ns=2;i=63                 2:IO_Signals             
+      doIsComplete                   ns=2;i=86                 2:doIsComplete           , False
+        FalseState                     ns=2;i=87                 0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=88                 0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TESTE2                     ns=2;i=89                 2:DRV1TESTE2             , False
+        FalseState                     ns=2;i=90                 0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=91                 0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKE                      ns=2;i=92                 2:DRV1BRAKE              , False
+        FalseState                     ns=2;i=93                 0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=94                 0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN2                     ns=2;i=95                 2:DRV1CHAIN2             , False
+        FalseState                     ns=2;i=96                 0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=97                 0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN1                     ns=2;i=98                 2:DRV1CHAIN1             , False
+        FalseState                     ns=2;i=99                 0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=100                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEOK                    ns=2;i=101                2:DRV1BRAKEOK            , False
+        FalseState                     ns=2;i=102                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=103                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST2                      ns=2;i=104                2:DRV1TEST2              , False
+        FalseState                     ns=2;i=105                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=106                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST1                      ns=2;i=107                2:DRV1TEST1              , False
+        FalseState                     ns=2;i=108                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=109                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1SPEED                      ns=2;i=110                2:DRV1SPEED              , False
+        FalseState                     ns=2;i=111                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=112                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEFB                    ns=2;i=113                2:DRV1BRAKEFB            , False
+        FalseState                     ns=2;i=114                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=115                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN2                       ns=2;i=116                2:DRV1FAN2               , False
+        FalseState                     ns=2;i=117                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=118                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN1                       ns=2;i=119                2:DRV1FAN1               , False
+        FalseState                     ns=2;i=120                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=121                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCEXT                     ns=2;i=122                2:DRV1PTCEXT             , False
+        FalseState                     ns=2;i=123                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=124                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCINT                     ns=2;i=125                2:DRV1PTCINT             , False
+        FalseState                     ns=2;i=126                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=127                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH2                     ns=2;i=128                2:DRV1PANCH2             , False
+        FalseState                     ns=2;i=129                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=130                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH1                     ns=2;i=131                2:DRV1PANCH1             , False
+        FalseState                     ns=2;i=132                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=133                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1EXTCONT                    ns=2;i=134                2:DRV1EXTCONT            , False
+        FalseState                     ns=2;i=135                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=136                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K2                         ns=2;i=137                2:DRV1K2                 , False
+        FalseState                     ns=2;i=138                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=139                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K1                         ns=2;i=140                2:DRV1K1                 , False
+        FalseState                     ns=2;i=141                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=142                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM2                       ns=2;i=143                2:DRV1LIM2               , False
+        FalseState                     ns=2;i=144                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=145                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM1                       ns=2;i=146                2:DRV1LIM1               , False
+        FalseState                     ns=2;i=147                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=148                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGRBNK                     ns=2;i=149                2:STLEDGRBNK             , False
+        FalseState                     ns=2;i=150                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=151                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGR                        ns=2;i=152                2:STLEDGR                , False
+        FalseState                     ns=2;i=153                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=154                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDREDBNK                    ns=2;i=155                2:STLEDREDBNK            , False
+        FalseState                     ns=2;i=156                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=157                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDRED                       ns=2;i=158                2:STLEDRED               , False
+        FalseState                     ns=2;i=159                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=160                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      TESTEN1                        ns=2;i=161                2:TESTEN1                , False
+        FalseState                     ns=2;i=162                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=163                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MOTLMP                         ns=2;i=164                2:MOTLMP                 , True
+        FalseState                     ns=2;i=165                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=166                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSO                        ns=2;i=167                2:SOFTSSO                , True
+        FalseState                     ns=2;i=168                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=169                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSO                        ns=2;i=170                2:SOFTGSO                , True
+        FalseState                     ns=2;i=171                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=172                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASO                        ns=2;i=173                2:SOFTASO                , True
+        FalseState                     ns=2;i=174                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=175                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESO                        ns=2;i=176                2:SOFTESO                , False
+        FalseState                     ns=2;i=177                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=178                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRVOVLD                        ns=2;i=179                2:DRVOVLD                , False
+        FalseState                     ns=2;i=180                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=181                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANEL24OVLD                    ns=2;i=182                2:PANEL24OVLD            , False
+        FalseState                     ns=2;i=183                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=184                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANFAN                         ns=2;i=185                2:PANFAN                 , False
+        FalseState                     ns=2;i=186                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=187                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_4                      ns=2;i=188                2:ENABLE2_4              , True
+        FalseState                     ns=2;i=189                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=190                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_3                      ns=2;i=191                2:ENABLE2_3              , True
+        FalseState                     ns=2;i=192                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=193                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_2                      ns=2;i=194                2:ENABLE2_2              , True
+        FalseState                     ns=2;i=195                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=196                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_1                      ns=2;i=197                2:ENABLE2_1              , True
+        FalseState                     ns=2;i=198                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=199                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE1                        ns=2;i=200                2:ENABLE1                , True
+        FalseState                     ns=2;i=201                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=202                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH2                            ns=2;i=203                2:CH2                    , True
+        FalseState                     ns=2;i=204                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=205                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH1                            ns=2;i=206                2:CH1                    , True
+        FalseState                     ns=2;i=207                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=208                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSI                        ns=2;i=209                2:SOFTSSI                , True
+        FalseState                     ns=2;i=210                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=211                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS2                            ns=2;i=212                2:SS2                    , True
+        FalseState                     ns=2;i=213                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=214                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS1                            ns=2;i=215                2:SS1                    , True
+        FalseState                     ns=2;i=216                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=217                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSI                        ns=2;i=218                2:SOFTGSI                , True
+        FalseState                     ns=2;i=219                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=220                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS2                            ns=2;i=221                2:GS2                    , True
+        FalseState                     ns=2;i=222                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=223                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS1                            ns=2;i=224                2:GS1                    , True
+        FalseState                     ns=2;i=225                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=226                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASI                        ns=2;i=227                2:SOFTASI                , True
+        FalseState                     ns=2;i=228                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=229                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS2                            ns=2;i=230                2:AS2                    , True
+        FalseState                     ns=2;i=231                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=232                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS1                            ns=2;i=233                2:AS1                    , True
+        FalseState                     ns=2;i=234                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=235                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MONPB                          ns=2;i=236                2:MONPB                  , False
+        FalseState                     ns=2;i=237                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=238                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      USERDOOVLD                     ns=2;i=239                2:USERDOOVLD             , False
+        FalseState                     ns=2;i=240                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=241                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS2                         ns=2;i=242                2:MANFS2                 , False
+        FalseState                     ns=2;i=243                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=244                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN2                           ns=2;i=245                2:MAN2                   , False
+        FalseState                     ns=2;i=246                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=247                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS1                         ns=2;i=248                2:MANFS1                 , False
+        FalseState                     ns=2;i=249                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=250                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN1                           ns=2;i=251                2:MAN1                   , False
+        FalseState                     ns=2;i=252                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=253                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO2                          ns=2;i=254                2:AUTO2                  , True
+        FalseState                     ns=2;i=255                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=256                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO1                          ns=2;i=257                2:AUTO1                  , True
+        FalseState                     ns=2;i=258                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=259                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN2                            ns=2;i=260                2:EN2                    , False
+        FalseState                     ns=2;i=261                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=262                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN1                            ns=2;i=263                2:EN1                    , False
+        FalseState                     ns=2;i=264                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=265                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESI                        ns=2;i=266                2:SOFTESI                , False
+        FalseState                     ns=2;i=267                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=268                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES2                            ns=2;i=269                2:ES2                    , True
+        FalseState                     ns=2;i=270                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=271                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES1                            ns=2;i=272                2:ES1                    , True
+        FalseState                     ns=2;i=273                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=274                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+  RAPID                          ns=2;i=64                 2:RAPID                  
+    T_ROB1                         ns=2;i=275                2:T_ROB1                 
+      TaskExecutionState             ns=2;i=276                2:TaskExecutionState     , 1  
+      TaskState                      ns=2;i=277                2:TaskState              , 0  
+      Tools                          ns=2;i=278                2:Tools                  
+        ExternalFedTool                ns=2;i=675                2:ExternalFedTool        , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        ExternalFedWobjData            ns=2;i=678                2:ExternalFedWobjData    , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        DrillTool                      ns=2;i=680                2:DrillTool              , [TRUE,[[67.056,0,55.372],[0.7071,0,0.7071,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        MyTool                         ns=2;i=682                2:MyTool                 , [TRUE,[[31.7926,0,229.639],[0.945519,0,0.325568,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        PendEff_point                  ns=2;i=684                2:PendEff_point          , [TRUE,[[67.056,0,55.372],[0.707107,0,0.707107,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+      WorkObjs                       ns=2;i=279                2:WorkObjs               
+        A                              ns=2;i=685                2:A                      , [FALSE,TRUE,"",[[-982.614,-597.3,290.101],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+      user                           ns=2;i=280                2:user                   
+      BASE                           ns=2;i=281                2:BASE                   
+        tool0                          ns=2;i=688                2:tool0                  , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        wobj0                          ns=2;i=689                2:wobj0                  , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        load0                          ns=2;i=690                2:load0                  , [0.001,[0,0,0.001],[1,0,0,0],0,0,0]
+      Speeds                         ns=2;i=282                2:Speeds                 
+      StandardJointMoves             ns=2;i=283                2:StandardJointMoves     
+      Targets                        ns=2;i=284                2:Targets                
+        TargetsUUID                    ns=2;i=694                2:TargetsUUID            , dscin3ofcij823oimcdms88ecdjdddvs
+      KennyWorkingPlan               ns=2;i=285                2:KennyWorkingPlan       
+        workingPlanUUID                ns=2;i=695                2:workingPlanUUID        , dvtrghfdfadsfyjhegdwafjktergasdfsd
+rob4                           ns=2;i=65                 2:rob4                   
+  BootVersion                    ns=2;i=66                 2:BootVersion            , 6.7.0.1
+  ControllerAddress              ns=2;i=67                 2:ControllerAddress      , 127.0.0.1
+  ControllerID                   ns=2;i=68                 2:ControllerID           ,    
+  ControllerName                 ns=2;i=69                 2:ControllerName         , WILLIAMSOBEBEB1
+  SystemID                       ns=2;i=70                 2:SystemID               , 97376a04-5c6a-493c-9fad-9f39479284b9
+  SystemName                     ns=2;i=71                 2:SystemName             , Rob3
+  CollisionDetectState           ns=2;i=72                 2:CollisionDetectState   , 0  
+  ControllerExecutionState       ns=2;i=73                 2:ControllerExecutionState, 2  
+  ControllerState                ns=2;i=74                 2:ControllerState        , 2  
+  InterfaceState                 ns=2;i=75                 2:InterfaceState         , 1  
+  OperatingMode                  ns=2;i=76                 2:OperatingMode          , 0  
+  SpeedRatio                     ns=2;i=77                 2:SpeedRatio             , 100
+  SystemClock                    ns=2;i=78                 2:SystemClock            , 2020-07-27 13:27:30
+  RapidProgramUsedMemory         ns=2;i=79                 2:RapidProgramUsedMemory , 0  
+  RapidProgramFreeMemory         ns=2;i=80                 2:RapidProgramFreeMemory , 0  
+  MasterRAPID                    ns=2;i=81                 2:MasterRAPID            , 0  
+  MasterCFG                      ns=2;i=82                 2:MasterCFG              , 0  
+  IO_System                      ns=2;i=83                 2:IO_System              
+    IO_Signals                     ns=2;i=84                 2:IO_Signals             
+      doIsComplete                   ns=2;i=486                2:doIsComplete           , False
+        FalseState                     ns=2;i=487                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=488                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TESTE2                     ns=2;i=489                2:DRV1TESTE2             , False
+        FalseState                     ns=2;i=490                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=491                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKE                      ns=2;i=492                2:DRV1BRAKE              , False
+        FalseState                     ns=2;i=493                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=494                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN2                     ns=2;i=495                2:DRV1CHAIN2             , False
+        FalseState                     ns=2;i=496                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=497                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1CHAIN1                     ns=2;i=498                2:DRV1CHAIN1             , False
+        FalseState                     ns=2;i=499                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=500                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEOK                    ns=2;i=501                2:DRV1BRAKEOK            , False
+        FalseState                     ns=2;i=502                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=503                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST2                      ns=2;i=504                2:DRV1TEST2              , False
+        FalseState                     ns=2;i=505                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=506                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1TEST1                      ns=2;i=507                2:DRV1TEST1              , False
+        FalseState                     ns=2;i=508                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=509                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1SPEED                      ns=2;i=510                2:DRV1SPEED              , False
+        FalseState                     ns=2;i=511                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=512                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1BRAKEFB                    ns=2;i=513                2:DRV1BRAKEFB            , False
+        FalseState                     ns=2;i=514                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=515                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN2                       ns=2;i=516                2:DRV1FAN2               , False
+        FalseState                     ns=2;i=517                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=518                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1FAN1                       ns=2;i=519                2:DRV1FAN1               , False
+        FalseState                     ns=2;i=520                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=521                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCEXT                     ns=2;i=522                2:DRV1PTCEXT             , False
+        FalseState                     ns=2;i=523                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=524                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PTCINT                     ns=2;i=525                2:DRV1PTCINT             , False
+        FalseState                     ns=2;i=526                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=527                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH2                     ns=2;i=528                2:DRV1PANCH2             , False
+        FalseState                     ns=2;i=529                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=530                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1PANCH1                     ns=2;i=531                2:DRV1PANCH1             , False
+        FalseState                     ns=2;i=532                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=533                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1EXTCONT                    ns=2;i=534                2:DRV1EXTCONT            , False
+        FalseState                     ns=2;i=535                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=536                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K2                         ns=2;i=537                2:DRV1K2                 , False
+        FalseState                     ns=2;i=538                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=539                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1K1                         ns=2;i=540                2:DRV1K1                 , False
+        FalseState                     ns=2;i=541                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=542                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM2                       ns=2;i=543                2:DRV1LIM2               , False
+        FalseState                     ns=2;i=544                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=545                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRV1LIM1                       ns=2;i=546                2:DRV1LIM1               , False
+        FalseState                     ns=2;i=547                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=548                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGRBNK                     ns=2;i=549                2:STLEDGRBNK             , False
+        FalseState                     ns=2;i=550                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=551                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDGR                        ns=2;i=552                2:STLEDGR                , False
+        FalseState                     ns=2;i=553                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=554                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDREDBNK                    ns=2;i=555                2:STLEDREDBNK            , False
+        FalseState                     ns=2;i=556                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=557                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      STLEDRED                       ns=2;i=558                2:STLEDRED               , False
+        FalseState                     ns=2;i=559                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=560                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      TESTEN1                        ns=2;i=561                2:TESTEN1                , False
+        FalseState                     ns=2;i=562                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=563                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MOTLMP                         ns=2;i=564                2:MOTLMP                 , True
+        FalseState                     ns=2;i=565                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=566                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSO                        ns=2;i=567                2:SOFTSSO                , True
+        FalseState                     ns=2;i=568                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=569                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSO                        ns=2;i=570                2:SOFTGSO                , True
+        FalseState                     ns=2;i=571                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=572                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASO                        ns=2;i=573                2:SOFTASO                , True
+        FalseState                     ns=2;i=574                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=575                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESO                        ns=2;i=576                2:SOFTESO                , False
+        FalseState                     ns=2;i=577                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=578                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      DRVOVLD                        ns=2;i=579                2:DRVOVLD                , False
+        FalseState                     ns=2;i=580                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=581                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANEL24OVLD                    ns=2;i=582                2:PANEL24OVLD            , False
+        FalseState                     ns=2;i=583                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=584                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      PANFAN                         ns=2;i=585                2:PANFAN                 , False
+        FalseState                     ns=2;i=586                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=587                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_4                      ns=2;i=588                2:ENABLE2_4              , True
+        FalseState                     ns=2;i=589                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=590                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_3                      ns=2;i=591                2:ENABLE2_3              , True
+        FalseState                     ns=2;i=592                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=593                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_2                      ns=2;i=594                2:ENABLE2_2              , True
+        FalseState                     ns=2;i=595                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=596                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE2_1                      ns=2;i=597                2:ENABLE2_1              , True
+        FalseState                     ns=2;i=598                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=599                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ENABLE1                        ns=2;i=600                2:ENABLE1                , True
+        FalseState                     ns=2;i=601                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=602                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH2                            ns=2;i=603                2:CH2                    , True
+        FalseState                     ns=2;i=604                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=605                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      CH1                            ns=2;i=606                2:CH1                    , True
+        FalseState                     ns=2;i=607                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=608                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTSSI                        ns=2;i=609                2:SOFTSSI                , True
+        FalseState                     ns=2;i=610                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=611                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS2                            ns=2;i=612                2:SS2                    , True
+        FalseState                     ns=2;i=613                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=614                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SS1                            ns=2;i=615                2:SS1                    , True
+        FalseState                     ns=2;i=616                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=617                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTGSI                        ns=2;i=618                2:SOFTGSI                , True
+        FalseState                     ns=2;i=619                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=620                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS2                            ns=2;i=621                2:GS2                    , True
+        FalseState                     ns=2;i=622                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=623                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      GS1                            ns=2;i=624                2:GS1                    , True
+        FalseState                     ns=2;i=625                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=626                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTASI                        ns=2;i=627                2:SOFTASI                , True
+        FalseState                     ns=2;i=628                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=629                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS2                            ns=2;i=630                2:AS2                    , True
+        FalseState                     ns=2;i=631                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=632                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AS1                            ns=2;i=633                2:AS1                    , True
+        FalseState                     ns=2;i=634                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=635                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MONPB                          ns=2;i=636                2:MONPB                  , False
+        FalseState                     ns=2;i=637                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=638                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      USERDOOVLD                     ns=2;i=639                2:USERDOOVLD             , False
+        FalseState                     ns=2;i=640                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=641                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS2                         ns=2;i=642                2:MANFS2                 , False
+        FalseState                     ns=2;i=643                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=644                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN2                           ns=2;i=645                2:MAN2                   , False
+        FalseState                     ns=2;i=646                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=647                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MANFS1                         ns=2;i=648                2:MANFS1                 , False
+        FalseState                     ns=2;i=649                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=650                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      MAN1                           ns=2;i=651                2:MAN1                   , False
+        FalseState                     ns=2;i=652                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=653                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO2                          ns=2;i=654                2:AUTO2                  , True
+        FalseState                     ns=2;i=655                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=656                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      AUTO1                          ns=2;i=657                2:AUTO1                  , True
+        FalseState                     ns=2;i=658                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=659                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN2                            ns=2;i=660                2:EN2                    , False
+        FalseState                     ns=2;i=661                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=662                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      EN1                            ns=2;i=663                2:EN1                    , False
+        FalseState                     ns=2;i=664                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=665                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      SOFTESI                        ns=2;i=666                2:SOFTESI                , False
+        FalseState                     ns=2;i=667                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=668                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES2                            ns=2;i=669                2:ES2                    , True
+        FalseState                     ns=2;i=670                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=671                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+      ES1                            ns=2;i=672                2:ES1                    , True
+        FalseState                     ns=2;i=673                0:FalseState             , LocalizedText(Encoding:2, Locale:None, Text:0)
+        TrueState                      ns=2;i=674                0:TrueState              , LocalizedText(Encoding:2, Locale:None, Text:1)
+  RAPID                          ns=2;i=85                 2:RAPID                  
+    T_ROB1                         ns=2;i=696                2:T_ROB1                 
+      TaskExecutionState             ns=2;i=697                2:TaskExecutionState     , 1  
+      TaskState                      ns=2;i=698                2:TaskState              , 0  
+      Tools                          ns=2;i=699                2:Tools                  
+        ExternalFedTool                ns=2;i=707                2:ExternalFedTool        , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        ExternalFedWobjData            ns=2;i=708                2:ExternalFedWobjData    , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        DrillTool                      ns=2;i=709                2:DrillTool              , [TRUE,[[67.056,0,55.372],[0.7071,0,0.7071,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        MyTool                         ns=2;i=710                2:MyTool                 , [TRUE,[[31.7926,0,229.639],[0.945519,0,0.325568,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+        PendEff_point                  ns=2;i=825                2:PendEff_point          , [TRUE,[[67.056,0,55.372],[0.707107,0,0.707107,0]],[1,[0,0,1],[1,0,0,0],0,0,0]]
+      WorkObjs                       ns=2;i=700                2:WorkObjs               
+        A                              ns=2;i=901                2:A                      , [FALSE,TRUE,"",[[-982.614,596.5,290.101],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+      user                           ns=2;i=701                2:user                   
+      CartmanWorkingPlan             ns=2;i=702                2:CartmanWorkingPlan     
+        workingPlanUUID                ns=2;i=902                2:workingPlanUUID        , wdvw324c3j67t4gwcymumnrwvdccsdscs
+      BASE                           ns=2;i=703                2:BASE                   
+        tool0                          ns=2;i=914                2:tool0                  , [TRUE,[[0,0,0],[1,0,0,0]],[0.001,[0,0,0.001],[1,0,0,0],0,0,0]]
+        wobj0                          ns=2;i=915                2:wobj0                  , [FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]]
+        load0                          ns=2;i=916                2:load0                  , [0.001,[0,0,0.001],[1,0,0,0],0,0,0]
+      Speeds                         ns=2;i=704                2:Speeds                 
+      StandardJointMoves             ns=2;i=705                2:StandardJointMoves     
+      Targets                        ns=2;i=706                2:Targets                
+        TargetsUUID                    ns=2;i=922                2:TargetsUUID            , ddmhmdsf4594ymtmsdd32fwefdswquyjm

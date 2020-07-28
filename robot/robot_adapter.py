@@ -73,7 +73,7 @@ class MappedDataItem(DataItem):
         self.set_value(self._variable.value())
     
 
-class MappedTranform(DataItem):
+class MappedTransform(DataItem):
     def __init__(self, name, transformation):
         super().__init__(name)
         self._transformation = transformation
@@ -144,8 +144,37 @@ class Robot(object):
             })
         self._adapter.add_data_item(di)
 
+    def create_process_data_items(self, node):
+        self.add_event('WorkingPlanUUID', '{abbc}:workingPlanUUID', root=node)
+        self.add_variable('FeatureName', '{abbc}:AP238_FEATURE_NAME', root=node)
+        self.add_variable('FeatureUUID', '{abbc}:AP238_FEATURE_UUID', root=node)
+        self.add_variable('WorkingstepName', '{abbc}:AP238_WORKINGSTEP_NAME', root=node)
+        self.add_variable('WorkingstepUUID', '{abbc}:AP238_WORKINGSTEP_UUID', root=node)
+
+        def working_step():
+            uuid = self.value('WorkingstepUUID')
+            name = self.value('WorkingstepName')
+            if not uuid:
+                return None
+            else:
+                return f"UUID='{uuid}' NAME='{name}'"
+        
+        di = MappedTransform(f'{self._name}:WorkingStep', working_step)
+        self._adapter.add_data_item(di)
+
+        def feature():
+            uuid = self.value('FeatureUUID')
+            name = self.value('FeatureName')
+            if not uuid:
+                return None
+            else:
+                return f"UUID='{uuid}' NAME='{name}'"
+        
+        di = MappedTransform(f'{self._name}:Feature', feature)
+        self._adapter.add_data_item(di)
+
     def value(self, name):
-        return self._variables[name].get_value()
+        return self._variables[name].value()
 
     def variable(self, name):
         return self._variables[name]
@@ -170,6 +199,9 @@ class Robot(object):
 
         self._variables = { }
 
+        avail = Event(f'{name}:avail')
+        adapter.add_data_item(avail)
+
         # ABB Specific Model
         self.add_variable("SystemID", "{abbc}:SystemID", root = self._abb_root)
         self.add_variable("OperatingMode", "{abbc}:OperatingMode", root = self._abb_root)
@@ -186,7 +218,7 @@ class Robot(object):
         axes.connect(self._ua_root, self._bindings)
 
         def create_position(root):
-            name = f'{root.get_browse_name().Name}_axis'
+            name = f'{root.get_browse_name().Name}_angle'
             self.add_sample(name, '{di}:ParameterSet/{uar}:ActualPosition', root=root)
 
         axes.each(create_position)
@@ -206,12 +238,30 @@ class Robot(object):
         self.add_execution()
         self.add_controller_mode()
 
+        # Add AP238 data items
+        rapid = Node("{abbc}:RAPID/{abbc}:T_ROB1")
+        rapid.connect(self._abb_root, self._bindings)
+
+        def add_module(node):
+            if node.get_browse_name().Name.endswith('Module'):
+                self.create_process_data_items(node)
+            
+        rapid.each(add_module)
+
+        avail.set_value('AVAILABLE')
+
+
+# Main 
+        
 logging.basicConfig(level=logging.WARN)
-server = sys.argv[1]
-url = f"opc.tcp://robot:robotics@{server}:61510"
-print(f"Connecting to OPC Server {server}: {url}")
+url = sys.argv[1]
+if not url.startswith('opc.tcp'):
+    url = f"opc.tcp://robot:robotics@{url}:61510"
+
+print(f"Connecting to OPC Server {url}")
 client = Client(url)
 client.set_security_string("Basic256Sha256,Sign,my_cert.der,my_private_key.pem")
+
 try:
     client.application_uri = "urn:mtconnect.org:MTConnect:MTConnect"
     client.secure_channel_timeout = 1000000
@@ -231,9 +281,9 @@ try:
 
     adapter = Adapter(('0.0.0.0', 7878))
 
-    robots = [Robot(adapter, 'Stan', 1, root, bindings),              
-              Robot(adapter, 'Kenny', 3, root, bindings),
-              Robot(adapter, 'Cartman', 4, root, bindings)]
+    robots = [Robot(adapter, 'Stan', 1, root, bindings) ] 
+#              Robot(adapter, 'Kenny', 3, root, bindings),
+#              Robot(adapter, 'Cartman', 4, root, bindings)]
 
     adapter.start()
 
