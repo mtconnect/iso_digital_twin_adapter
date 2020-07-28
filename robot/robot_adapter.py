@@ -2,6 +2,7 @@ import sys
 import os
 import logging
 import time
+import threading
 
 from opcua import Client
 from opcua import ua
@@ -12,7 +13,7 @@ import code
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 
 from adapter.mtconnect_adapter import Adapter
-from adapter.data_item import Event, SimpleCondition, Sample, ThreeDSample
+from adapter.data_item import DataItem, Event, SimpleCondition, Sample, ThreeDSample
 
 def resolve_path(root, path, bindings):
     try:
@@ -21,59 +22,7 @@ def resolve_path(root, path, bindings):
         return root.get_child(path_list)
     except:
         print(f"Could not resolve {path} as {path_list}: {sys.exc_info()[0]}")
-    
 
-class Enumeration(Event):
-    def __init__(self, name, translation):
-        super().__init__(self, name)
-        self._translation = translation
-        
-    def set_value(self, value):
-        return super().set_value(self, self._translation[value])                
-
-class Mapping(object):
-    Mappings = []
-        
-    def __init__(self, bindings, path, data_item, value_fun = lambda n: n.get_value()):
-        data_item.set_name(data_item.name().format(**bindings))
-        print(f"Creating mapping from {path} to {data_item.name()}")
-        self._path = path
-        self._bindings = bindings
-        self._data_item = data_item
-        self._value_fun = value_fun
-        self._node = None
-        
-        Mapping.Mappings.append(self)
-        
-    def connect(self, root):
-        self._node = resolve_path(root, self._path, self._bindings)
-        
-    def collect(self):
-        self._data_item.set_value(value_fun(self._node.get_value()))
-        
-    def __repr__(self):
-        return "{} -> {}".format(self._path, self._data_item.name())
-        
-class Collection(object):
-    def __init__(self, name, path, apply):
-        self._nodes = []
-        self._name = name
-        self._path = path
-        self._apply = apply
-        
-    def create_mapping(self, node, bindings):
-        child_bindings = dict(bindings)
-        child_bindings[f"{self._name}_name"] = node.get_browse_name().Name
-        mapping = self._apply(node, child_bindings)
-        mapping.connect(node)
-        
-    def collect(self, root, bindings):
-        node = resolve_path(root, self._path, bindings)
-        children = node.get_children()
-        for child in children:
-            self._nodes.append(child)
-            self.create_mapping(child, bindings)
-        
 
 def embed():
     vars = globals()
@@ -110,13 +59,43 @@ class Variable(Node):
         self._value = self._node.get_value()
         return self._value
         
+class MappedDataItem(DataItem):
+    def __init__(self, name, variable):
+        super().__init__(name)
+        self._variable = variable
 
+    def collect(self):
+        self.set_value(self._variable.get_value())
+    
+
+class MappedEnumeration(DataItem):
+    def __init__(self, name, transformation):
+        super().__init__(name)
+        self._transformation = transformation
+
+    def collect(self):
+        v = variable.get_value()
+        self.set_value(self._transformation(v))
+
+        
 class Robot(object):
     def add_variable(self, name, path, root = None):
-        self._variables[name] = Variable(name, path, root=root, bindings=self._bindings)
+        v = Variable(name, path, root=root, bindings=self._bindings)
+        self._variables[name] = v
+        return v
+
+    def add_event(self, name, path, root = None):
+        v = self.add_variable(name, path, root = root)
+        sample = MappedDataItem(name, v)
+        self._adapter.add_data_item(sample)
+
+    def add_sample(self, name, path, root = None):
+        self.add_event(name, path, root)
+    
         
     
-    def __init__(self, number, root, bindings):
+    def __init__(self, adapter, number, root, bindings):
+        self._adapter = adapter
         self._number = number
         self._root = root
         self._bindings = dict(bindings)
@@ -140,22 +119,22 @@ class Robot(object):
         axes = Node("{uar}:MotionDevices/{di}:ROB_{number}/{uar}:Axes")
         axes.connect(self._ua_root, self._bindings)
 
-        def create_position(self, root):
+        def create_position(root):
             name = f'{root.get_browse_name().Name}_axis'
-            self.add_variable(name, '{di}:ParameterSet/{uar}:ActualPosition', root=root)
+            self.add_sample(name, '{di}:ParameterSet/{uar}:ActualPosition', root=root)
 
-        axes.each(lambda n: create_position(self, n))
+        axes.each(lambda n: create_position(n))
 
         # Get some of the UA controller stuff
         controllers = Node("{uar}:Controllers")
         controllers.connect(self._ua_root, self._bindings)
 
-        def add_controller_variables(self, root):
+        def add_controller_variables(root):
             self.add_variable("ExecutionMode", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:ExecutionMode", root=root)
             self.add_variable("TaskProgramLoaded", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:TaskProgramLoaded", root=root)
             self.add_variable("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB{number}/{di}:ParameterSet/{uar}:TaskProgramName", root=root)
 
-        controllers.each(lambda n: add_controller_variables(self, n))
+        controllers.each(lambda n: add_controller_variables(n))
 
 
         print(self._variables)
@@ -169,6 +148,7 @@ try:
     client.session_timeout = 1000000
     client.connect()
     root = client.get_root_node()
+    running = True
 
     # Get the indexes of the various namespaces
     bindings = { "ua": 0,
@@ -180,11 +160,28 @@ try:
                  "number": 1
               }
 
-    robot1 = Robot(1, root, bindings)
-        
+    adapter = Adapter(('0.0.0.0', 7878))
+    
+    robot1 = Robot(adapter, 1, root, bindings)
+
+    adapter.start()
+
+    def collect_data(data_items):
+        for d in data_items:
+            d.collect()
+
+    def gather_forever():
+        while adapter.is_running():
+            adapter.gather(collect_data)
+            time.sleep(0.100)
+
+    gather_thread = threading.Thread(target = gather_forever)
+    gather_thread.start()
+    
     embed()
     
 finally:
+    adapter.stop()
     client.disconnect()
 
 

@@ -19,13 +19,14 @@ import uuid
 from datetime import datetime
 import re
 import struct
-
+import sys
+import traceback
 
 class Adapter(ThreadingMixIn, TCPServer):
     allow_reuse_address = True
     def __init__(self, address, heartbeat_interval = 10000, family = socket.AF_INET):
         self.address_family = family
-        super().__init__(address, BaseRequestHandler, False)
+        TCPServer.__init__(self, address, BaseRequestHandler, False)
         self._clients = dict()
         self._lock = threading.RLock()
         self._data_items = []
@@ -35,6 +36,9 @@ class Adapter(ThreadingMixIn, TCPServer):
 
     def add_data_item(self, item):
         self._data_items.append(item)
+
+    def is_running(self):
+        return self._running
 
     def start(self):
         self.server_bind()
@@ -46,6 +50,7 @@ class Adapter(ThreadingMixIn, TCPServer):
         self._server_thread.start()
 
     def stop(self):
+        self._running = False
         self.shutdown()
         for client in self._clients.values():
             client.shutdown(socket.SHUT_RDWR)
@@ -77,21 +82,23 @@ class Adapter(ThreadingMixIn, TCPServer):
         try:
             client.settimeout(None)
             while self._running:
-                line = client.recv(256)
+                line = str(client.recv(256), "utf-8")
                 if self._ping_pat.match(line):
                     if not client.gettimeout():
                         client.settimeout(self._heartbeat_interval / 500.0)
                     try:
                         self._lock.acquire()
-                        client.send("* PONG " + str(self._heartbeat_interval) + "\n")
+                        client.send(bytes("* PONG " + str(self._heartbeat_interval) + "\n", "utf-8"))
                     finally:
                         self._lock.release()
                 else:
                     break
         except:
+            print("Exception occurred in send_to_client, removing client:" + str(sys.exc_info()[0]))
+            traceback.print_tb(sys.exc_info()[2])
             print("Exception in heartbeat thread")
 
-        print("Headbeat thread stopped")
+        print("Heartbeat thread stopped")
 
 
     def remove_client(self, client_address):
@@ -158,9 +165,10 @@ class Adapter(ThreadingMixIn, TCPServer):
             finally:
                 self._lock.release()
             if socket:
-                socket.send(line)
+                socket.sendall(bytes(line, "utf-8"))
         except Exception as ex:
-            print("Exception occurred in send_to_client, removing client" + str(ex))
+            print("Exception occurred in send_to_client, removing client:" + str(ex))
+            traceback.print_tb(sys.exc_info()[2])
             self.remove_client(client)
 
 
@@ -172,7 +180,7 @@ class Adapter(ThreadingMixIn, TCPServer):
     def gather(self, function):
         self.begin()
 
-        function()
+        function(self._data_items)
 
         self.complete()
         self.send_changed(self._clients.keys())
