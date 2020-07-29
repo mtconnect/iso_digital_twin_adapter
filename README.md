@@ -26,7 +26,13 @@ To start the server, run the following command from the command line:
 
 Where `<user>` is the user name in the "User ID" tab of the OPC Server. `<password>` Is the password from the same tab. And `<host>` is the name or IP address of the machine the OPC UA server is running on.
 
-The default user name and password are: `Default User` and `robotics`.
+The default user name and password are: `Default User` and `robotics`. If the defaults are used, the adapter can be started as follows with only the `<host>`:
+
+	python robot_adapter.py <host>
+	
+If the host is the local machine, invoke as follows:
+
+	python robot_adapter.py 127.0.0.1
 
 The configuration for the MTConnect Agent is in the `robot/agent` subdirectory and has all the Device.xml and configuration file to collect information from the local machine.
 
