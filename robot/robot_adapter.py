@@ -23,7 +23,6 @@ def resolve_path(root, path, bindings):
     except:
         print(f"Could not resolve {path} as {path_list}: {sys.exc_info()[0]}")
 
-
 def embed():
     vars = globals()
     vars.update(locals())
@@ -70,7 +69,6 @@ class MappedDataItem(DataItem):
     def gather(self):
         self.set_value(self._variable.value())
     
-
 class MappedTransform(DataItem):
     def __init__(self, name, transformation):
         super().__init__(name)
@@ -125,7 +123,6 @@ class Robot(object):
 
         avail.set_value('AVAILABLE')
 
-    
     def add_variable(self, name, path, root = None):
         v = Variable(name, path, root, self._bindings)
         self._variables[name] = v
@@ -138,7 +135,6 @@ class Robot(object):
 
     def add_sample(self, name, path, root = None):
         self.add_event(name, path, root)
-
 
     def add_estop(self):
         di = MappedEnumeration(f"{self._name}:estop", self._variables["ControllerState"], {
@@ -195,7 +191,6 @@ class Robot(object):
         di = MappedTransform(f'{self._name}:Feature', feature)
         self._adapter.add_data_item(di)
 
-
     def add_abb_variables(self):
         # ABB Specific Model
         self.add_variable("SystemID", "{abbc}:SystemID", root = self._abb_root)
@@ -208,7 +203,6 @@ class Robot(object):
         self.add_variable("TaskExecutionState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskExecutionState", self._abb_root)
         self.add_variable("IsDone", "{abbc}:IO_System/{abbc}:IO_Signals/{abbc}:IsDone", self._abb_root)
 
-
     def add_axes_angles(self):
         # Get the axes position from the UA section
         def create_position(root):
@@ -217,7 +211,6 @@ class Robot(object):
 
         axes = Node("{uar}:MotionDevices/{di}:ROB_1/{uar}:Axes", self._ua_root, self._bindings)
         axes.each(create_position)
-
 
     def add_controller_variables(self):
         # Get some of the UA controller stuff
@@ -249,7 +242,6 @@ class Robot(object):
         for v in self._variables.values():
             v.get_value()
     
-
 # Main 
         
 logging.basicConfig(level=logging.WARN)
