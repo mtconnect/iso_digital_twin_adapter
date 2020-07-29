@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <MTConnectDevices xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='urn:mtconnect.org:MTConnectDevices:1.6' xmlns:m='urn:mtconnect.org:MTConnectDevices:1.6' xsi:schemaLocation='urn:mtconnect.org:MTConnectDevices:1.6 http://schemas.mtconnect.org/schemas/MTConnectDevices_1.6.xsd'>
-  <Header creationTime='2020-07-28T19:15:36Z' assetBufferSize='1024' sender='localhost' assetCount='0' version='1.6' instanceId='1' bufferSize='131072'/>
+  <Header creationTime='2020-07-29T17:14:26Z' assetBufferSize='1024' sender='localhost' assetCount='0' version='1.6' instanceId='1' bufferSize='131072'/>
   <Devices>
     <Device name='Stan' uuid='DigitalTwin_Stan_9a245b' id='I1053705d219'>
       <Description model='IRB-120' manufacturer='ABB'>6 Axis Robot - Robot Stan</Description>
@@ -51,409 +51,421 @@
             </Rotary>
           </Components>
         </Axes>
-        <ProcessOccurence id='I95530b45de1'>
-          <DataItems>
-            <DataItem type='WORKING_STEP' category='EVENT' id='I22a766e4465' name='WorkingStep' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Working Step</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
-                    <Description>The type of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the working step</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='FEATURE' category='EVENT' id='I95ded582189' name='Feature' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Feature</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
-                    <Description>The type of feature </Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the feature</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='WORKING_PLAN' category='EVENT' id='Iddf6a7ac39d' name='WorkingPlanUUID'/>
-          </DataItems>
-        </ProcessOccurence>
-        <PartOccurence id='I5210cd97cf7'/>
-        <Controller id='I5a7d0aa14fd'>
+        <Process id='Ica4854bde0d'>
           <Components>
-            <Path name='task1' id='I3f713905652'>
+            <ProcessOccurence id='I6264b096f07'>
               <DataItems>
-                <DataItem type='CONTROLLER_MODE' category='EVENT' id='Ifa1eef74c29' name='controller_mode'/>
-                <DataItem type='EXECUTION' category='EVENT' id='If057e3c28ed' name='execution'/>
-                <DataItem type='PROGRAM' category='EVENT' id='I347bd37bbc0' name='TaskProgramName'/>
-                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='Ie7ad7229b05' name='SpeedRatio' units='PERCENT'/>
-                <DataItem type='PATH_POSITION' category='SAMPLE' id='Icf9586dad21' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='Iaecb4d29bd4'/>
-                <DataItem type='ORIENTATION' category='SAMPLE' id='I5ae350c5289' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
+                <DataItem type='WORKING_STEP' category='EVENT' id='Ie031c01043a' name='WorkingStep' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Working Step</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
+                        <Description>The type of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the working step</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='FEATURE' category='EVENT' id='Iea6f7e7f686' name='Feature' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Feature</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
+                        <Description>The type of feature </Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the feature</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='I2edb301b5e3' name='WorkingPlanUUID'/>
+              </DataItems>
+            </ProcessOccurence>
+          </Components>
+        </Process>
+        <Controller id='Iab779f66b31'>
+          <Components>
+            <Path name='task1' id='Icd79186121c'>
+              <DataItems>
+                <DataItem type='CONTROLLER_MODE' category='EVENT' id='I41feb52bdb6' name='controller_mode'/>
+                <DataItem type='EXECUTION' category='EVENT' id='Ia73b0cd4046' name='execution'/>
+                <DataItem type='PROGRAM' category='EVENT' id='I0c8c4166d9c' name='TaskProgramName'/>
+                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='I432471f15af' name='SpeedRatio' units='PERCENT'/>
+                <DataItem type='PATH_POSITION' category='SAMPLE' id='Ic254b7190fd' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='Iaecb4d29bd4'/>
+                <DataItem type='ORIENTATION' category='SAMPLE' id='I2bdb7107440' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
               </DataItems>
             </Path>
           </Components>
         </Controller>
-        <Auxiliaries id='Ia018184d25e'>
+        <Auxiliaries id='If3e21284f66'>
           <Components>
-            <EndEffector id='I2709bb82129'/>
+            <EndEffector id='Ifb0f7db2f91'/>
           </Components>
         </Auxiliaries>
       </Components>
     </Device>
-    <Device name='Kyle' uuid='DigitalTwin_Kyle_10f65c' id='I7ec2752a0ec'>
+    <Device name='Kyle' uuid='DigitalTwin_Kyle_10f65c' id='I10c390d96b9'>
       <Description model='IRB-120' manufacturer='ABB'>6 Axis Robot - Robot Kyle</Description>
       <Configuration>
         <CoordinateSystems>
-          <CoordinateSystem type='WORLD' id='I8f12a3199bd' name='world'>
+          <CoordinateSystem type='WORLD' id='I0b4e3ec6403' name='world'>
             <Origin>0 0 0</Origin>
           </CoordinateSystem>
-          <CoordinateSystem type='TASK' id='I8237a0e3b1e' name='user' nativeName='USER' parentIdRef='I8f12a3199bd'/>
+          <CoordinateSystem type='TASK' id='Ibbe82f62841' name='user' nativeName='USER' parentIdRef='I0b4e3ec6403'/>
         </CoordinateSystems>
       </Configuration>
       <DataItems>
-        <DataItem type='AVAILABILITY' category='EVENT' id='I1c56f80cbd7' name='avail'/>
-        <DataItem type='EMERGENCY_STOP' category='EVENT' id='I96f095e7f8c' name='estop'/>
+        <DataItem type='AVAILABILITY' category='EVENT' id='I9c5fe43076b' name='avail'/>
+        <DataItem type='EMERGENCY_STOP' category='EVENT' id='I61a16dee05f' name='estop'/>
       </DataItems>
       <Components>
-        <Axes id='I6cd74d6712a'>
+        <Axes id='I89a13b3ddc5'>
           <Components>
-            <Rotary name='J1' nativeName='Rax_1' id='I786c95bad34'>
+            <Rotary name='J1' nativeName='Rax_1' id='I9f2cf5681f9'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I6637a5e8372' name='Rax_1_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I3c9469c2ac2' name='Rax_1_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J2' nativeName='Rax_2' id='Id4f41f8de04'>
+            <Rotary name='J2' nativeName='Rax_2' id='Iefeb7dad5ba'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I3593f6cb79d' name='Rax_2_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='Ie4603521a3a' name='Rax_2_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J3' nativeName='Rax_3' id='I599853d0d95'>
+            <Rotary name='J3' nativeName='Rax_3' id='I18bf37cd191'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I5b9a773c5af' name='Rax_3_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='Ie50f436c7e7' name='Rax_3_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J4' nativeName='Rax_4' id='Ie95f1ccbdd6'>
+            <Rotary name='J4' nativeName='Rax_4' id='I5ee49dcc9ea'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='Ie5511c07c30' name='Rax_4_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I444262f529b' name='Rax_4_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J5' nativeName='Rax_5' id='I59209232c82'>
+            <Rotary name='J5' nativeName='Rax_5' id='Ide0da9b7bcc'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I1e67d7e5162' name='Rax_5_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I11dcb7abefc' name='Rax_5_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J6' nativeName='Rax_6' id='I92caecf17a4'>
+            <Rotary name='J6' nativeName='Rax_6' id='Ia45222e6525'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I74e9f8054eb' name='Rax_6_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I6c7c0d90d58' name='Rax_6_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
           </Components>
         </Axes>
-        <ProcessOccurence id='I01c7d44f7f7'>
-          <DataItems>
-            <DataItem type='WORKING_STEP' category='EVENT' id='I00fc432f5da' name='WorkingStep' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Working Step</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
-                    <Description>The type of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the working step</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='FEATURE' category='EVENT' id='Ief263c2cb50' name='Feature' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Feature</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
-                    <Description>The type of feature </Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the feature</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='WORKING_PLAN' category='EVENT' id='Ibe736240fbb' name='WorkingPlanUUID'/>
-          </DataItems>
-        </ProcessOccurence>
-        <PartOccurence id='Ie4396ad2887'/>
-        <Controller id='Icb929a32c2d'>
+        <Process id='Iddac49c5109'>
           <Components>
-            <Path name='task1' id='I78fcfb45827'>
+            <ProcessOccurence id='I2bdc3d347f4'>
               <DataItems>
-                <DataItem type='CONTROLLER_MODE' category='EVENT' id='I68f9023ccb4' name='controller_mode'/>
-                <DataItem type='EXECUTION' category='EVENT' id='I0a3ee5e02c2' name='execution'/>
-                <DataItem type='PROGRAM' category='EVENT' id='Ib8e4d995cc4' name='TaskProgramName'/>
-                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='Ied34c9d3d7c' name='SpeedRatio' units='PERCENT'/>
-                <DataItem type='PATH_POSITION' category='SAMPLE' id='I4f5e9e78e45' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='I8237a0e3b1e'/>
-                <DataItem type='ORIENTATION' category='SAMPLE' id='Id7483a5a5f3' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
+                <DataItem type='WORKING_STEP' category='EVENT' id='If7c27b78c96' name='WorkingStep' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Working Step</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
+                        <Description>The type of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the working step</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='FEATURE' category='EVENT' id='Ie36bb62b80a' name='Feature' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Feature</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
+                        <Description>The type of feature </Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the feature</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='Ide4dfc790aa' name='WorkingPlanUUID'/>
+              </DataItems>
+            </ProcessOccurence>
+          </Components>
+        </Process>
+        <Controller id='I9f34b4555d7'>
+          <Components>
+            <Path name='task1' id='I37b1464f315'>
+              <DataItems>
+                <DataItem type='CONTROLLER_MODE' category='EVENT' id='I1e67cf733ad' name='controller_mode'/>
+                <DataItem type='EXECUTION' category='EVENT' id='I4a96b55f198' name='execution'/>
+                <DataItem type='PROGRAM' category='EVENT' id='I22528776378' name='TaskProgramName'/>
+                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='I8abcc721928' name='SpeedRatio' units='PERCENT'/>
+                <DataItem type='PATH_POSITION' category='SAMPLE' id='I9a79cd94208' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='Ibbe82f62841'/>
+                <DataItem type='ORIENTATION' category='SAMPLE' id='I808d4f7a82d' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
               </DataItems>
             </Path>
           </Components>
         </Controller>
-        <Auxiliaries id='I8125180aadd'>
+        <Auxiliaries id='Ib627f3f8150'>
           <Components>
-            <EndEffector id='I3ed95df2bda'/>
+            <EndEffector id='I3bb1e556397'/>
           </Components>
         </Auxiliaries>
       </Components>
     </Device>
-    <Device name='Cartman' uuid='DigitalTwin_Cartman_438f56' id='Idc4a71d25ff'>
+    <Device name='Cartman' uuid='DigitalTwin_Cartman_438f56' id='I62eae8a74af'>
       <Description model='IRB-120' manufacturer='ABB'>6 Axis Robot - Robot Cartman</Description>
       <Configuration>
         <CoordinateSystems>
-          <CoordinateSystem type='WORLD' id='I7a75820948e' name='world'>
+          <CoordinateSystem type='WORLD' id='Iee29c5d1ef4' name='world'>
             <Origin>0 0 0</Origin>
           </CoordinateSystem>
-          <CoordinateSystem type='TASK' id='Ia98f1348320' name='user' nativeName='USER' parentIdRef='I7a75820948e'/>
+          <CoordinateSystem type='TASK' id='Ib698e850ada' name='user' nativeName='USER' parentIdRef='Iee29c5d1ef4'/>
         </CoordinateSystems>
       </Configuration>
       <DataItems>
-        <DataItem type='AVAILABILITY' category='EVENT' id='I7305484cd82' name='avail'/>
-        <DataItem type='EMERGENCY_STOP' category='EVENT' id='Id7e38a0e8f7' name='estop'/>
+        <DataItem type='AVAILABILITY' category='EVENT' id='Ic1b621099d0' name='avail'/>
+        <DataItem type='EMERGENCY_STOP' category='EVENT' id='I4d75c0273be' name='estop'/>
       </DataItems>
       <Components>
-        <Axes id='Ie241b7018a5'>
+        <Axes id='Ie15d147e17c'>
           <Components>
-            <Rotary name='J1' nativeName='Rax_1' id='I38c802c0e8e'>
+            <Rotary name='J1' nativeName='Rax_1' id='I679d2d3805f'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I71b64ec7a0e' name='Rax_1_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I1610adaeb5d' name='Rax_1_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J2' nativeName='Rax_2' id='I929262d563d'>
+            <Rotary name='J2' nativeName='Rax_2' id='I778d94f6000'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I491b40761b9' name='Rax_2_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I9f4dcd1bdde' name='Rax_2_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J3' nativeName='Rax_3' id='I9f39bffd7c7'>
+            <Rotary name='J3' nativeName='Rax_3' id='Iafa11807c1a'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I72061a53c24' name='Rax_3_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I67aaabe187d' name='Rax_3_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J4' nativeName='Rax_4' id='Ia771ad12509'>
+            <Rotary name='J4' nativeName='Rax_4' id='Ie2fd28b2294'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='Iddf08ae855c' name='Rax_4_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='Ieb54a360b1e' name='Rax_4_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J5' nativeName='Rax_5' id='I73421e362bb'>
+            <Rotary name='J5' nativeName='Rax_5' id='I6e4668dc31c'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I6fc93854cb4' name='Rax_5_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I1f67d0a1c9d' name='Rax_5_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J6' nativeName='Rax_6' id='Ife9c92d78da'>
+            <Rotary name='J6' nativeName='Rax_6' id='I20460a19f57'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I2ab4db4738e' name='Rax_6_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I22f3ae845b3' name='Rax_6_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
           </Components>
         </Axes>
-        <ProcessOccurence id='I01b5858311a'>
-          <DataItems>
-            <DataItem type='WORKING_STEP' category='EVENT' id='I977e760ee2a' name='WorkingStep' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Working Step</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
-                    <Description>The type of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the working step</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='FEATURE' category='EVENT' id='I414998cfc26' name='Feature' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Feature</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
-                    <Description>The type of feature </Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the feature</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='WORKING_PLAN' category='EVENT' id='I65b60206a6f' name='WorkingPlanUUID'/>
-          </DataItems>
-        </ProcessOccurence>
-        <PartOccurence id='Idc23af6659a'/>
-        <Controller id='I6968e908a04'>
+        <Process id='Iee0a8446396'>
           <Components>
-            <Path name='task1' id='Ib1fb120e9c5'>
+            <ProcessOccurence id='I3266c5432ca'>
               <DataItems>
-                <DataItem type='CONTROLLER_MODE' category='EVENT' id='I73fa2a252c6' name='controller_mode'/>
-                <DataItem type='EXECUTION' category='EVENT' id='Ia8bf2fd4951' name='execution'/>
-                <DataItem type='PROGRAM' category='EVENT' id='Ie4cd792df14' name='TaskProgramName'/>
-                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='Ib4b9e819662' name='SpeedRatio' units='PERCENT'/>
-                <DataItem type='PATH_POSITION' category='SAMPLE' id='Iab8ccfce91c' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='Ia98f1348320'/>
-                <DataItem type='ORIENTATION' category='SAMPLE' id='I3ca5be4a4f0' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
+                <DataItem type='WORKING_STEP' category='EVENT' id='Ieb0e88cc9db' name='WorkingStep' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Working Step</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
+                        <Description>The type of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the working step</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='FEATURE' category='EVENT' id='Ib02127c9d3d' name='Feature' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Feature</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
+                        <Description>The type of feature </Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the feature</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='I10076ff6d08' name='WorkingPlanUUID'/>
+              </DataItems>
+            </ProcessOccurence>
+          </Components>
+        </Process>
+        <Controller id='I6d9b559a910'>
+          <Components>
+            <Path name='task1' id='I671e5c245c1'>
+              <DataItems>
+                <DataItem type='CONTROLLER_MODE' category='EVENT' id='Ic64133ffde9' name='controller_mode'/>
+                <DataItem type='EXECUTION' category='EVENT' id='Idd0c806ebc7' name='execution'/>
+                <DataItem type='PROGRAM' category='EVENT' id='Ie7401d09063' name='TaskProgramName'/>
+                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='I1d207aef050' name='SpeedRatio' units='PERCENT'/>
+                <DataItem type='PATH_POSITION' category='SAMPLE' id='I36249477ef6' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='Ib698e850ada'/>
+                <DataItem type='ORIENTATION' category='SAMPLE' id='I7bbcc6cd58c' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
               </DataItems>
             </Path>
           </Components>
         </Controller>
-        <Auxiliaries id='Icf35abdb9a1'>
+        <Auxiliaries id='Iaf1c516d698'>
           <Components>
-            <EndEffector id='I3b640cb26a4'/>
+            <EndEffector id='I6ef3f593934'/>
           </Components>
         </Auxiliaries>
       </Components>
     </Device>
-    <Device name='Kenny' uuid='DigitalTwin_Kenny_c911f5' id='I61b4b0e5370'>
+    <Device name='Kenny' uuid='DigitalTwin_Kenny_c911f5' id='I20ba63cad5f'>
       <Description model='IRB-120' manufacturer='ABB'>6 Axis Robot - Robot Kenny</Description>
       <Configuration>
         <CoordinateSystems>
-          <CoordinateSystem type='WORLD' id='Ie44a5495400' name='world'>
+          <CoordinateSystem type='WORLD' id='I7579309605f' name='world'>
             <Origin>0 0 0</Origin>
           </CoordinateSystem>
-          <CoordinateSystem type='TASK' id='I33d2948135e' name='user' nativeName='USER' parentIdRef='Ie44a5495400'/>
+          <CoordinateSystem type='TASK' id='Iab03a710b6a' name='user' nativeName='USER' parentIdRef='I7579309605f'/>
         </CoordinateSystems>
       </Configuration>
       <DataItems>
-        <DataItem type='AVAILABILITY' category='EVENT' id='Id2a2bbc5cfb' name='avail'/>
-        <DataItem type='EMERGENCY_STOP' category='EVENT' id='I7f1a2cf7b82' name='estop'/>
+        <DataItem type='AVAILABILITY' category='EVENT' id='I806ba9b2b6d' name='avail'/>
+        <DataItem type='EMERGENCY_STOP' category='EVENT' id='Ic1fee12d6c9' name='estop'/>
       </DataItems>
       <Components>
-        <Axes id='Ifebd1544797'>
+        <Axes id='I79d7bbf67de'>
           <Components>
-            <Rotary name='J1' nativeName='Rax_1' id='Ifb8b3229e00'>
+            <Rotary name='J1' nativeName='Rax_1' id='I1e076613682'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='If88c018cbd1' name='Rax_1_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='Ia3a19050c02' name='Rax_1_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J2' nativeName='Rax_2' id='I8211810f912'>
+            <Rotary name='J2' nativeName='Rax_2' id='Id0dd70bc450'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I90102a41e69' name='Rax_2_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I81378db995b' name='Rax_2_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J3' nativeName='Rax_3' id='I43002a4f480'>
+            <Rotary name='J3' nativeName='Rax_3' id='I4cfda606e89'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I2839bf9fdd7' name='Rax_3_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='Idf30a4bc407' name='Rax_3_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J4' nativeName='Rax_4' id='I1623df2b85e'>
+            <Rotary name='J4' nativeName='Rax_4' id='I2991f07867c'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I83b1f5bfece' name='Rax_4_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I0941c7dd5ca' name='Rax_4_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J5' nativeName='Rax_5' id='Ifc16c4b4ce1'>
+            <Rotary name='J5' nativeName='Rax_5' id='I569dbd5fc32'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I41deba821f0' name='Rax_5_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I2b89fc7492a' name='Rax_5_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
-            <Rotary name='J6' nativeName='Rax_6' id='I4bf750cf6eb'>
+            <Rotary name='J6' nativeName='Rax_6' id='I9322c962972'>
               <DataItems>
-                <DataItem type='ANGLE' category='SAMPLE' id='I84f30a7c190' name='Rax_6_angle' units='DEGREE' nativeUnits='DEGREE'/>
+                <DataItem type='ANGLE' category='SAMPLE' id='I4280d9aaa30' name='Rax_6_angle' units='DEGREE' nativeUnits='DEGREE'/>
               </DataItems>
             </Rotary>
           </Components>
         </Axes>
-        <ProcessOccurence id='I77e2b738608'>
-          <DataItems>
-            <DataItem type='WORKING_STEP' category='EVENT' id='If26746d6888' name='WorkingStep' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Working Step</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
-                    <Description>The type of the working step</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the working step</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='FEATURE' category='EVENT' id='Ibe02a7cb727' name='Feature' representation='DATA_SET'>
-              <Definition>
-                <Description>AP 238 Feature</Description>
-                <EntryDefinitions>
-                  <EntryDefinition key='UUID' type='UUID'>
-                    <Description>The UUID of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='NAME' type='NAME'>
-                    <Description>The Name of the feature</Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
-                    <Description>The type of feature </Description>
-                  </EntryDefinition>
-                  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
-                    <Description>The description of the feature</Description>
-                  </EntryDefinition>
-                </EntryDefinitions>
-              </Definition>
-            </DataItem>
-            <DataItem type='WORKING_PLAN' category='EVENT' id='I8257b4e456f' name='WorkingPlanUUID'/>
-          </DataItems>
-        </ProcessOccurence>
-        <PartOccurence id='Ibcadeea6717'/>
-        <Controller id='Ic21c6f15e6a'>
+        <Process id='I3f72312a7a3'>
           <Components>
-            <Path name='task1' id='I0cc5564f775'>
+            <ProcessOccurence id='I0cc5ac5e6e9'>
               <DataItems>
-                <DataItem type='CONTROLLER_MODE' category='EVENT' id='I8d2c137a061' name='controller_mode'/>
-                <DataItem type='EXECUTION' category='EVENT' id='Ic47236fd31e' name='execution'/>
-                <DataItem type='PROGRAM' category='EVENT' id='I9674bf334dd' name='TaskProgramName'/>
-                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='I45df637797d' name='SpeedRatio' units='PERCENT'/>
-                <DataItem type='PATH_POSITION' category='SAMPLE' id='I9f1eaad9775' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='I33d2948135e'/>
-                <DataItem type='ORIENTATION' category='SAMPLE' id='I09e9c117b4b' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
+                <DataItem type='WORKING_STEP' category='EVENT' id='I0ecf889701c' name='WorkingStep' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Working Step</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
+                        <Description>The type of the working step</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the working step</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='FEATURE' category='EVENT' id='I9aa7d1f690e' name='Feature' representation='DATA_SET'>
+                  <Definition>
+                    <Description>AP 238 Feature</Description>
+                    <EntryDefinitions>
+                      <EntryDefinition key='UUID' type='UUID'>
+                        <Description>The UUID of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='NAME' type='NAME'>
+                        <Description>The Name of the feature</Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
+                        <Description>The type of feature </Description>
+                      </EntryDefinition>
+                      <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+                        <Description>The description of the feature</Description>
+                      </EntryDefinition>
+                    </EntryDefinitions>
+                  </Definition>
+                </DataItem>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='I07d7c8b7e04' name='WorkingPlanUUID'/>
+              </DataItems>
+            </ProcessOccurence>
+          </Components>
+        </Process>
+        <Controller id='Ifa5a87ad5e1'>
+          <Components>
+            <Path name='task1' id='I495f6b041da'>
+              <DataItems>
+                <DataItem type='CONTROLLER_MODE' category='EVENT' id='I64f144aa6ae' name='controller_mode'/>
+                <DataItem type='EXECUTION' category='EVENT' id='I1881598de67' name='execution'/>
+                <DataItem type='PROGRAM' category='EVENT' id='I8e29ce82dfa' name='TaskProgramName'/>
+                <DataItem type='PATH_FEEDRATE_OVERRIDE' category='EVENT' id='Ia679b768e0d' name='SpeedRatio' units='PERCENT'/>
+                <DataItem type='PATH_POSITION' category='SAMPLE' id='I6c37640c73f' name='path_pos' units='MILLIMETER_3D' nativeUnits='MILLIMETER_3D' coordinateSystemId='Iab03a710b6a'/>
+                <DataItem type='ORIENTATION' category='SAMPLE' id='I2f8d6016a9f' name='orientation' units='DEGREE_3D' nativeUnits='DEGREE_3D'/>
               </DataItems>
             </Path>
           </Components>
         </Controller>
-        <Auxiliaries id='I90f075e2813'>
+        <Auxiliaries id='I3496700cc88'>
           <Components>
-            <EndEffector id='Ieaf15eee1ab'/>
+            <EndEffector id='Ib574c9cf305'/>
           </Components>
         </Auxiliaries>
       </Components>
