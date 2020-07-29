@@ -268,7 +268,6 @@ try:
     client.session_timeout = 1000000
     client.connect()
     root = client.get_root_node()
-    running = True
 
     # Get the indexes of the various namespaces
     bindings = { "ua": 0,
@@ -282,15 +281,15 @@ try:
     adapter = Adapter(('0.0.0.0', 7878))
 
     robots = [Robot(adapter, 'Stan', 1, root, bindings) ] 
+#              Robot(adapter, 'Kyle', 2, root, bindings),
 #              Robot(adapter, 'Kenny', 3, root, bindings),
 #              Robot(adapter, 'Cartman', 4, root, bindings)]
 
     adapter.start()
 
     def gather_data(data_items):
-        for d in data_items:
-            d.gather()
-
+        for d in data_items: d.gather()
+    
     def gather_forever():
         while adapter.is_running():
             for r in robots: r.collect()
