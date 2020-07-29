@@ -31,9 +31,10 @@ def embed():
     shell.interact()
 
 class Node(object):
-    def __init__(self, path):
+    def __init__(self, path, root, bindings):
         self._path = path
         self._node = None
+        self.connect(root, bindings)
 
     def connect(self, root, bindings):
         self._node = resolve_path(root, self._path, bindings)
@@ -48,13 +49,10 @@ class Node(object):
         return self._node
 
 class Variable(Node):
-    def __init__(self, name, path, root = None, bindings = None):
-        super().__init__(path)
+    def __init__(self, name, path, root, bindings):
+        super().__init__(path, root, bindings)
         self._value = None
         self.name = name
-
-        if root is not None and bindings is not None:
-            self.connect(root, bindings)
 
     def get_value(self):
         if self._node is not None:
@@ -101,7 +99,7 @@ class MappedEnumeration(DataItem):
                 
 class Robot(object):
     def add_variable(self, name, path, root = None):
-        v = Variable(name, path, root=root, bindings=self._bindings)
+        v = Variable(name, path, root, self._bindings)
         self._variables[name] = v
         return v
 
@@ -141,11 +139,11 @@ class Robot(object):
         self._adapter.add_data_item(di)
 
     def create_process_data_items(self, node):
-        self.add_event('WorkingPlanUUID', '{abbc}:workingPlanUUID', root=node)
-        self.add_variable('FeatureName', '{abbc}:AP238_FEATURE_NAME', root=node)
-        self.add_variable('FeatureUUID', '{abbc}:AP238_FEATURE_UUID', root=node)
-        self.add_variable('WorkingstepName', '{abbc}:AP238_WORKINGSTEP_NAME', root=node)
-        self.add_variable('WorkingstepUUID', '{abbc}:AP238_WORKINGSTEP_UUID', root=node)
+        self.add_event('WorkingPlanUUID', '{abbc}:workingPlanUUID', node)
+        self.add_variable('FeatureName', '{abbc}:AP238_FEATURE_NAME', node)
+        self.add_variable('FeatureUUID', '{abbc}:AP238_FEATURE_UUID', node)
+        self.add_variable('WorkingstepName', '{abbc}:AP238_WORKINGSTEP_NAME', node)
+        self.add_variable('WorkingstepUUID', '{abbc}:AP238_WORKINGSTEP_UUID', node)
 
         def working_step():
             uuid = self.value('WorkingstepUUID')
@@ -201,33 +199,30 @@ class Robot(object):
         # ABB Specific Model
         self.add_variable("SystemID", "{abbc}:SystemID", root = self._abb_root)
         self.add_variable("OperatingMode", "{abbc}:OperatingMode", root = self._abb_root)
-        self.add_variable("ControllerState", "{abbc}:ControllerState", root=self._abb_root)
-        self.add_variable("ControllerExecutionState", "{abbc}:ControllerExecutionState", root=self._abb_root)
-        self.add_event("SpeedRatio", "{abbc}:SpeedRatio", root=self._abb_root)
-        self.add_variable("DrillTool", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:Tools/{abbc}:DrillTool", root=self._abb_root)
-        self.add_variable("TaskState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskState", root=self._abb_root)
-        self.add_variable("TaskExecutionState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskExecutionState", root=self._abb_root)
-        self.add_variable("IsDone", "{abbc}:IO_System/{abbc}:IO_Signals/{abbc}:IsDone", root=self._abb_root)
+        self.add_variable("ControllerState", "{abbc}:ControllerState", self._abb_root)
+        self.add_variable("ControllerExecutionState", "{abbc}:ControllerExecutionState", self._abb_root)
+        self.add_event("SpeedRatio", "{abbc}:SpeedRatio", self._abb_root)
+        self.add_variable("DrillTool", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:Tools/{abbc}:DrillTool", self._abb_root)
+        self.add_variable("TaskState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskState", self._abb_root)
+        self.add_variable("TaskExecutionState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskExecutionState", self._abb_root)
+        self.add_variable("IsDone", "{abbc}:IO_System/{abbc}:IO_Signals/{abbc}:IsDone", self._abb_root)
 
         # Get the axes position from the UA section
-        axes = Node("{uar}:MotionDevices/{di}:ROB_1/{uar}:Axes")
-        axes.connect(self._ua_root, self._bindings)
+        axes = Node("{uar}:MotionDevices/{di}:ROB_1/{uar}:Axes", self._ua_root, self._bindings)
 
         def create_position(root):
             name = f'{root.get_browse_name().Name}_angle'
-            self.add_sample(name, '{di}:ParameterSet/{uar}:ActualPosition', root=root)
+            self.add_sample(name, '{di}:ParameterSet/{uar}:ActualPosition', root)
 
         axes.each(create_position)
 
         # Get some of the UA controller stuff
-        controllers = Node("{uar}:Controllers")
-        controllers.connect(self._ua_root, self._bindings)
-
         def add_controller_variables(root):
-            self.add_variable("ExecutionMode", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:ExecutionMode", root=root)
-            self.add_variable("TaskProgramLoaded", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramLoaded", root=root)
-            self.add_event("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramName", root=root)
+            self.add_variable("ExecutionMode", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:ExecutionMode", root)
+            self.add_variable("TaskProgramLoaded", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramLoaded", root)
+            self.add_event("TaskProgramName", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:TaskProgramName", root)
 
+        controllers = Node("{uar}:Controllers", self._ua_root, self._bindings)
         controllers.each(add_controller_variables)
 
         self.add_estop()
@@ -235,13 +230,11 @@ class Robot(object):
         self.add_controller_mode()
 
         # Add AP238 data items
-        rapid = Node("{abbc}:RAPID/{abbc}:T_ROB1")
-        rapid.connect(self._abb_root, self._bindings)
-
         def add_module(node):
             if node.get_browse_name().Name.endswith('Module'):
                 self.create_process_data_items(node)
             
+        rapid = Node("{abbc}:RAPID/{abbc}:T_ROB1", self._abb_root, self._bindings)
         rapid.each(add_module)
 
         avail.set_value('AVAILABLE')
