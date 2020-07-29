@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <MTConnectDevices xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='urn:mtconnect.org:MTConnectDevices:1.6' xmlns:m='urn:mtconnect.org:MTConnectDevices:1.6' xsi:schemaLocation='urn:mtconnect.org:MTConnectDevices:1.6 http://schemas.mtconnect.org/schemas/MTConnectDevices_1.6.xsd'>
-  <Header creationTime='2020-07-29T17:14:26Z' assetBufferSize='1024' sender='localhost' assetCount='0' version='1.6' instanceId='1' bufferSize='131072'/>
+  <Header creationTime='2020-07-29T18:26:14Z' assetBufferSize='1024' sender='localhost' assetCount='0' version='1.6' instanceId='1' bufferSize='131072'/>
   <Devices>
     <Device name='Stan' uuid='DigitalTwin_Stan_9a245b' id='I1053705d219'>
       <Description model='IRB-120' manufacturer='ABB'>6 Axis Robot - Robot Stan</Description>
@@ -53,9 +53,9 @@
         </Axes>
         <Process id='Ica4854bde0d'>
           <Components>
-            <ProcessOccurence id='I6264b096f07'>
+            <ProcessOccurrence id='If5bbf4f9182'>
               <DataItems>
-                <DataItem type='WORKING_STEP' category='EVENT' id='Ie031c01043a' name='WorkingStep' representation='DATA_SET'>
+                <DataItem type='WORKING_STEP' category='EVENT' id='I47c90835a7d' name='WorkingStep' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Working Step</Description>
                     <EntryDefinitions>
@@ -74,7 +74,7 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='FEATURE' category='EVENT' id='Iea6f7e7f686' name='Feature' representation='DATA_SET'>
+                <DataItem type='FEATURE' category='EVENT' id='I30f48f4f503' name='Feature' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Feature</Description>
                     <EntryDefinitions>
@@ -93,9 +93,9 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='WORKING_PLAN' category='EVENT' id='I2edb301b5e3' name='WorkingPlanUUID'/>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='Ie511dab14d9' name='WorkingPlanUUID'/>
               </DataItems>
-            </ProcessOccurence>
+            </ProcessOccurrence>
           </Components>
         </Process>
         <Controller id='Iab779f66b31'>
@@ -170,9 +170,9 @@
         </Axes>
         <Process id='Iddac49c5109'>
           <Components>
-            <ProcessOccurence id='I2bdc3d347f4'>
+            <ProcessOccurrence id='Icde65a982ca'>
               <DataItems>
-                <DataItem type='WORKING_STEP' category='EVENT' id='If7c27b78c96' name='WorkingStep' representation='DATA_SET'>
+                <DataItem type='WORKING_STEP' category='EVENT' id='Ieff851cc672' name='WorkingStep' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Working Step</Description>
                     <EntryDefinitions>
@@ -191,7 +191,7 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='FEATURE' category='EVENT' id='Ie36bb62b80a' name='Feature' representation='DATA_SET'>
+                <DataItem type='FEATURE' category='EVENT' id='I0c46453214d' name='Feature' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Feature</Description>
                     <EntryDefinitions>
@@ -210,9 +210,9 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='WORKING_PLAN' category='EVENT' id='Ide4dfc790aa' name='WorkingPlanUUID'/>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='Ia48118f9088' name='WorkingPlanUUID'/>
               </DataItems>
-            </ProcessOccurence>
+            </ProcessOccurrence>
           </Components>
         </Process>
         <Controller id='I9f34b4555d7'>
@@ -287,9 +287,9 @@
         </Axes>
         <Process id='Iee0a8446396'>
           <Components>
-            <ProcessOccurence id='I3266c5432ca'>
+            <ProcessOccurrence id='I3e87cc59154'>
               <DataItems>
-                <DataItem type='WORKING_STEP' category='EVENT' id='Ieb0e88cc9db' name='WorkingStep' representation='DATA_SET'>
+                <DataItem type='WORKING_STEP' category='EVENT' id='I97e0cd7fe79' name='WorkingStep' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Working Step</Description>
                     <EntryDefinitions>
@@ -308,7 +308,7 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='FEATURE' category='EVENT' id='Ib02127c9d3d' name='Feature' representation='DATA_SET'>
+                <DataItem type='FEATURE' category='EVENT' id='I4a4eeb38a54' name='Feature' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Feature</Description>
                     <EntryDefinitions>
@@ -327,9 +327,9 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='WORKING_PLAN' category='EVENT' id='I10076ff6d08' name='WorkingPlanUUID'/>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='I0bb7b7539f1' name='WorkingPlanUUID'/>
               </DataItems>
-            </ProcessOccurence>
+            </ProcessOccurrence>
           </Components>
         </Process>
         <Controller id='I6d9b559a910'>
@@ -404,9 +404,9 @@
         </Axes>
         <Process id='I3f72312a7a3'>
           <Components>
-            <ProcessOccurence id='I0cc5ac5e6e9'>
+            <ProcessOccurrence id='I249fc0afa63'>
               <DataItems>
-                <DataItem type='WORKING_STEP' category='EVENT' id='I0ecf889701c' name='WorkingStep' representation='DATA_SET'>
+                <DataItem type='WORKING_STEP' category='EVENT' id='I204ab4a6446' name='WorkingStep' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Working Step</Description>
                     <EntryDefinitions>
@@ -425,7 +425,7 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='FEATURE' category='EVENT' id='I9aa7d1f690e' name='Feature' representation='DATA_SET'>
+                <DataItem type='FEATURE' category='EVENT' id='I98b1cc98b4f' name='Feature' representation='DATA_SET'>
                   <Definition>
                     <Description>AP 238 Feature</Description>
                     <EntryDefinitions>
@@ -444,9 +444,9 @@
                     </EntryDefinitions>
                   </Definition>
                 </DataItem>
-                <DataItem type='WORKING_PLAN' category='EVENT' id='I07d7c8b7e04' name='WorkingPlanUUID'/>
+                <DataItem type='WORKING_PLAN' category='EVENT' id='If36ee3ce6a1' name='WorkingPlanUUID'/>
               </DataItems>
-            </ProcessOccurence>
+            </ProcessOccurrence>
           </Components>
         </Process>
         <Controller id='Ifa5a87ad5e1'>
