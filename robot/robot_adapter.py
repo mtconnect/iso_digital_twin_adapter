@@ -98,6 +98,34 @@ class MappedEnumeration(DataItem):
                 self.unavailable()
                 
 class Robot(object):
+    def __init__(self, adapter, name, number, root, bindings):
+        self._adapter = adapter
+        self._number = number
+        self._root = root
+        self._bindings = dict(bindings)
+        self._bindings["number"] = number
+        self._name = name
+        self._variables = { }
+
+        avail = Event(f'{name}:avail')
+        adapter.add_data_item(avail)
+
+        print(f"Binding variables for robot {name} #{number}")
+        self._abb_root = resolve_path(root, "0:Objects/{abbc}:IRC5/{abbc}:rob{number}", self._bindings)
+        self._ua_root = resolve_path(root, "0:Objects/{di}:DeviceSet/{di}:rob{number}", self._bindings)
+
+        self.add_abb_variables()
+        self.add_axes_angles()
+        self.add_controller_variables()
+        
+        self.add_estop()
+        self.add_execution()
+        self.add_controller_mode()
+        self.add_robot_module()
+
+        avail.set_value('AVAILABLE')
+
+    
     def add_variable(self, name, path, root = None):
         v = Variable(name, path, root, self._bindings)
         self._variables[name] = v
@@ -167,35 +195,8 @@ class Robot(object):
         di = MappedTransform(f'{self._name}:Feature', feature)
         self._adapter.add_data_item(di)
 
-    def value(self, name):
-        return self._variables[name].value()
 
-    def variable(self, name):
-        return self._variables[name]
-                        
-    def collect(self):
-        for v in self._variables.values():
-            v.get_value()
-    
-    def __init__(self, adapter, name, number, root, bindings):
-        self._adapter = adapter
-        self._number = number
-        self._root = root
-        self._bindings = dict(bindings)
-        self._bindings["number"] = number
-        self._name = name
-
-
-        print("--------------------------------")
-        print(f"Binding variables for robot {number}")
-        self._abb_root = resolve_path(root, "0:Objects/{abbc}:IRC5/{abbc}:rob{number}", self._bindings)
-        self._ua_root = resolve_path(root, "0:Objects/{di}:DeviceSet/{di}:rob{number}", self._bindings)
-
-        self._variables = { }
-
-        avail = Event(f'{name}:avail')
-        adapter.add_data_item(avail)
-
+    def add_abb_variables(self):
         # ABB Specific Model
         self.add_variable("SystemID", "{abbc}:SystemID", root = self._abb_root)
         self.add_variable("OperatingMode", "{abbc}:OperatingMode", root = self._abb_root)
@@ -207,15 +208,18 @@ class Robot(object):
         self.add_variable("TaskExecutionState", "{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:TaskExecutionState", self._abb_root)
         self.add_variable("IsDone", "{abbc}:IO_System/{abbc}:IO_Signals/{abbc}:IsDone", self._abb_root)
 
-        # Get the axes position from the UA section
-        axes = Node("{uar}:MotionDevices/{di}:ROB_1/{uar}:Axes", self._ua_root, self._bindings)
 
+    def add_axes_angles(self):
+        # Get the axes position from the UA section
         def create_position(root):
             name = f'{root.get_browse_name().Name}_angle'
             self.add_sample(name, '{di}:ParameterSet/{uar}:ActualPosition', root)
 
+        axes = Node("{uar}:MotionDevices/{di}:ROB_1/{uar}:Axes", self._ua_root, self._bindings)
         axes.each(create_position)
 
+
+    def add_controller_variables(self):
         # Get some of the UA controller stuff
         def add_controller_variables(root):
             self.add_variable("ExecutionMode", "{uar}:TaskControls/{di}:T_ROB1/{di}:ParameterSet/{uar}:ExecutionMode", root)
@@ -225,10 +229,7 @@ class Robot(object):
         controllers = Node("{uar}:Controllers", self._ua_root, self._bindings)
         controllers.each(add_controller_variables)
 
-        self.add_estop()
-        self.add_execution()
-        self.add_controller_mode()
-
+    def add_robot_module(self):
         # Add AP238 data items
         def add_module(node):
             if node.get_browse_name().Name.endswith('Module'):
@@ -236,9 +237,18 @@ class Robot(object):
             
         rapid = Node("{abbc}:RAPID/{abbc}:T_ROB1", self._abb_root, self._bindings)
         rapid.each(add_module)
+            
+        
+    def value(self, name):
+        return self._variables[name].value()
 
-        avail.set_value('AVAILABLE')
-
+    def variable(self, name):
+        return self._variables[name]
+                        
+    def collect(self):
+        for v in self._variables.values():
+            v.get_value()
+    
 
 # Main 
         
