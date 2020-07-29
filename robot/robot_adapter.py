@@ -252,11 +252,12 @@ class Robot(object):
 logging.basicConfig(level=logging.WARN)
 url = sys.argv[1]
 if not url.startswith('opc.tcp'):
-    url = f"opc.tcp://robot:robotics@{url}:61510"
+    url = f"opc.tcp://Default User:robotics@{url}:61510"
 
 print(f"Connecting to OPC Server {url}")
 client = Client(url)
 client.set_security_string("Basic256Sha256,Sign,my_cert.der,my_private_key.pem")
+adapter = None
 
 try:
     client.application_uri = "urn:mtconnect.org:MTConnect:MTConnect"
@@ -299,7 +300,7 @@ try:
     embed()
     
 finally:
-    adapter.stop()
+    if adapter: adapter.stop()
     client.disconnect()
 
 
