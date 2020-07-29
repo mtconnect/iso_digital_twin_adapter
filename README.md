@@ -28,7 +28,7 @@ Where `<user>` is the user name in the "User ID" tab of the OPC Server. `<passwo
 
 The default user name and password are: `Default User` and `robotics`.
 
-The configuration for the MTConnect Agent is in the `robot\agent` subdirectory and has all the Device.xml and configuration file to collect information from the local machine.
+The configuration for the MTConnect Agent is in the `robot/agent` subdirectory and has all the Device.xml and configuration file to collect information from the local machine.
 
 The server requires certificates. I have checked in a personal private and public key pair for testing. The `generate` script uses openssh tools to create new certificates using the cert.config file. To customize it, change the `[ subject ]` section to match your identity.
 
