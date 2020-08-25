@@ -251,6 +251,11 @@ client = Client(url)
 client.set_security_string("Basic256Sha256,Sign,my_cert.der,my_private_key.pem")
 adapter = None
 
+if len(sys.argv) > 2:
+    dump = (sys.argv[2] == 'dump')
+else:
+    dump = False
+    
 try:
     client.application_uri = "urn:mtconnect.org:MTConnect:MTConnect"
     client.secure_channel_timeout = 1000000
@@ -258,6 +263,15 @@ try:
     client.connect()
     root = client.get_root_node()
 
+    if dump:
+        def dump_node(node, indent = 0):
+            print((' ' * indent) + node.get_browse_name().to_string())
+            for child in node.get_children():
+                dump_node(child, indent + 2)
+
+        dump_node(root)
+        exit()
+        
     # Get the indexes of the various namespaces
     bindings = { "ua": 0,
                  "user": 1,
