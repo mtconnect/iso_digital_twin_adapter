@@ -102,6 +102,7 @@ class Robot(object):
         self._root = root
         self._bindings = dict(bindings)
         self._bindings["number"] = number
+        self._bindings["name"] = name
         self._name = name
         self._variables = { }
 
@@ -109,8 +110,8 @@ class Robot(object):
         adapter.add_data_item(avail)
 
         print(f"Binding variables for robot {name} #{number}")
-        self._abb_root = resolve_path(root, "0:Objects/{abbc}:IRC5/{abbc}:rob{number}", self._bindings)
-        self._ua_root = resolve_path(root, "0:Objects/{di}:DeviceSet/{di}:rob{number}", self._bindings)
+        self._abb_root = resolve_path(root, "0:Objects/{abbc}:IRC5/{abbc}:{name}", self._bindings)
+        self._ua_root = resolve_path(root, "0:Objects/{di}:DeviceSet/{di}:{name}", self._bindings)
 
         self.add_abb_variables()
         self.add_axes_angles()
@@ -247,7 +248,7 @@ class Robot(object):
 logging.basicConfig(level=logging.WARN)
 url = sys.argv[1]
 if not url.startswith('opc.tcp'):
-    url = f"opc.tcp://Default User:robotics@{url}:61510"
+    url = f"opc.tcp://Default User:robotics@{url}:61510/ABB.IRC5.OPCUA.Server"
 
 print(f"Connecting to OPC Server {url}")
 client = Client(url)
@@ -272,10 +273,10 @@ try:
 
     adapter = Adapter(('0.0.0.0', 7878))
 
-    robots = [Robot(adapter, 'Stan', 1, root, bindings) ] 
-#              Robot(adapter, 'Kyle', 2, root, bindings),
-#              Robot(adapter, 'Kenny', 3, root, bindings),
-#              Robot(adapter, 'Cartman', 4, root, bindings)]
+    robots = [Robot(adapter, 'Stan', 1, root, bindings),
+              Robot(adapter, 'Kyle', 2, root, bindings),
+              Robot(adapter, 'Cartman', 3, root, bindings),
+              Robot(adapter, 'Kenny', 4, root, bindings)]
 
     adapter.start()
 
