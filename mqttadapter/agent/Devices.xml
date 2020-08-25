@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTConnectDevices> <!-- removed MTConnect xml namespaces-->
+    <Header creationTime="2011-08-10T00:35:05Z" sender="kth" instanceId="1312930214" version="1.5" bufferSize="131072" assetBufferSize="1" assetCount="0"/>
+    <Devices>
+        <Device id="KTH-HERMLEC50-01" name="KTH-HERMLEC50-01" uuid="KTH-HERMLEC50-01">
+            <Description manufacturer="Hermle"> 
+            </Description>
+            <DataItems>
+                <DataItem category="EVENT" id="d2_01" name="avail" type="AVAILABILITY"/>
+                <DataItem category="CONDITION" id="d3_01" name="system" type="SYSTEM"/>
+                <DataItem category="EVENT" id="d1_01_asset_chg" type="ASSET_CHANGED"/>
+            </DataItems>
+            <Components>
+                <Controller id="controller33_01" name="Controller">
+                    <DataItems>
+                        <DataItem category="CONDITION" id="controller34_01" name="logic" type="LOGIC_PROGRAM"/>
+                    </DataItems>
+                    <Components>
+                        <Path id="path135_01" name="path">
+                            <DataItems>
+                                <DataItem category="EVENT" id="path136_01" name="exec_1" type="EXECUTION"/>
+                                <DataItem category="EVENT" id="path137_01" name="line_1" type="LINE"/>
+                                <DataItem category="EVENT" id="path138_01" name="mode_1" type="CONTROLLER_MODE"/>
+                                <DataItem category="EVENT" id="path139_01" name="program_1" type="PROGRAM"/>
+								<DataItem category="EVENT" id="path139_02" name="programcomment_1" type="PROGRAM_COMMENT"/>
+                                <DataItem category="EVENT" id="path140_01" name="Fovr_1" nativeUnits="PERCENT" subType="OVERRIDE" type="PATH_FEEDRATE" units="PERCENT"/>
+                                <DataItem category="EVENT" id="path141_01" name="Sovr_1" nativeUnits="PERCENT" subType="OVERRIDE" type="ROTARY_VELOCITY" units="PERCENT"/>
+                                <DataItem category="EVENT" id="path142_01" name="FRovr_1" nativeUnits="PERCENT" subType="RAPID" type="PATH_FEEDRATE_OVERRIDE" units="PERCENT"/>
+                                <DataItem category="SAMPLE" id="path143_01" name="path_position_1" nativeUnits="INCH_3D" subType="ACTUAL" type="PATH_POSITION" units="MILLIMETER_3D"/>
+                                <DataItem category="EVENT" id="path144_01" name="tool_id_1" type="TOOL_ASSET_ID"/>
+                                <DataItem category="CONDITION" id="path145_01" name="system_1" type="SYSTEM"/>
+                                <DataItem category="EVENT" id="path146_01" name="block_1" type="BLOCK"/>
+                                <DataItem category="EVENT" id="path147_01" name="estop_1" type="EMERGENCY_STOP"/>
+                                <DataItem category="EVENT" id="path148_01" name="msg_1" type="MESSAGE"/>
+                                <DataItem category="EVENT" id="path149_01" name="active_axes_1" type="ACTIVE_AXES"/>
+                                <DataItem category="EVENT" id="path150_01" name="part_count_1" type="PART_COUNT"/>
+                                <DataItem category="SAMPLE" id="path151_01" name="Fact_1" nativeUnits="FOOT/MINUTE" subType="ACTUAL" type="PATH_FEEDRATE" units="MILLIMETER/SECOND"/>
+                                <DataItem category="SAMPLE" id="path152_01" name="Fcmd_1" nativeUnits="FOOT/MINUTE" subType="COMMANDED" type="PATH_FEEDRATE" units="MILLIMETER/SECOND"/>
+								<DataItem category="EVENT" id="path153_01" name="startofcycle_1" type="START_OF_CYCLE"/>
+								<DataItem category="EVENT" id="path153_02" name="endofcycle_1" type="END_OF_CYCLE"/>
+                            </DataItems>
+                        </Path>
+                    </Components>
+                </Controller>
+			    <Process id='process_1'>
+				  <Components>
+					<ProcessOccurrence id='po'>
+					  <DataItems>
+						<DataItem type='WORKING_STEP' category='EVENT' id='po1' name='WorkingStep' representation='DATA_SET'>
+						  <Definition>
+							<Description>AP 238 Working Step</Description>
+							<EntryDefinitions>
+							  <EntryDefinition key='UUID' type='UUID'>
+								<Description>The UUID of the working step</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='NAME' type='NAME'>
+								<Description>The Name of the working step</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='WORKING_STEP_TYPE' type='WORKING_STEP_TYPE'>
+								<Description>The type of the working step</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+								<Description>The description of the working step</Description>
+							  </EntryDefinition>
+							</EntryDefinitions>
+						  </Definition>
+						</DataItem>
+						<DataItem type='FEATURE' category='EVENT' id='po2' name='Feature' representation='DATA_SET'>
+						  <Definition>
+							<Description>AP 238 Feature</Description>
+							<EntryDefinitions>
+							  <EntryDefinition key='UUID' type='UUID'>
+								<Description>The UUID of the feature</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='NAME' type='NAME'>
+								<Description>The Name of the feature</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='FEATURE_TYPE' type='FEATURE_TYPE'>
+								<Description>The type of feature </Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+								<Description>The description of the feature</Description>
+							  </EntryDefinition>
+							</EntryDefinitions>
+						  </Definition>
+						</DataItem>
+						<DataItem type='OPERATION' category='EVENT' id='po3' name='Operation' representation='DATA_SET'>
+						  <Definition>
+							<Description>Operation</Description>
+							<EntryDefinitions>
+							  <EntryDefinition key='UUID' type='UUID'>
+								<Description>The UUID of the operation</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='OPERATION_TYPE' type='OPERATION_TYPE'>
+								<Description>The type of operation</Description>
+							  </EntryDefinition>
+							</EntryDefinitions>
+						  </Definition>
+						</DataItem>
+						<DataItem type='PRODUCT' category='EVENT' id='po4' name='Product' representation='DATA_SET'>
+						  <Definition>
+							<Description>Product</Description>
+							<EntryDefinitions>
+							  <EntryDefinition key='UUID' type='UUID'>
+								<Description>The UUID of the product</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='VERSION' type='VERSION'>
+								<Description>The version of the product</Description>
+							  </EntryDefinition>
+							</EntryDefinitions>
+						  </Definition>
+						</DataItem>
+						<DataItem type='PROJECT' category='EVENT' id='po5' name='Project' representation='DATA_SET'>
+						  <Definition>
+							<Description>Project</Description>
+							<EntryDefinitions>
+							  <EntryDefinition key='UUID' type='UUID'>
+								<Description>The UUID of the project</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='RELEASE' type='RELEASE'>
+								<Description>The release of the project</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='STATUS' type='STATUS'>
+								<Description>The status of the project</Description>
+							  </EntryDefinition>
+							</EntryDefinitions>
+						  </Definition>
+						</DataItem>
+						<DataItem type='TOOL' category='EVENT' id='po6' name='Tool' representation='DATA_SET'>
+						  <Definition>
+							<Description>Tool</Description>
+							<EntryDefinitions>
+							  <EntryDefinition key='CLASS' type='CLASS'>
+								<Description>The class of the tool</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='NAME' type='NAME'>
+								<Description>The name of the tool</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
+								<Description>The description of the tool</Description>
+							  </EntryDefinition>
+							</EntryDefinitions>
+						  </Definition>
+						</DataItem>
+					  </DataItems>
+					</ProcessOccurrence>
+				  </Components>
+				</Process>
+            </Components>
+        </Device>
+    </Devices>
+</MTConnectDevices>
