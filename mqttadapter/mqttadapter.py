@@ -65,58 +65,63 @@ class Device:
 
     def create_dataitems(self):
 
-        self.add_dataitem("AVAILABILITY","avail")
-        self._mapped_variables["avail"].set_value("AVAILABLE")
+        """Already defined in Hermle MTConnect Adapter"""
+        #self.add_dataitem("AVAILABILITY","avail")
+        #self._mapped_variables["avail"].set_value("AVAILABLE")
+        #self.add_dataitem("TOOL_ASSET_ID","toolID")
+        #self.add_dataitem("PROGRAM","programID")
 
-        self.add_dataitem("START_OF_CYCLE","startofcycle")
-        self.add_dataitem("END_OF_CYCLE","endofcycle")
-        self.add_dataitem("PROGRAM","programID")
-        self.add_dataitem("PROGRAM_COMMENT","programVersion")
-        self.add_dataitem("TOOL_ASSET_ID","toolID")
+        """Add STEP dataitems"""
+        #Arguments:: (MTCONNECT_DATAITEM_TYPE, MTCONNECT_DATAITEM_NAME, NATIVE_MQTT_NAME)
+        self.add_dataitem("START_OF_CYCLE","startofcycle_1","startofcycle")
+        self.add_dataitem("END_OF_CYCLE","endofcycle_1","endofcycle")
 
-        self.add_dataset("FEATURE", "UUID", "featureID")
-        self.add_dataset("FEATURE", "NAME", "featureName")
-        self.add_dataset("FEATURE", "FEATURE_TYPE", "featureType")
+        self.add_dataitem("PROGRAM_COMMENT","programcomment_1","programVersion")
 
-        self.add_dataset("OPERATION", "UUID", "operationID")
-        self.add_dataset("OPERATION", "OPERATION_TYPE", "operationType")
+        #Arguments:: (MTCONNECT_DATAITEM_TYPE, MTCONNECT_DATAITEM_NAME, MTCONNECT_ENTRY_NAME, NATIVE_MQTT_NAME)
+        self.add_dataset("FEATURE","Feature", "UUID", "featureID")
+        self.add_dataset("FEATURE","Feature", "NAME", "featureName")
+        self.add_dataset("FEATURE","Feature", "FEATURE_TYPE", "featureType")
 
-        self.add_dataset("PRODUCT", "UUID", "productID")
-        self.add_dataset("PRODUCT", "VERSION", "productVersion")
+        self.add_dataset("OPERATION","Operation", "UUID", "operationID")
+        self.add_dataset("OPERATION","Operation", "OPERATION_TYPE", "operationType")
 
-        self.add_dataset("PROJECT", "UUID", "projectID")
-        self.add_dataset("PROJECT", "RELEASE", "projectRelease")
-        self.add_dataset("PROJECT", "STATUS", "projectStatus")
+        self.add_dataset("PRODUCT","Product", "UUID", "productID")
+        self.add_dataset("PRODUCT","Product", "VERSION", "productVersion")
 
-        self.add_dataset("TOOL", "CLASS", "toolClass")
-        self.add_dataset("TOOL", "DESCRIPTION", "toolDescription")
-        self.add_dataset("TOOL", "NAME", "toolName")
+        self.add_dataset("PROJECT","Project", "UUID", "projectID")
+        self.add_dataset("PROJECT","Project", "RELEASE", "projectRelease")
+        self.add_dataset("PROJECT","Project", "STATUS", "projectStatus")
 
-        self.add_dataset("WORKING_STEP", "UUID", "workingStepID")
-        self.add_dataset("WORKING_STEP", "NAME", "workingStepName")
-        self.add_dataset("WORKING_STEP", "WORKING_STEP_TYPE", "workingStepType")
-        self.add_dataset("WORKING_STEP", "DESCRIPTION", "workingStepDescription")
+        self.add_dataset("TOOL","Tool", "CLASS", "toolClass")
+        self.add_dataset("TOOL","Tool", "DESCRIPTION", "toolDescription")
+        self.add_dataset("TOOL","Tool", "NAME", "toolName")
 
-    def add_dataitem(self, name, native_name):
+        self.add_dataset("WORKING_STEP","WorkingStep", "UUID", "workingStepID")
+        self.add_dataset("WORKING_STEP","WorkingStep", "NAME", "workingStepName")
+        self.add_dataset("WORKING_STEP","WorkingStep", "WORKING_STEP_TYPE", "workingStepType")
+        self.add_dataset("WORKING_STEP","WorkingStep", "DESCRIPTION", "workingStepDescription")
+
+    def add_dataitem(self, dataitem_type, dataitem_name, native_name):
         self._mapped_variables[native_name] = Variable()
-        self._dataitems[name] = MappedDataItem(name, self._mapped_variables[native_name])
-        self._adapter.add_data_item(self._dataitems[name])
+        self._dataitems[dataitem_name] = MappedDataItem(dataitem_name, self._mapped_variables[native_name])
+        self._adapter.add_data_item(self._dataitems[dataitem_name])
 
-    def add_dataset(self, name, entry_name, native_name):
-        if name not in self._datasets:
-            self._datasets[name] = dict()
+    def add_dataset(self, dataitem_type, dataitem_name, entry_name, native_name):
+        if dataitem_name not in self._datasets:
+            self._datasets[dataitem_name] = dict()
 
-        if name not in self._dataitems:
-            self._dataitems[name] = MappedDataSet(name, self._datasets[name])
-            self._adapter.add_data_item(self._dataitems[name])
+        if dataitem_name not in self._dataitems:
+            self._dataitems[dataitem_name] = MappedDataSet(dataitem_name, self._datasets[dataitem_name])
+            self._adapter.add_data_item(self._dataitems[dataitem_name])
 
         self._mapped_variables[native_name] = Variable()
-        self._datasets[name][entry_name] = self._mapped_variables[native_name]
+        self._datasets[dataitem_name][entry_name] = self._mapped_variables[native_name]
 
     def update_values(self, dataitems):
         for key,val in dataitems.items():
             val = "UNAVAILABLE" if val == "empty" else val
-            self._mapped_variables[key].set_value(val)
+            self._mapped_variables[key].set_value(val) if key in self._mapped_variables else str()
 
         self.gather_data()
 

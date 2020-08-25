@@ -23,11 +23,10 @@ test_data = {"projectRelease":"empty","productID": "Boxy_3-Axis", "featureName":
 
 test_msg={   "lisaMessage" : {      "messageBody" : {         "data" : "{\"HermleSTEPVariables\":"+json.dumps(test_data)+"}",         "type" : "HermleSTEPVariables"      },      "messageHeader" : {         "handshakeConfirmation" : False,         "timeStamp" : 1595332636516      }   }}
 
-broker="mqtt.eclipse.org"
 client= mqtt.Client()
 client.on_connect = on_connect
 
-client.connect(broker, 1883, 600)
+client.connect("mqtt.eclipse.org", 1883, 600)
 client.subscribe("HermleSTEPVariables")
 
 client.publish("HermleSTEPVariables", json.dumps(test_msg))
