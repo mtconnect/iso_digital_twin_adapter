@@ -36,5 +36,13 @@ If the host is the local machine, invoke as follows:
 
 The configuration for the MTConnect Agent is in the `robot/agent` subdirectory and has all the Device.xml and configuration file to collect information from the local machine.
 
+#### Trust the Certificate
+
 The server requires certificates. I have checked in a personal private and public key pair for testing. The `generate` script uses openssh tools to create new certificates using the cert.config file. To customize it, change the `[ subject ]` section to match your identity.
+
+On the OPC Server Configuration `Client Certificates` Tab, you need to select the certificate if it is in the `Rejected` section and click `Trust`.
+
+## Download and Copy the MTConnect Agent to the `robot/agent` directory.
+
+The agent configuration is in the `robot/agent` directory. You need to download the agent from: [Agent Releases](https://github.com/mtconnect/cppagent/releases) download and extract the agent from the zip file. The `agent.exe` is in the `bin` directory. Copy the file to the `robot/agent` directory and start the agent from the command line: `agent debug`
 
