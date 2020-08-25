@@ -38,8 +38,8 @@ class Node(object):
     def connect(self, root, bindings):
         self._node = resolve_path(root, self._path, bindings)
         if self._node is not None:
-            self._browse_name = self._node.get_browse_name().Name            
-        
+            self._browse_name = self._node.get_browse_name().Name
+    
     def each(self, function):
         for n in self._node.get_children():
             function(n)
@@ -225,12 +225,8 @@ class Robot(object):
 
     def add_robot_module(self):
         # Add AP238 data items
-        def add_module(node):
-            if node.get_browse_name().Name.endswith('Module'):
-                self.create_process_data_items(node)
-            
-        rapid = Node("{abbc}:RAPID/{abbc}:T_ROB1", self._abb_root, self._bindings)
-        rapid.each(add_module)
+        node = Node("{abbc}:RAPID/{abbc}:T_ROB1/{abbc}:{name}WorkingPlan", self._abb_root, self._bindings)
+        self.create_process_data_items(node.get_node())
             
         
     def value(self, name):
