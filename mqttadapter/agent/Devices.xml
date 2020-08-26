@@ -11,6 +11,70 @@
                 <DataItem category="EVENT" id="d1_01_asset_chg" type="ASSET_CHANGED"/>
             </DataItems>
             <Components>
+			    <Axes id="d4_01" name="axes">
+                    <Components>
+                        <Linear id="x15_01" name="X1" nativeName="X1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="x16_01" name="X1act" nativeUnits="INCH" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                                <DataItem category="SAMPLE" id="x17_01" name="X1load" nativeUnits="INCH" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                            </DataItems>
+                        </Linear>
+                        <Linear id="y18_01" name="Y1" nativeName="Y1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="y19_01" name="Y1act" nativeUnits="INCH" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                                <DataItem category="SAMPLE" id="y110_01" name="Y1load" nativeUnits="INCH" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                            </DataItems>
+                        </Linear>
+                        <Linear id="y28_01" name="Y2" nativeName="Y2">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="y29_01" name="Y2act" nativeUnits="INCH" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                                <DataItem category="SAMPLE" id="y210_01" name="Y2load" nativeUnits="INCH" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                            </DataItems>
+                        </Linear>
+                        <Linear id="z111_01" name="Z1" nativeName="Z1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="z112_01" name="Z1act" nativeUnits="INCH" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                                <DataItem category="SAMPLE" id="z113_01" name="Z1load" nativeUnits="INCH" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                            </DataItems>
+                        </Linear>
+                        <Linear id="z214_01" name="A2" nativeName="U1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="a215_01" name="U1act" nativeUnits="INCH" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                                <DataItem category="SAMPLE" id="a216_01" name="U1load" nativeUnits="INCH" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                            </DataItems>
+                        </Linear>
+                        <Linear id="a114_01" name="A1" nativeName="A1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="a115_01" name="A1act" nativeUnits="INCH" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                                <DataItem category="SAMPLE" id="a116_01" name="A1load" nativeUnits="INCH" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                            </DataItems>
+                        </Linear>
+                        <Linear id="a214_01" name="A3" nativeName="MAG1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="a315_01" name="MAG1act" nativeUnits="INCH" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                                <DataItem category="SAMPLE" id="a316_01" name="MAG1load" nativeUnits="INCH" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                            </DataItems>
+                        </Linear>
+                        <Rotary id="c121_01" name="C1" nativeName="C1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="c122_01" name="C1act" nativeUnits="DEGREE" subType="ACTUAL" type="ANGLE" units="DEGREE"/>
+                                <DataItem category="SAMPLE" id="c123_01" name="C1load" nativeUnits="PERCENT" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                                <DataItem category="SAMPLE" id="c124_01" name="C1velocity" nativeUnits="REVOLUTION/MINUTE" subType="ACTUAL" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                                <DataItem category="EVENT" id="c125_01" name="C1direction" type="DIRECTION"/>
+                                <DataItem category="EVENT" id="c126_01" name="C1mode" type="ROTARY_MODE"/>
+                            </DataItems>
+                        </Rotary>
+                        <Rotary id="c227_01" name="C2" nativeName="SP1">
+                            <DataItems>
+                                <DataItem category="SAMPLE" id="c228_01" name="SP1act" nativeUnits="DEGREE" subType="ACTUAL" type="ANGLE" units="DEGREE"/>
+                                <DataItem category="SAMPLE" id="c229_01" name="SP1load" nativeUnits="PERCENT" subType="ACTUAL" type="LOAD" units="PERCENT"/>
+                                <DataItem category="SAMPLE" id="c230_01" name="SP1velocity" nativeUnits="REVOLUTION/MINUTE" subType="ACTUAL" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                                <DataItem category="EVENT" id="c231_01" name="SP1direction" type="DIRECTION"/>
+                                <DataItem category="EVENT" id="c232_01" name="SP1mode" type="ROTARY_MODE"/>
+                            </DataItems>
+                        </Rotary>
+                    </Components>
+                </Axes>
                 <Controller id="controller33_01" name="Controller">
                     <DataItems>
                         <DataItem category="CONDITION" id="controller34_01" name="logic" type="LOGIC_PROGRAM"/>
