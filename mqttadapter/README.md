@@ -6,6 +6,10 @@
 
 The adapter library is located in the `adapter` directory and provides an an abstraction around the MTConnect socket server to send data to an MTConnect agent. The agent can be found at (https://github.com/mtconnect/cppagent).
 
+### MTConnect Agent Configuration
+
+Copy `Devices.xml` and `agent.cfg` from the `mqttadapter/agent` directory to the directory where the `agent.cfg` for the MTConnect Agent Installation is.
+
 ### The mqtt adapter
 
 The MQTT python adapter is located in the `mqttadapter` subdirectory.
@@ -38,7 +42,7 @@ and then run the following command:
 
 	py mqttpublisher_sim.py
 
-## Running Simulator
+### Running Simulator
 
 Install Ruby. Download from here: https://www.ruby-lang.org/en/downloads/
 
