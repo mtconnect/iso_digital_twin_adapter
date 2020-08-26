@@ -37,3 +37,11 @@ To test SHDR output update the configuration in `mqttpublisher_sim.py` to match 
 and then run the following command:
 
 	py mqttpublisher_sim.py
+
+## Running Simulator
+
+Install Ruby. Download from here: https://www.ruby-lang.org/en/downloads/
+
+Copy the `hermle_log.txt` in the `mqttadapter/agent` directory  to the `simulator/` directory of the Agent installation and run the following command:
+
+	ruby run_scenario.rb -l hermle_log.txt
