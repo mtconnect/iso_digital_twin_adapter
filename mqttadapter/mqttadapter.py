@@ -26,7 +26,7 @@ class MappedDataSet(DataItem):
 
 class Variable:
     def __init__(self):
-        self._value = "UNAVAILABLE"
+        self._value = None
 
     def get_value(self):
         return self._value
@@ -36,17 +36,17 @@ class Variable:
 
 class DataSetVariable:
     def __init__(self, datasets):
-        self._value = "UNAVAILABLE"
+        self._value = None
         self._datasets = datasets
 
     def get_value(self):
         value = str()
         for dataset, val in self._datasets.items():
-            if val.get_value() not in [None, "UNAVAILABLE"]:
+            if val.get_value() is not None:
                 value += str(dataset)+"={'"+str(val.get_value())+"'}"
         value = value.replace("}"," ")[:-1].replace("{","")
 
-        if value: self._value = value
+        self._value = value if value else None
         return self._value
 
     def set_value(self, value):
@@ -120,37 +120,49 @@ class Device:
 
     def update_values(self, dataitems):
         for key,val in dataitems.items():
-            val = "UNAVAILABLE" if val == "empty" else val
+            val = None if val == "empty" else val
             self._mapped_variables[key].set_value(val) if key in self._mapped_variables else str()
 
         self.gather_data()
 
     def on_mqttmsg_arrival(self, client, userdata, msg):
+        false = False #handshake_var
+        true = True #handshake_var
         msg_json = loads(msg.payload)
         timestamp_unix_milsec = msg_json['lisaMessage']['messageHeader']['timeStamp']
         timestamp_utc = datetime.utcfromtimestamp(int(int(timestamp_unix_milsec)/1000)).strftime('%Y-%m-%dT%H:%M:%SZ')
         data_json = loads(msg_json['lisaMessage']['messageBody']['data'])
-        dataitems = data_json['HermleSTEPVariables']
+        dataitems = data_json
 
         self.update_values(dataitems)
 
     def gather_data(self):
+        self._adapter.begin_gather()
+
         for dataitem_key, dataitem_val in self._dataitems.items():
             dataitem_val.gather()
-        time.sleep(0.5)
+
+        self._adapter.complete_gather()
+
 
     
 def on_connect(client, userdata, flags, rc):
     print ("Connected with result code: " + str(rc))
 
+def on_disconnect(client, userdata, rc):
+    if rc != 0:
+        print("Unexpected disconnection with result code: "+str(rc))
+    else:
+        print("Disconnected Successfully!")
 
 if __name__ == '__main__':
 
-    #Device(host,port): host and port must be configured into the device file.
-    device1 = Device('localhost',7878)
+    #Device(host,port): host and port must be configured into the agent cfg file.
+    device1 = Device('localhost',7879)
 
     client= mqtt.Client()
     client.on_connect = on_connect
+    client.on_disconnect = on_disconnect
     client.on_message = device1.on_mqttmsg_arrival
 
     #connect(host, port=1883, keepalive=60, bind_address="")
