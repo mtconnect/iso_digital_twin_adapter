@@ -100,8 +100,6 @@
                                 <DataItem category="EVENT" id="path150_01" name="part_count_1" type="PART_COUNT"/>
                                 <DataItem category="SAMPLE" id="path151_01" name="Fact_1" nativeUnits="FOOT/MINUTE" subType="ACTUAL" type="PATH_FEEDRATE" units="MILLIMETER/SECOND"/>
                                 <DataItem category="SAMPLE" id="path152_01" name="Fcmd_1" nativeUnits="FOOT/MINUTE" subType="COMMANDED" type="PATH_FEEDRATE" units="MILLIMETER/SECOND"/>
-								<DataItem category="EVENT" id="path153_01" name="startofcycle_1" type="START_OF_CYCLE"/>
-								<DataItem category="EVENT" id="path153_02" name="endofcycle_1" type="END_OF_CYCLE"/>
                             </DataItems>
                         </Path>
                     </Components>
@@ -110,6 +108,8 @@
 				  <Components>
 					<ProcessOccurrence id='po'>
 					  <DataItems>
+						<DataItem category="EVENT" id="path153_01" name="startofcycle_1" type="START_OF_CYCLE"/>
+						<DataItem category="EVENT" id="path153_02" name="endofcycle_1" type="END_OF_CYCLE"/>
 						<DataItem type='WORKING_STEP' category='EVENT' id='po1' name='WorkingStep' representation='DATA_SET'>
 						  <Definition>
 							<Description>AP 238 Working Step</Description>
