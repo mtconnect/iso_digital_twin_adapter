@@ -108,8 +108,6 @@
 				  <Components>
 					<ProcessOccurrence id='po'>
 					  <DataItems>
-						<DataItem category="EVENT" id="path153_01" name="startofcycle_1" type="START_OF_CYCLE"/>
-						<DataItem category="EVENT" id="path153_02" name="endofcycle_1" type="END_OF_CYCLE"/>
 						<DataItem type='WORKING_STEP' category='EVENT' id='po1' name='WorkingStep' representation='DATA_SET'>
 						  <Definition>
 							<Description>AP 238 Working Step</Description>
@@ -125,6 +123,12 @@
 							  </EntryDefinition>
 							  <EntryDefinition key='DESCRIPTION' type='DESCRIPTION'>
 								<Description>The description of the working step</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='START_TIME' type='START_TIME'>
+								<Description>The start timestamp of the working step</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='END_TIME' type='END_TME'>
+								<Description>The end timestamp of the working step</Description>
 							  </EntryDefinition>
 							</EntryDefinitions>
 						  </Definition>
@@ -194,6 +198,9 @@
 						  <Definition>
 							<Description>Tool</Description>
 							<EntryDefinitions>
+							  <EntryDefinition key='UUID' type='UUID'>
+								<Description>The UUID of the tool</Description>
+							  </EntryDefinition>
 							  <EntryDefinition key='CLASS' type='CLASS'>
 								<Description>The class of the tool</Description>
 							  </EntryDefinition>
