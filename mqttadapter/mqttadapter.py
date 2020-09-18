@@ -35,19 +35,33 @@ class Variable:
         self._value = value
 
 class DataSetVariable:
-    def __init__(self, datasets):
+    def __init__(self, dataset):
         self._value = None
-        self._datasets = datasets
+        self._dataset = dataset
+        self._reset = False
+        self._name = str()
 
     def get_value(self):
         value = str()
-        for dataset, val in self._datasets.items():
+        for key, val in self._dataset.items():
+            if key == 'NAME':
+                if self._name and str(val.get_value()) != self._name:
+                    self._reset = True
+                self._name = str(val.get_value())
             if val.get_value() is not None:
-                value += str(dataset)+"={'"+str(val.get_value())+"'}"
+                value += str(key)+"={'"+str(val.get_value())+"'}"
         value = value.replace("}"," ")[:-1].replace("{","")
 
-        self._value = value if value else None
-        return self._value
+        if self._reset:
+            value = ":MANUAL " + value
+            self._reset = False
+
+        self.reset_values()
+        return value if value else None
+
+    def reset_values(self):
+        for key, val in self._dataset.items():
+            self._dataset[key].set_value(None)
 
     def set_value(self, value):
         self._value = value
@@ -73,8 +87,6 @@ class Device:
 
         """Add STEP dataitems"""
         #Arguments:: (MTCONNECT_DATAITEM_TYPE, MTCONNECT_DATAITEM_NAME, NATIVE_MQTT_NAME)
-        self.add_dataitem("START_OF_CYCLE","startofcycle_1","startofcycle")
-        self.add_dataitem("END_OF_CYCLE","endofcycle_1","endofcycle")
 
         self.add_dataitem("PROGRAM_COMMENT","programcomment_1","programVersion")
 
@@ -96,11 +108,15 @@ class Device:
         self.add_dataset("TOOL","Tool", "CLASS", "toolClass")
         self.add_dataset("TOOL","Tool", "DESCRIPTION", "toolDescription")
         self.add_dataset("TOOL","Tool", "NAME", "toolName")
+        self.add_dataset("TOOL","Tool", "UUID", "toolID")
 
         self.add_dataset("WORKING_STEP","WorkingStep", "UUID", "workingStepID")
         self.add_dataset("WORKING_STEP","WorkingStep", "NAME", "workingStepName")
         self.add_dataset("WORKING_STEP","WorkingStep", "WORKING_STEP_TYPE", "workingStepType")
         self.add_dataset("WORKING_STEP","WorkingStep", "DESCRIPTION", "workingStepDescription")
+        self.add_dataset("WORKING_STEP","WorkingStep", "START_TIME","startofcycle")
+        self.add_dataset("WORKING_STEP","WorkingStep", "END_TIME","endofcycle")
+        
 
     def add_dataitem(self, dataitem_type, dataitem_name, native_name):
         self._mapped_variables[native_name] = Variable()
