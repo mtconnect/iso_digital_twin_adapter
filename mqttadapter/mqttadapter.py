@@ -61,7 +61,8 @@ class DataSetVariable:
 
     def reset_values(self):
         for key, val in self._dataset.items():
-            self._dataset[key].set_value(None)
+            if key != "NAME":
+                self._dataset[key].set_value(None)
 
     def set_value(self, value):
         self._value = value
