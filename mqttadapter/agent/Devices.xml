@@ -60,7 +60,7 @@
                                 <DataItem category="SAMPLE" id="c122_01" name="C1act" nativeUnits="DEGREE" subType="ACTUAL" type="ANGLE" units="DEGREE"/>
                                 <DataItem category="SAMPLE" id="c123_01" name="C1load" nativeUnits="PERCENT" subType="ACTUAL" type="LOAD" units="PERCENT"/>
                                 <DataItem category="SAMPLE" id="c124_01" name="C1velocity" nativeUnits="REVOLUTION/MINUTE" subType="ACTUAL" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
-                                <DataItem category="EVENT" id="c125_01" name="C1direction" type="DIRECTION"/>
+                                <DataItem category="EVENT" id="c125_01" name="C1direction" subType="ROTARY" type="DIRECTION"/>
                                 <DataItem category="EVENT" id="c126_01" name="C1mode" type="ROTARY_MODE"/>
                             </DataItems>
                         </Rotary>
@@ -69,7 +69,7 @@
                                 <DataItem category="SAMPLE" id="c228_01" name="SP1act" nativeUnits="DEGREE" subType="ACTUAL" type="ANGLE" units="DEGREE"/>
                                 <DataItem category="SAMPLE" id="c229_01" name="SP1load" nativeUnits="PERCENT" subType="ACTUAL" type="LOAD" units="PERCENT"/>
                                 <DataItem category="SAMPLE" id="c230_01" name="SP1velocity" nativeUnits="REVOLUTION/MINUTE" subType="ACTUAL" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
-                                <DataItem category="EVENT" id="c231_01" name="SP1direction" type="DIRECTION"/>
+                                <DataItem category="EVENT" id="c231_01" name="SP1direction" subType="ROTARY" type="DIRECTION"/>
                                 <DataItem category="EVENT" id="c232_01" name="SP1mode" type="ROTARY_MODE"/>
                             </DataItems>
                         </Rotary>
@@ -83,12 +83,11 @@
                         <Path id="path135_01" name="path">
                             <DataItems>
                                 <DataItem category="EVENT" id="path136_01" name="exec_1" type="EXECUTION"/>
-                                <DataItem category="EVENT" id="path137_01" name="line_1" type="LINE"/>
                                 <DataItem category="EVENT" id="path138_01" name="mode_1" type="CONTROLLER_MODE"/>
                                 <DataItem category="EVENT" id="path139_01" name="program_1" type="PROGRAM"/>
 								<DataItem category="EVENT" id="path139_02" name="programcomment_1" type="PROGRAM_COMMENT"/>
-                                <DataItem category="EVENT" id="path140_01" name="Fovr_1" nativeUnits="PERCENT" subType="OVERRIDE" type="PATH_FEEDRATE" units="PERCENT"/>
-                                <DataItem category="EVENT" id="path141_01" name="Sovr_1" nativeUnits="PERCENT" subType="OVERRIDE" type="ROTARY_VELOCITY" units="PERCENT"/>
+                                <DataItem category="EVENT" id="path140_01" name="Fovr_1" nativeUnits="PERCENT" subType="PROGRAMMED" type="PATH_FEEDRATE_OVERRIDE" units="PERCENT"/>
+                                <DataItem category="EVENT" id="path141_01" name="Sovr_1" nativeUnits="PERCENT" type="ROTARY_VELOCITY_OVERRIDE" units="PERCENT"/>
                                 <DataItem category="EVENT" id="path142_01" name="FRovr_1" nativeUnits="PERCENT" subType="RAPID" type="PATH_FEEDRATE_OVERRIDE" units="PERCENT"/>
                                 <DataItem category="SAMPLE" id="path143_01" name="path_position_1" nativeUnits="INCH_3D" subType="ACTUAL" type="PATH_POSITION" units="MILLIMETER_3D"/>
                                 <DataItem category="EVENT" id="path144_01" name="tool_id_1" type="TOOL_ASSET_ID"/>
