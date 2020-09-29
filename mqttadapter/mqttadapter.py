@@ -90,6 +90,7 @@ class Device:
         #Arguments:: (MTCONNECT_DATAITEM_TYPE, MTCONNECT_DATAITEM_NAME, NATIVE_MQTT_NAME)
 
         self.add_dataitem("PROGRAM_COMMENT","programcomment_1","programVersion")
+        self.add_dataitem("PROGRAM","program_2","programID")
 
         #Arguments:: (MTCONNECT_DATAITEM_TYPE, MTCONNECT_DATAITEM_NAME, MTCONNECT_ENTRY_NAME, NATIVE_MQTT_NAME)
         self.add_dataset("FEATURE","Feature", "UUID", "featureID")
