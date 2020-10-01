@@ -84,7 +84,7 @@
                             <DataItems>
                                 <DataItem category="EVENT" id="path136_01" name="exec_1" type="EXECUTION"/>
                                 <DataItem category="EVENT" id="path138_01" name="mode_1" type="CONTROLLER_MODE"/>
-                                <DataItem category="EVENT" id="path139_02" name="program_2" type="PROGRAM"/>
+                                <DataItem category="EVENT" id="path139_02" name="program_1" type="PROGRAM"/>
 								<DataItem category="EVENT" id="path139_03" name="programcomment_1" type="PROGRAM_COMMENT"/>
                                 <DataItem category="EVENT" id="path140_01" name="Fovr_1" nativeUnits="PERCENT" subType="PROGRAMMED" type="PATH_FEEDRATE_OVERRIDE" units="PERCENT"/>
                                 <DataItem category="EVENT" id="path141_01" name="Sovr_1" nativeUnits="PERCENT" type="ROTARY_VELOCITY_OVERRIDE" units="PERCENT"/>
@@ -168,6 +168,12 @@
 						  <Definition>
 							<Description>Product</Description>
 							<EntryDefinitions>
+							  <EntryDefinition key='ID' type='ID'>
+								<Description>The ID of the product</Description>
+							  </EntryDefinition>
+							  <EntryDefinition key='NAME' type='NAME'>
+								<Description>The name of the product</Description>
+							  </EntryDefinition>
 							  <EntryDefinition key='UUID' type='UUID'>
 								<Description>The UUID of the product</Description>
 							  </EntryDefinition>
@@ -181,6 +187,9 @@
 						  <Definition>
 							<Description>Project</Description>
 							<EntryDefinitions>
+							  <EntryDefinition key='ID' type='ID'>
+								<Description>The ID of the project</Description>
+							  </EntryDefinition>
 							  <EntryDefinition key='UUID' type='UUID'>
 								<Description>The UUID of the project</Description>
 							  </EntryDefinition>
@@ -197,6 +206,9 @@
 						  <Definition>
 							<Description>Tool</Description>
 							<EntryDefinitions>
+							  <EntryDefinition key='ID' type='ID'>
+								<Description>The ID of the tool</Description>
+							  </EntryDefinition>
 							  <EntryDefinition key='UUID' type='UUID'>
 								<Description>The UUID of the tool</Description>
 							  </EntryDefinition>
