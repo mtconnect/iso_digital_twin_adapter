@@ -90,27 +90,32 @@ class Device:
         #Arguments:: (MTCONNECT_DATAITEM_TYPE, MTCONNECT_DATAITEM_NAME, NATIVE_MQTT_NAME)
 
         self.add_dataitem("PROGRAM_COMMENT","programcomment_1","programVersion")
-        self.add_dataitem("PROGRAM","program_2","programID")
+        #self.add_dataitem("PROGRAM","program_1","programID")
 
         #Arguments:: (MTCONNECT_DATAITEM_TYPE, MTCONNECT_DATAITEM_NAME, MTCONNECT_ENTRY_NAME, NATIVE_MQTT_NAME)
         self.add_dataset("FEATURE","Feature", "UUID", "featureID")
         self.add_dataset("FEATURE","Feature", "NAME", "featureName")
         self.add_dataset("FEATURE","Feature", "FEATURE_TYPE", "featureType")
+        #self.add_dataset("FEATURE","Feature", "FEATURE_DESCRIPTION", "featureDescription")
 
         self.add_dataset("OPERATION","Operation", "UUID", "operationID")
         self.add_dataset("OPERATION","Operation", "OPERATION_TYPE", "operationType")
 
-        self.add_dataset("PRODUCT","Product", "UUID", "productID")
+        self.add_dataset("PRODUCT","Product", "ID", "productID")
+        #self.add_dataset("PRODUCT","Product", "UUID", "productUuid")
+        #self.add_dataset("PRODUCT","Product", "NAME", "productName")
         self.add_dataset("PRODUCT","Product", "VERSION", "productVersion")
 
-        self.add_dataset("PROJECT","Project", "UUID", "projectID")
+        self.add_dataset("PROJECT","Project", "ID", "programID")
+        #self.add_dataset("PROJECT","Project", "UUID", "projectUuid")
         self.add_dataset("PROJECT","Project", "RELEASE", "projectRelease")
         self.add_dataset("PROJECT","Project", "STATUS", "projectStatus")
 
         self.add_dataset("TOOL","Tool", "CLASS", "toolClass")
         self.add_dataset("TOOL","Tool", "DESCRIPTION", "toolDescription")
         self.add_dataset("TOOL","Tool", "NAME", "toolName")
-        self.add_dataset("TOOL","Tool", "UUID", "toolID")
+        self.add_dataset("TOOL","Tool", "ID", "toolID")
+        #self.add_dataset("TOOL","Tool", "UUID", "toolUuid")
 
         self.add_dataset("WORKING_STEP","WorkingStep", "UUID", "workingStepID")
         self.add_dataset("WORKING_STEP","WorkingStep", "NAME", "workingStepName")
